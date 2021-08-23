@@ -34,6 +34,13 @@ gem 'devise'
 # Pundit authorization
 gem 'pundit'
 
+# Bootstrap set up
+# Autoprefixer
+gem 'autoprefixer-rails', '10.2.5'
+# Font awesome sass
+gem 'font-awesome-sass', '~> 5.6.1'
+# Simple form for
+gem 'simple_form'
 
 
 group :development, :test do
