@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # devise authentication
 gem 'devise'
 
+# Pundit authorization
+gem 'pundit'
+
 
 
 group :development, :test do
