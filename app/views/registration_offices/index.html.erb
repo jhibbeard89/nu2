@@ -1,0 +1,10 @@
+<div class="container">
+<h1 class="registration-offices-header-text">Registration Offices in Berlin</h1>
+  <div class="registration-office-container">
+    <ol>
+    <% @registration_office.each do |registration_office| %>
+      <li><%= registration_office.name %></li>
+    <% end %>
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module RegistrationOfficesHelper
+end
