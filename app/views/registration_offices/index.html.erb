@@ -1,10 +1,23 @@
 <div class="container">
-<h1 class="registration-offices-header-text">Registration Offices in Berlin</h1>
+  <div class="form-container">
+   <h1>CONTAINER FOR THE MAP</h1>
+  </div>
+</div>
+
+<div class="container">
+<h1 class="registration-offices-header-text">Registration in Berlin</h1>
   <div class="registration-office-container">
     <ol>
-    <% @registration_office.each do |registration_office| %>
-      <li><%= registration_office.name %></li>
+    <% @registration_offices.each do |registration_office| %>
+      <li>
+      <%= link_to registration_office.office_name, registration_office_path(registration_office) %> <br>
+      </li>
     <% end %>
     </ol>
   </div>
 </div>
+
+
+<%# <div class="link-buttons">
+  <%= link_to "Book an appointment", path(@meal), class: "btn" %>
+<%# </div> %>

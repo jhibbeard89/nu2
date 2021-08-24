@@ -1,0 +1,47 @@
+<div class="grid-body">
+  <div class="column-left">
+    <div class="container">
+
+      <h1 class="registration-office-header">Please book your appointment with:</h1>
+
+      <div class="registration-office-details">
+        <div>
+          <h1><%= @registration_office.office_name %></h1>
+          <p><%= @registration_office.address %></p>
+
+          <h3>Opening Hours:</h3>
+          <p>Mondays to Fridays from <%= @registration_office.opening_hours %> to <%= @registration_office.closing_hours %> o'clock</p>
+        </div>
+      </div>
+
+      <h3 class="registration-office-header">Please choose an appointment for your registration:</h3>
+      <div class="container appointments-container column-right">
+          <div class="container morning-appointments column-left">
+            <p class="btn-gradient-purple text-center">08:00</p>
+            <p class="btn-gradient-purple text-center">08:30</p>
+            <p class="btn-gradient-purple text-center">09:00</p>
+            <p class="btn-gradient-purple text-center">09:30</p>
+            <p class="btn-gradient-purple text-center">10:00</p>
+            <p class="btn-gradient-purple text-center">10:30</p>
+            <p class="btn-gradient-purple text-center">11:00</p>
+            <p class="btn-gradient-purple text-center">11:30</p>
+          </div>
+          <div class="container afternoon-appointments column-right">
+            <p class="btn-gradient-purple text-center">12:00</p>
+            <p class="btn-gradient-purple text-center">12:30</p>
+            <p class="btn-gradient-purple text-center">13:00</p>
+            <p class="btn-gradient-purple text-center">13:30</p>
+            <p class="btn-gradient-purple text-center">14:00</p>
+            <p class="btn-gradient-purple text-center">14:30</p>
+            <p class="btn-gradient-purple text-center">15:00</p>
+            <p class="btn-gradient-purple text-center">15:30</p>
+          </div>
+      </div>
+
+      <div class="container">
+        <%# <%= link_to "Book ", new_appointment_path(@appointment), class: "btn" %>
+        <%# <%= link_to "Go back to all offices", registration_offices_path, class: "btn" %>
+      </div>
+    </div>
+  </div>
+</div>
