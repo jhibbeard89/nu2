@@ -31,9 +31,6 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # devise authentication
 gem 'devise'
 
-# Pundit authorization
-gem 'pundit'
-
 # Bootstrap set up
 # Autoprefixer
 gem 'autoprefixer-rails', '10.2.5'
