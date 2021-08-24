@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_095904) do
+ActiveRecord::Schema.define(version: 2021_08_24_105957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,8 +53,10 @@ ActiveRecord::Schema.define(version: 2021_08_24_095904) do
     t.bigint "insurance_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
     t.index ["bank_id"], name: "index_user_choices_on_bank_id"
     t.index ["insurance_id"], name: "index_user_choices_on_insurance_id"
+    t.index ["user_id"], name: "index_user_choices_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,5 +90,6 @@ ActiveRecord::Schema.define(version: 2021_08_24_095904) do
   add_foreign_key "appointments", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
+  add_foreign_key "user_choices", "users"
   add_foreign_key "way_answers", "users"
 end
