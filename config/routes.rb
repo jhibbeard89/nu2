@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "home#index"
   resources :banks, only: [:index, :show]
+  resources :insurances, only: [:index, :show]
 end
