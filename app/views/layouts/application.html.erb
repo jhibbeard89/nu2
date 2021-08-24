@@ -12,6 +12,44 @@
   </head>
 
   <body>
+
+    <div class="navbar navbar-expand-sm navbar-light navbar-nu2">
+      <%# REPLACE BELOW LINK WITH LOGO %>
+      <%= link_to "Nü2", root_path, class: "navbar-nu2-logo" %>
+
+
+    <div>
+      <ul class="navbar-nav mr-auto">
+      <% if current_user %>
+        <li class="nav-item">
+          <%= link_to "My Account", "#", class: "nav-link" %>
+        </li>
+        <%= image_tag "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "My Tasks", "#", class: "dropdown-item" %>
+          <%= link_to "Settings", "#", class: "dropdown-item" %>
+          <%= link_to "Referrals", "#", class: "dropdown-item" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+        <% else %>
+            <%= link_to "Sign In", new_user_session_path, class: "btn-hollow" %>
+        <% end %>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
     <%= yield %>
 
     <p class="notice"><%= notice %></p>

@@ -1,1 +1,11 @@
 // Specific CSS for your home-page
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section-container {
+  align-items: center;
+  margin: 10px;
+  height: 1000px;
+}

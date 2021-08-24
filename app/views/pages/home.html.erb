@@ -1,4 +1,48 @@
-<a class="btn btn-hollow" href="#">Button Hollow</a>
-<a class="btn btn-flat" href="#">Button Flat</a>
-<a class="btn btn-gradient-yellow" href="#">Button Gradient Yellow</a>
-<a class="btn btn-gradient-purple" href="#">Button Gradient Purple</a>
+<div class="banner">
+  <div class="flex-container">
+    <div>
+      <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f21dd68f36fe25cb3bdc872_illustration_1.png" alt="German bureaucracy drives people nuts!">
+    </div>
+    <div class="container">
+      <div>
+        <h1>Nü2 Berlin?</h1>
+        <p>We can help. Hack German bureaucracy with our services.</p>
+        <%= link_to "GET STARTED", new_user_registration_path, class: "btn-flat" %>
+      </div>
+      <div>
+        <br>
+        <%= link_to "Already a member?", new_user_session_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex-container section-container">
+
+  <div class="card-product">
+
+    <div class="card-product-infos">
+      <h2>Service 1</h2>
+      <p>Description of <strong>service</strong>.</p>
+    </div>
+
+  </div>
+
+  <div class="card-product">
+    <div class="card-product-infos">
+      <h2>Service 2</h2>
+      <p>Description of <strong>service</strong>.</p>
+    </div>
+
+  </div>
+
+  <div class="card-product">
+
+    <div class="card-product-infos">
+      <h2>Service 3</h2>
+      <p>Description of <strong>service</strong>.</p>
+    </div>
+
+  </div>
+
+</div>
