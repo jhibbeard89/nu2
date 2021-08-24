@@ -1,0 +1,2 @@
+class RegistrationOffice < ApplicationRecord
+end

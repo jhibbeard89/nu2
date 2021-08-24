@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 
+  documents_uploaded: false
+  user: one
+  registration_office: one
+
+two:
+  date: 
+  documents_uploaded: false
+  user: two
+  registration_office: two
