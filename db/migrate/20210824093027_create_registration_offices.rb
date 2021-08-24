@@ -3,8 +3,8 @@ class CreateRegistrationOffices < ActiveRecord::Migration[6.1]
     create_table :registration_offices do |t|
       t.string :office_name
       t.string :address
-      t.dateTime :opening_hours
-      t.dateTime :closing_hours
+      t.datetime :opening_hours
+      t.datetime :closing_hours
 
       t.timestamps
     end
