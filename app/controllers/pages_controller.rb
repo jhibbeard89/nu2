@@ -3,4 +3,6 @@ class PagesController < ApplicationController
   def home; end
 
   def tv_license; end
+
+  def req_index; end
 end
