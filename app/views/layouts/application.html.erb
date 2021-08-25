@@ -13,46 +13,44 @@
 
   <body>
 
+  <%# NAVBAR%>
     <div class="navbar navbar-expand-sm navbar-light navbar-nu2">
-      <%# REPLACE BELOW LINK WITH LOGO? %>
       <%= link_to "Nü2", root_path, class: "navbar-nu2-logo" %>
-
-
-    <div>
-      <ul class="navbar-nav mr-auto">
-      <% if current_user %>
-        <li class="nav-item">
-          <%= link_to "My Account", "#", class: "nav-link" %>
-        </li>
-        <%= image_tag "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "My Tasks", "#", class: "dropdown-item" %>
-          <%= link_to "Settings", "#", class: "dropdown-item" %>
-          <%= link_to "Referrals", "#", class: "dropdown-item" %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-        </div>
+      <div>
+        <ul class="navbar-nav mr-auto">
+        <% if current_user %>
+          <li class="nav-item">
+            <%= link_to "My Account", "#", class: "nav-link" %>
+          </li>
+          <%= image_tag "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "My Tasks", "#", class: "dropdown-item" %>
+            <%= link_to "Settings", "#", class: "dropdown-item" %>
+            <%= link_to "Referrals", "#", class: "dropdown-item" %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
         <% else %>
             <%= link_to "Sign In", new_user_session_path, class: "btn-hollow" %>
         <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
 
     <%= yield %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <%= render "shared/flashes" %>
+
+  <%# FOOTER %>
+    <div class="footer">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div>
+        I <i class="fas fa-heart"></i> Berlin.
+      </div>
+    </div>
+
   </body>
 </html>
