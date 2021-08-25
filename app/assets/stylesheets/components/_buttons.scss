@@ -10,14 +10,14 @@
 }
 
 .btn-hollow:hover {
-  color: white;
+  color: $off-white;
   &:hover {
     text-decoration: none;
   }
 }
 
 .btn-flat {
-  color: white;
+  color: $off-white;
   padding: 8px 24px;
   border-radius: 4px;
   background: $brand-purple;
@@ -26,7 +26,7 @@
 
 .btn-flat:hover {
   background: $brand-purple-faded;
-  color: white;
+  color: $off-white;
   &:hover {
     text-decoration: none;
   }
@@ -48,7 +48,7 @@
 }
 
 .btn-gradient-purple {
-  color: white;
+  color: $off-white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
@@ -59,5 +59,5 @@
 
 .btn-gradient-purple:hover {
   background: linear-gradient($brand-purple-lighter, $brand-purple-faded);
-  color: white;
+  color: $off-white;
 }

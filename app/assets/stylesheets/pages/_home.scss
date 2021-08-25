@@ -1,11 +1,23 @@
 // Specific CSS for your home-page
-.flex-container {
+.banner-container {
   display: flex;
   justify-content: space-evenly;
 }
 
 .section-container {
-  align-items: center;
-  margin: 10px;
-  height: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $brand-yellow;
+}
+
+.card-product {
+  background-color: $off-white;
+}
+
+.card-product-img {
+  background-color: $off-white;
+}
+
+.card-product h2 {
+  color: $brand-purple
 }

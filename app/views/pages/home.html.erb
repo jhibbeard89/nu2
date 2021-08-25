@@ -1,7 +1,9 @@
+<%# BANNER %>
+
 <div class="banner">
-  <div class="flex-container">
+  <div class="banner-container">
     <div>
-      <img src="https://assets.website-files.com/5f10771cbfea70224f1ce526/5f21dd68f36fe25cb3bdc872_illustration_1.png" alt="German bureaucracy drives people nuts!">
+      <%= image_tag 'bureaucracy.jpg'  %>
     </div>
     <div class="container">
       <div>
@@ -17,32 +19,68 @@
   </div>
 </div>
 
-<div class="flex-container section-container">
-
+<%# CARDS ON LANDING PAGE %>
+<div class="section-container">
   <div class="card-product">
-
-    <div class="card-product-infos">
-      <h2>Service 1</h2>
-      <p>Description of <strong>service</strong>.</p>
+    <div style="text-align: center">
+      <%= image_tag 'ridin.png'  %>
     </div>
-
+    <div class="card-product-infos">
+        <h2>Fulsome Support</h2>
+        <ul>
+          <li>
+            <%= "City address registration, health insurance, bank account, and more!" %>
+          </li>
+          <li>
+            <%= "Gather and track all of your information in one place." %>
+          </li>
+          <li>
+            <%= "We do the research so you don't have to." %>
+          </li>
+        </ul>
+      </ul>
+    </div>
   </div>
 
   <div class="card-product">
-    <div class="card-product-infos">
-      <h2>Service 2</h2>
-      <p>Description of <strong>service</strong>.</p>
+    <div style="text-align: center">
+      <%= image_tag 'telescope.png' %>
     </div>
-
+    <div class="card-product-infos">
+      <h2>Fast and Free</h2>
+      <ul>
+          <li>
+            <%= "Our services are absolutely free; just sign-up!" %>
+          </li>
+          <li>
+            <%= "Book appointments quickly and seamlessly through our portal." %>
+          </li>
+          <li>
+            <%= "We offer 24/7 online support. Chat with us!" %>
+          </li>
+        </ul>
+    </div>
   </div>
 
   <div class="card-product">
-
-    <div class="card-product-infos">
-      <h2>Service 3</h2>
-      <p>Description of <strong>service</strong>.</p>
+    <div style="text-align:center">
+      <%= image_tag 'peace.png' %>
     </div>
-
+    <div class="card-product-infos">
+      <h2>Friendly Service</h2>
+      <ul>
+          <li>
+            <%= "Services are catered to your relocation and life needs." %>
+          </li>
+          <li>
+            <%= "We speak English, German, Mandarin, French, Spanish, Turkish and Arabic." %>
+          </li>
+          <li>
+            <%= "We can't wait to welcome you!" %>
+          </li>
+        </ul>
+    </div>
   </div>
-
 </div>
+
+<%# FOOTER %>
