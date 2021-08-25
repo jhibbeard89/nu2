@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_095904) do
+ActiveRecord::Schema.define(version: 2021_08_25_144927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2021_08_24_095904) do
   create_table "registration_offices", force: :cascade do |t|
     t.string "office_name"
     t.string "address"
-    t.datetime "opening_hours"
-    t.datetime "closing_hours"
+    t.string "opening_hours"
+    t.string "closing_hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,6 +55,20 @@ ActiveRecord::Schema.define(version: 2021_08_24_095904) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bank_id"], name: "index_user_choices_on_bank_id"
     t.index ["insurance_id"], name: "index_user_choices_on_insurance_id"
+  end
+
+  create_table "user_profile_questions", force: :cascade do |t|
+    t.string "employment_status"
+    t.string "income_range"
+    t.datetime "arrival_date"
+    t.string "address"
+    t.string "phone_number"
+    t.datetime "date_of_birth"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "net_income"
+    t.index ["user_id"], name: "index_user_profile_questions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -71,22 +85,9 @@ ActiveRecord::Schema.define(version: 2021_08_24_095904) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "way_answers", force: :cascade do |t|
-    t.string "employment_status"
-    t.string "income_range"
-    t.datetime "arrival_date"
-    t.string "address"
-    t.string "phone_number"
-    t.datetime "date_of_birth"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_way_answers_on_user_id"
-  end
-
   add_foreign_key "appointments", "registration_offices"
   add_foreign_key "appointments", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
-  add_foreign_key "way_answers", "users"
+  add_foreign_key "user_profile_questions", "users"
 end
