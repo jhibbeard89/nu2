@@ -1,0 +1,84 @@
+<%# BANNER %>
+
+<div class="banner">
+  <div class="banner-container">
+    <div>
+      <%= image_tag 'bureaucracy.jpg'  %>
+    </div>
+    <div class="container">
+      <div>
+        <h1>Nü2 Berlin?</h1>
+        <p>We can help. Hack German bureaucracy with our services.</p>
+        <%= link_to "GET STARTED", new_user_registration_path, class: "btn-flat" %>
+      </div>
+      <div>
+        <br>
+        <%= link_to "Already a member?", new_user_session_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%# CARDS ON LANDING PAGE %>
+<div class="section-container">
+  <div class="card-product">
+    <div style="text-align: center">
+      <%= image_tag 'telescope.png'  %>
+    </div>
+    <div class="card-product-infos">
+        <h2>Fulsome Support</h2>
+        <ul>
+          <li>
+            <%= "City address registration, health insurance, bank account, and more!" %>
+          </li>
+          <li>
+            <%= "Gather and keep track of all your information in one place." %>
+          </li>
+          <li>
+            <%= "We've done the research so you don't have to." %>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card-product">
+    <div style="text-align: center">
+      <%= image_tag 'ridin.png' %>
+    </div>
+    <div class="card-product-infos">
+      <h2>Fast and Free</h2>
+      <ul>
+          <li>
+            <%= "Our services are absolutely free; just sign-up!" %>
+          </li>
+          <li>
+            <%= "Book appointments quickly and seamlessly through our portal." %>
+          </li>
+          <li>
+            <%= "We offer 24/7 online support. Chat with us!" %>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="card-product">
+    <div style="text-align:center">
+      <%= image_tag 'peace.png' %>
+    </div>
+    <div class="card-product-infos">
+      <h2>Friendly Service</h2>
+      <ul>
+          <li>
+            <%= "Services are catered to your specific relocation and life needs." %>
+          </li>
+          <li>
+            <%= "We speak English, German, Mandarin, French, Spanish, Turkish and Arabic." %>
+          </li>
+          <li>
+            <%= "We can't wait to welcome you!" %>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>

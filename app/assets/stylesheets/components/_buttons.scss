@@ -1,0 +1,63 @@
+.btn-hollow {
+  color: $brand-purple;
+  border: 2px solid $brand-purple;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-hollow:hover {
+  color: $off-white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-flat {
+  color: $off-white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $brand-purple;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: $brand-purple-faded;
+  color: $off-white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-gradient-yellow {
+  color: $brand-purple;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($brand-yellow, $brand-yellow-lighter);
+  transition: background 0.3s ease;
+  border: 1px solid $brand-yellow;
+}
+
+.btn-gradient-yellow:hover {
+  background: linear-gradient($brand-yellow-lighter, $brand-yellow-faded);
+  color: $brand-purple;
+}
+
+.btn-gradient-purple {
+  color: $off-white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($brand-purple, $brand-purple-lighter);
+  transition: background 0.3s ease;
+  border: 1px solid $brand-purple;
+}
+
+.btn-gradient-purple:hover {
+  background: linear-gradient($brand-purple-lighter, $brand-purple-faded);
+  color: $off-white;
+}
