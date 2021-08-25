@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_144927) do
+ActiveRecord::Schema.define(version: 2021_08_25_152450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,11 +39,24 @@ ActiveRecord::Schema.define(version: 2021_08_25_144927) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "employment_status"
+    t.integer "annual_gross_income_range"
+    t.integer "net_month_income_range"
+    t.string "phone_number"
+    t.datetime "arrivel_date"
+    t.datetime "date_of_birth"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_questions_on_user_id"
+  end
+
   create_table "registration_offices", force: :cascade do |t|
     t.string "office_name"
     t.string "address"
-    t.string "opening_hours"
-    t.string "closing_hours"
+    t.datetime "opening_hours"
+    t.datetime "closing_hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,20 +68,6 @@ ActiveRecord::Schema.define(version: 2021_08_25_144927) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["bank_id"], name: "index_user_choices_on_bank_id"
     t.index ["insurance_id"], name: "index_user_choices_on_insurance_id"
-  end
-
-  create_table "user_profile_questions", force: :cascade do |t|
-    t.string "employment_status"
-    t.string "income_range"
-    t.datetime "arrival_date"
-    t.string "address"
-    t.string "phone_number"
-    t.datetime "date_of_birth"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "net_income"
-    t.index ["user_id"], name: "index_user_profile_questions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -87,7 +86,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_144927) do
 
   add_foreign_key "appointments", "registration_offices"
   add_foreign_key "appointments", "users"
+  add_foreign_key "questions", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
-  add_foreign_key "user_profile_questions", "users"
 end
