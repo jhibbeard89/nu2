@@ -2,10 +2,53 @@
 
 <p>Once you sign up for a health insurance policy in Berlin, you receive an Insurance Card, which you have to present when seeking medical attention at a doctor’s office or hospital. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
 
-<h3>Here Are Your Banking Options: </h3>
 
-<ul>
-  <% @insurances.each do |insurance| %>
-    <li><%=link_to insurance.name, insurance_path(insurance) %></li>
-  <% end %>
-</ul>
+<% income_range = 88000 %>
+<% employment_status = "employed" %>
+<% age = 30 %>
+
+
+<% if income_range < 62550 || (employment_status == "student" && age < 30)  %>
+    <h3>Based on your WAY answers you should have public health care.</h3>
+    <p>Please select from the following public health care options below:</p>
+
+
+        <ul>
+            <% @public_insurances.each do |insurance| %>
+            <li><%=insurance.name %></li>
+            <p><%= insurance.summary %></p>
+            <% end %>
+        </ul>
+
+    <% elsif age <= 35 && income_range > 62550 %>
+
+    <h3>Based on your WAY answers you should have private health care as it is cheaper in the long term.</h3>
+    <p>Please select from the following private health care options below:</p>
+
+        <ul>
+            <% @private_insurances.each do |insurance| %>
+            <li><%=insurance.name%></li>
+            <p><%= insurance.summary %></p>
+            <% end %>
+        </ul>
+
+    <% else %>
+
+      <h3>Based on your WAY answers you could have either public or private health insurance.</h3>
+      <p>Please select from the following private health care options below:</p>
+
+      <%# Or display another question like in the WAY from asking where theyd like public or private and maybe show a comparison
+      then either display public or private instead of all as below %>
+
+        <ul>
+            <% @insurances.each do |insurance| %>
+            <li><%=link_to insurance.name, insurance_path(insurance) %></li>
+            <% end %>
+        </ul>
+
+    <% end %>
+
+
+
+
+
