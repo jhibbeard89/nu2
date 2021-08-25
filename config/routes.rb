@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :registration_offices, only: [:index, :show]
 
   get "tv_license", :to => "pages#tv_license"
+  get "req_index", :to => "pages#req_index"
+
 end
