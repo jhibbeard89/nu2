@@ -9,5 +9,9 @@
 @import "font-awesome";
 
 // Your CSS partials
+@import "components/grid";
 @import "components/index";
 @import "pages/index";
+
+// Registration Offices
+@import "registration_offices";

@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_08_24_135536) do
 
   # These are extensions that must be enabled in order to support this database
@@ -49,8 +50,8 @@ ActiveRecord::Schema.define(version: 2021_08_24_135536) do
   create_table "registration_offices", force: :cascade do |t|
     t.string "office_name"
     t.string "address"
-    t.datetime "opening_hours"
-    t.datetime "closing_hours"
+    t.string "opening_hours"
+    t.string "closing_hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
