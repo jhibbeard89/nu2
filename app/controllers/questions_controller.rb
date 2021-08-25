@@ -4,11 +4,22 @@ class QuestionsController < ApplicationController
   end
 
   def create
+    @user = User.new
+    @user.email = user_params['email']
+    @user.password = '123456'
+    @user.save
     @question = Question.new(question_params)
-    @question.save!
+    @question.save
   end
 
   private
+
+  def user_params
+    params.require(:questions).permit(
+      :email
+    )
+  end
+
   def question_params
     params.require(:questions).permit(
       :employment_status,
