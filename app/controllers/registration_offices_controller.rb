@@ -7,3 +7,5 @@ class RegistrationOfficesController < ApplicationController
     @registration_office = RegistrationOffice.find(params[:id])
   end
 end
+
+puts "comment"
