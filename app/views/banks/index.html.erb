@@ -6,10 +6,38 @@ On top of this, having a German bank account is often an important requirement f
 
 In Germany, there are a number of traditional banking options as well as an array of modern online banks. We have profiled a number of these below, highlighting their respective pros and cons to give you a clear idea of which is the best bank in Germany for your situation. </p>
 
-<h3>Here Are Your Banking Options: </h3>
+<% duration = 11 %>
+<% german_level = "Beginner" %>
+<% age = 25 %>
+<% monthly_income = 900 %>
 
-<ul>
-  <% @banks.each do |bank| %>
-    <li><%=link_to bank.name, bank_path(bank) %></li>
-  <% end %>
-</ul>
+<div>
+<% if duration > 12 && german_level != "Beginner" %>
+  <h3>Based on that you plan to stay long-term in berlin and you have a good grasp of the language we recommend:</h3>
+  <p><%= @commerzbank.name %> as they offer comprehensive banking options. </p>
+  <p><%= @commerzbank.summary %></p>
+
+  Here are the alternatives too... 
+  <p><%= @deutschebank.name %></p>
+  <p><%= @n26.name %></p>
+
+  <% elsif duration > 12 && german_level == "Beginner" %>
+    <h3>Based on that you plan to stay long-term in berlin and you are still a German language beginner we recommend:</h3>
+    <p><%= @deutschebank.name %> as they have excellent english customer support</p>
+    <p><%= @deutschebank.summary %></p>
+
+    Here are the alternatives too... 
+    <p><%= @commerzbank.name %></p>
+    <p><%= @n26.name %></p>
+
+    <% elsif monthly_income > 1000 || age < 26 || german_level == "Beginner" || duration < 12 %>
+      <h3>Based on your answers we recommend:</h3>
+      <p><%= @n26.name %></p>
+      <p><%= @n26.summary %></p>
+
+      Here are the alternatives too... 
+      <p><%= @commerzbank.name %></p>
+      <p><%= @deutschebank.name %></p>
+
+    <% end %>
+</div>

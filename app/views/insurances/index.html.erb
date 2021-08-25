@@ -3,9 +3,9 @@
 <p>Once you sign up for a health insurance policy in Berlin, you receive an Insurance Card, which you have to present when seeking medical attention at a doctor’s office or hospital. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
 
 
-<% income_range = 120000 %>
+<% income_range = 88000 %>
 <% employment_status = "employed" %>
-<% age = 50 %>
+<% age = 30 %>
 
 
 <% if income_range < 62550 || (employment_status == "student" && age < 30)  %>
@@ -15,7 +15,8 @@
 
         <ul>
             <% @public_insurances.each do |insurance| %>
-            <li><%=link_to insurance.name, insurance_path(insurance) %></li>
+            <li><%=insurance.name %></li>
+            <p><%= insurance.summary %></p>
             <% end %>
         </ul>
 
@@ -26,7 +27,8 @@
 
         <ul>
             <% @private_insurances.each do |insurance| %>
-            <li><%=link_to insurance.name, insurance_path(insurance) %></li>
+            <li><%=insurance.name%></li>
+            <p><%= insurance.summary %></p>
             <% end %>
         </ul>
 
