@@ -1,0 +1,11 @@
+<h2>Insurance</h2>
+
+<p>Once you sign up for a health insurance policy in Berlin, you receive an Insurance Card, which you have to present when seeking medical attention at a doctor’s office or hospital. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
+
+<h3>Here Are Your Banking Options: </h3>
+
+<ul>
+  <% @insurances.each do |insurance| %>
+    <li><%=link_to insurance.name, insurance_path(insurance) %></li>
+  <% end %>
+</ul>
