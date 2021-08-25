@@ -1,0 +1,22 @@
+<h2>Here are the details of <%= @bank.name %>:</h2>
+
+<h3>English-speaking customer support:</h3>
+<p><%= @bank.english_customer_support %></p>
+
+<h3>Sign-up process:</h3>
+<p><%= @bank.signup_process %></p>
+
+<h3>Banking fees:</h3>
+<p><%= @bank.bank_fees %></p>
+
+<h3>ATM fees:</h3>
+<p><%= @bank.atm_fees %></p>
+
+<h3>Additional banking features:</h3>
+<p><%= @bank.banking_features %></p>
+
+<h3>summary:</h3>
+<p><%= @bank.summary %></p>
+
+
+<%= link_to "<< Back to all banks", banks_path(@bank) %><br>
