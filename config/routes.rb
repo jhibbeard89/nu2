@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :banks, only: [:index, :show]
   resources :insurances, only: [:index, :show]
   resources :registration_offices, only: [:index, :show]
+
+  get "tv_license", :to => "pages#tv_license"
 end
