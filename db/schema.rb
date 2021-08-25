@@ -30,6 +30,12 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "english_customer_support"
+    t.integer "signup_process"
+    t.integer "bank_fees"
+    t.integer "atm_fees"
+    t.integer "banking_features"
+    t.text "summary"
   end
 
   create_table "insurances", force: :cascade do |t|
@@ -37,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
     t.boolean "private"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "summary"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -55,8 +62,8 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
   create_table "registration_offices", force: :cascade do |t|
     t.string "office_name"
     t.string "address"
-    t.datetime "opening_hours"
-    t.datetime "closing_hours"
+    t.string "opening_hours"
+    t.string "closing_hours"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -66,8 +73,10 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
     t.bigint "insurance_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
     t.index ["bank_id"], name: "index_user_choices_on_bank_id"
     t.index ["insurance_id"], name: "index_user_choices_on_insurance_id"
+    t.index ["user_id"], name: "index_user_choices_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -89,4 +98,5 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
   add_foreign_key "questions", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
+  add_foreign_key "user_choices", "users"
 end
