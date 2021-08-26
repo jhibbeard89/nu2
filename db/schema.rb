@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_135536) do
+ActiveRecord::Schema.define(version: 2021_08_25_141906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_08_24_135536) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
     t.boolean "documents_uploaded"
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
     t.bigint "registration_office_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
