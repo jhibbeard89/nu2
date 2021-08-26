@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :create]
   def index
     Question.new
   end
@@ -23,10 +24,12 @@ class QuestionsController < ApplicationController
   def question_params
     params.require(:questions).permit(
       :employment_status,
+      :german_level,
       :annual_gross_income_range,
       :net_month_income_range,
       :phone_number,
       :arrivel_date,
+      :duration,
       :date_of_birth
     )
   end
