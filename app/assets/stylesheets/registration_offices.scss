@@ -1,3 +1,61 @@
 // Place all the styles related to the registration_offices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.grid-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .column-left {
+    grid-column: 1;
+  }
+
+  .column-right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.container {
+  // background-color: $brand-yellow;
+  height: 100%;
+  width: auto;
+  margin: 25px 25px;
+  padding: 10px 10px;
+}
+
+.registration-offices-header-text {
+  text-align: left;
+  padding: auto 20px;
+  // color: $brand-purple;
+  // font-family: $headers-font;
+}
+
+.registration-office-choice {
+  // color: $brand-purple;
+  list-style-type: none;
+  .hover {
+    color: white;
+    text-decoration: none !important;
+  }
+}
+
+.registration-office-header {
+  text-align: center;
+  // color: $brand-purple;
+  // font-family: $headers-font;
+  padding: 20px;
+  h1 {
+    font-size: 20px;
+  }
+}
+
+.registration-office-details {
+  // color: $brand-purple;
+  margin: 20px 20px;
+  padding: 20px;
+  h3 {
+    font-size: 20px;
+    // font-family: $body-font;
+  }
+}
