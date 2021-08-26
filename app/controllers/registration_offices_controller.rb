@@ -1,6 +1,13 @@
 class RegistrationOfficesController < ApplicationController
   def index
     @registration_offices = RegistrationOffice.all
+
+    @markers = @registration_offices.geocoded.map do |office|
+      {
+        lat: office.latitude,
+        lng: office.longitude
+      }
+    end
   end
 
   def show
