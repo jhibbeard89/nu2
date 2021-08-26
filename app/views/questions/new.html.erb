@@ -6,7 +6,8 @@
     <%= f.input :net_month_income_range %>
     <%= f.input :german_level %>
     <%= f.input :email %>
-    <%= f.input :address %>
+    <%= f.input :address,
+            input_html: { autocomplete: "address", id: "user_address" } %>
     <%= f.input :phone_number %>
     <%= f.input :arrival_date, input_html: { type: 'date' } %>
     <%= f.input :duration %>

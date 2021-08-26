@@ -1,5 +1,8 @@
+// This button is used for the log-in page on the landing page
+
 .btn-hollow {
   color: $brand-purple;
+  background-color: $brand-yellow;
   border: 2px solid $brand-purple;
   padding: 8px 24px;
   border-radius: 50px;
@@ -17,6 +20,8 @@
   }
 }
 
+// This button is used for the sign-up page on the landing page
+
 .btn-flat {
   color: $off-white;
   padding: 8px 24px;
@@ -32,6 +37,8 @@
     text-decoration: none;
   }
 }
+
+//
 
 .btn-gradient-yellow {
   color: $brand-purple;
@@ -61,4 +68,23 @@
 .btn-gradient-purple:hover {
   background: linear-gradient($brand-purple-lighter, $brand-purple-faded);
   color: $off-white;
+}
+
+.btn-round-purple {
+  color: $off-white;
+  background-color: $brand-purple-lighter;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-round-purple:hover {
+  color: $brand-yellow;
+  background-color: $brand-purple;
+  &:hover {
+    text-decoration: none;
+  }
 }

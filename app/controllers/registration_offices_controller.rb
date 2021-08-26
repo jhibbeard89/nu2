@@ -5,5 +5,6 @@ class RegistrationOfficesController < ApplicationController
 
   def show
     @registration_office = RegistrationOffice.find(params[:id])
+    @appointments = Appointment.where(registration_office_id: @registration_office.id)
   end
 end
