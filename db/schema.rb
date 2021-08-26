@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_08_25_152450) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "summary"
+    t.string "image"
   end
 
   create_table "questions", force: :cascade do |t|
