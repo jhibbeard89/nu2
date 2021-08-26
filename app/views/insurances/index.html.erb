@@ -3,12 +3,12 @@
 <p>Once you sign up for a health insurance policy in Berlin, you receive an Insurance Card, which you have to present when seeking medical attention at a doctor’s office or hospital. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
 
 
-<% income_range = 88000 %>
+<% gross_annual_income_range = 88000 %>
 <% employment_status = "employed" %>
 <% age = 30 %>
 
 
-<% if income_range < 62550 || (employment_status == "student" && age < 30)  %>
+<% if annual_gross_income_range < 62550 || (employment_status == "student" && age < 30)  %>
     <h2>Based on your WAY answers you should have public health care.</h2>
     <p>Please select from the following public health care options below:</p>
 
@@ -23,7 +23,7 @@
                 </div>
             <% end %>
         
-    <% elsif age <= 35 && income_range > 62550 %>
+    <% elsif age <= 35 && annual_gross_income_range > 62550 %>
 
     <h2>Based on your WAY answers you should have private health care as it is cheaper in the long term.</h2>
     <p>Please select from the following private health care options below:</p>
@@ -59,7 +59,6 @@
 
     <% end %>
     <%= link_to "<< Back to all requirements", req_index_path %>
-
 
 
 
