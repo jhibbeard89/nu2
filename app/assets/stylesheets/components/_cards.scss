@@ -1,44 +1,47 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+// SQUARE CARDS
+
+.card-square-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .cards {
-    grid-template-columns: 1fr;
+.card-square {
+  overflow: hidden;
+  width: 275px;
+  height: 275px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  align-items: center;
+  border-radius: 4px;
+  background-color: $off-white;
+  padding: 10px;
+}
+
+.card-square img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-square-infos {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+  a {
+    color: $brand-purple;
+    text-decoration: none;
+
+    &:hover {
+    font-size: 21px;
+    color: $brand-purple-lighter;
+  }
   }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
+// CARDS ON LANDING PAGE
 .card-product {
   overflow: hidden;
   width: 325px;
@@ -70,14 +73,9 @@
   margin-right: 25px;
 }
 
-// ul li:before {
-//   content: '✓';
-// }
 
 .card-product .card-product-infos {
   padding: 20px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
 }
+
+// FLIP CARDS => See file _television.scss
