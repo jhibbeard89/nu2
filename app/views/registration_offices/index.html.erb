@@ -1,0 +1,19 @@
+<div class="grid-body">
+
+  <div class="container column-left">
+    <h1 class="registration-offices-header-text">Registration Offices in Berlin</h1>
+    <p>Please choose your desired office for your registration in Berlin:</p>
+      <ul>
+        <% @registration_offices.each do |registration_office| %>
+        <li>
+        <%= link_to registration_office.office_name, registration_office_path(registration_office), class: "registration-office-choice" %> <br>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="container column-right">
+    <h1>CONTAINER FOR THE MAP</h1>
+  </div>
+
+</div>
