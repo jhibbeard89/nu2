@@ -35,7 +35,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -43,7 +43,7 @@
   overflow: hidden;
   width: 325px;
   height: 475px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
   align-items: center;
   border-radius: 4px;
 }
