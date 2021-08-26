@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-
+    raise
   end
 
   private

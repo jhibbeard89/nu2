@@ -1,6 +1,6 @@
 <div class="profile_question">
   <h3>To allow us to understand your needs, please answer a few questions.</h3>
-  <%= simple_form_for :questions do |f|  %>
+  <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
     <%= f.input :employment_status %>
     <%= f.input :annual_gross_income_range %>
     <%= f.input :net_month_income_range %>
