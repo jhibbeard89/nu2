@@ -1,0 +1,43 @@
+// Place all the styles related to the insurances controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card-product-2 {
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    align-items: center;
+    border-radius: 4px;
+  }
+  
+  .card-product-2 img {
+    width: 60%;
+    object-fit: cover;
+    padding-top: 50px;
+  }
+  
+  .card-product-2 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .card-product-2 {
+    background-color: $off-white;
+  }
+  
+  .card-product-2-img {
+    background-color: $off-white;
+  }
+  
+  .card-product-2 h2 {
+    color: $brand-purple
+  }
+  

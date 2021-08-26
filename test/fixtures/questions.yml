@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employment_status: MyString
+  annual_gross_income_range: 1
+  net_month_income_range: 1
+  arrivel_date: 
+  date_of_birth: 
+  user: one
+
+two:
+  employment_status: MyString
+  annual_gross_income_range: 1
+  net_month_income_range: 1
+  arrivel_date: 
+  date_of_birth: 
+  user: two

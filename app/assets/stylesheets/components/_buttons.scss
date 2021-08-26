@@ -1,19 +1,24 @@
 .btn-hollow {
   color: $brand-purple;
-  border: 1px solid $brand-purple;
+  border: 2px solid $brand-purple;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
   transition: opacity 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .btn-hollow:hover {
-  background-color: $brand-purple-translucent;
-  color: $brand-purple;
+  color: $off-white;
+  background-color: $brand-purple;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn-flat {
-  color: white;
+  color: $off-white;
   padding: 8px 24px;
   border-radius: 4px;
   background: $brand-purple;
@@ -22,7 +27,10 @@
 
 .btn-flat:hover {
   background: $brand-purple-faded;
-  color: white;
+  color: $off-white;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn-gradient-yellow {
@@ -41,7 +49,7 @@
 }
 
 .btn-gradient-purple {
-  color: $brand-yellow;
+  color: $off-white;
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bold;
@@ -52,5 +60,5 @@
 
 .btn-gradient-purple:hover {
   background: linear-gradient($brand-purple-lighter, $brand-purple-faded);
-  color: $brand-yellow;
+  color: $off-white;
 }

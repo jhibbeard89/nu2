@@ -1,0 +1,16 @@
+<div class="profile_question">
+  <h3>To allow us to understand your needs, please answer a few questions.</h3>
+  <%= simple_form_for :questions do |f|  %>
+    <%= f.input :employment_status %>
+    <%= f.input :annual_gross_income_range %>
+    <%= f.input :net_month_income_range %>
+    <%= f.input :german_level %>
+    <%= f.input :email %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :arrival_date, input_html: { type: 'date' } %>
+    <%= f.input :duration %>
+    <%= f.input :date_of_birth, input_html: { type: 'date' } %>
+    <%= f.submit %>
+  <% end %>
+</div>

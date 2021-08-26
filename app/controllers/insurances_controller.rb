@@ -1,9 +1,7 @@
 class InsurancesController < ApplicationController
   def index
     @insurances = Insurance.all
-  end
-    
-  def show
-    @insurance = Insurance.find(params[:id])
-  end
+    @public_insurances = Insurance.where(private: false)
+    @private_insurances = Insurance.where(private: true)
+  end   
 end
