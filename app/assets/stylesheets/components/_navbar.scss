@@ -11,10 +11,9 @@
   flex-grow: 0;
 }
 
-.nav-link {
+.nav-item {
   color: $brand-purple;
 }
-
 
 .navbar-nu2-logo {
   font-family: $logo-font;
@@ -29,6 +28,6 @@
   }
 }
 
-.navbar-nu2 .navbar-brand img {
-  width: 40px;
-}
+// .navbar-nu2 .navbar-brand img {
+//   width: 40px;
+// }

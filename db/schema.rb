@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_152126) do
+ActiveRecord::Schema.define(version: 2021_08_25_152450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,19 @@ ActiveRecord::Schema.define(version: 2021_08_25_152126) do
     t.string "image"
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "employment_status"
+    t.integer "annual_gross_income_range"
+    t.integer "net_month_income_range"
+    t.string "phone_number"
+    t.datetime "arrivel_date"
+    t.datetime "date_of_birth"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_questions_on_user_id"
+  end
+
   create_table "registration_offices", force: :cascade do |t|
     t.string "office_name"
     t.string "address"
@@ -81,23 +94,10 @@ ActiveRecord::Schema.define(version: 2021_08_25_152126) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "way_answers", force: :cascade do |t|
-    t.string "employment_status"
-    t.string "income_range"
-    t.datetime "arrival_date"
-    t.string "address"
-    t.string "phone_number"
-    t.datetime "date_of_birth"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_way_answers_on_user_id"
-  end
-
   add_foreign_key "appointments", "registration_offices"
   add_foreign_key "appointments", "users"
+  add_foreign_key "questions", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
   add_foreign_key "user_choices", "users"
-  add_foreign_key "way_answers", "users"
 end

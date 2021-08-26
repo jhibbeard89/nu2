@@ -12,6 +12,7 @@
 @import "components/grid";
 @import "components/index";
 @import "pages/index";
+@import "pages/profile_question";
 
 // Registration Offices
 @import "registration_offices";
@@ -21,4 +22,3 @@ html, body {
   min-height: 100vh;
   background-color: $brand-yellow;
 }
-
