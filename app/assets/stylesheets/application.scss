@@ -11,8 +11,9 @@
 // Your CSS partials
 @import "components/grid";
 @import "components/index";
+@import "pages/home";
 @import "pages/index";
-@import "pages/_insurances";
+@import "pages/insurances";
 
 // Registration Offices
 @import "registration_offices";
@@ -21,4 +22,3 @@ html, body {
   min-height: 100vh;
   background-color: $brand-yellow;
 }
-
