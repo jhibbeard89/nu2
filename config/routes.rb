@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   root to: "pages#index"
   resources :banks, only: [:index, :show]
   resources :insurances, only: [:index, :show]
-  resources :registration_offices, only: [:index, :show] do
-    resources :appointments, only: [:show, :update, :edit]
-    end
+  resources :registration_offices, only: [:index, :show]
+  resources :appointments, only: [:edit, :update]
   end
