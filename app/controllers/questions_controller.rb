@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :create]
+  skip_before_action :authenticate_user!, only: [:index, :create, :user_create]
   def index
     Question.new
   end
@@ -10,7 +10,14 @@ class QuestionsController < ApplicationController
     @user.password = '123456'
     @user.save
     @question = Question.new(question_params)
+    @question.user = @user
     @question.save
+    raise
+    redirect_to user_create_path(@question)
+  end
+
+  def user_create
+    raise
   end
 
   private
