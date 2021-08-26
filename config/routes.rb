@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :registration_offices, only: [:index, :show]
   resources :questions
 
+  post 'set_session', to: 'questions#set_session_questions', as: 'set_session_questions'
   get 'tv_license', to: 'pages#tv_license'
   get 'req_index', to: 'pages#req_index'
 end

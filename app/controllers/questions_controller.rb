@@ -1,14 +1,19 @@
 class QuestionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :create]
-  def index
+  skip_before_action :authenticate_user!, only: [:new]
+
+  def new
     @question = Question.new
   end
 
-  def create
+  def set_session_questions
     question_params.each do |k, v|
       session[k.to_sym] = v
     end
     redirect_to new_user_registration_path
+  end
+
+  def create
+
   end
 
   private
