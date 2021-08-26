@@ -12,13 +12,13 @@
 @import "components/grid";
 @import "components/index";
 @import "pages/index";
-@import "pages/profile_question";
+@import "pages/_insurances";
 
 // Registration Offices
 @import "registration_offices";
-@import "insurances";
 
 html, body {
   min-height: 100vh;
   background-color: $brand-yellow;
 }
+
