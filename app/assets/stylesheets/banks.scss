@@ -1,3 +1,14 @@
 // Place all the styles related to the banks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .page-padding {
+      margin-left: 40px;
+      margin-right: 40px;
+  }
