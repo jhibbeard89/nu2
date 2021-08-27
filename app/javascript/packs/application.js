@@ -12,3 +12,9 @@ import 'bootstrap';
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
