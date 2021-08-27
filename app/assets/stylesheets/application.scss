@@ -18,10 +18,9 @@
 @import "pages/index";
 @import "pages/insurances";
 @import "pages/television";
-@import "banks";
+@import "pages/banks";
+@import "pages/registration_offices";
 
-// Registration Offices
-@import "registration_offices";
 
 html, body {
   min-height: 100vh;
