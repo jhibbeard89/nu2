@@ -11,7 +11,7 @@ class Question < ApplicationRecord
     question.german_level = session[:german_level]
     question.duration = session[:duration]
     question.user = user
-    question.save!
+    question.save
   end
 
 end
