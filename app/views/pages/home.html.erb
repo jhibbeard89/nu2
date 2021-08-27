@@ -9,11 +9,11 @@
       <div>
         <h1>Nü2 Berlin?</h1>
         <p>We can help. Hack German bureaucracy with our services.</p>
-        <%= link_to "GET STARTED", new_question_path, class: "btn-flat" %>
+        <%= link_to "GET STARTED", new_question_path, class: "btn-flat" unless current_user %>
       </div>
       <div>
         <br>
-        <%= link_to "Already a member?", new_user_session_path %>
+        <%= link_to "Already a member?", new_user_session_path unless current_user%>
       </div>
     </div>
   </div>
