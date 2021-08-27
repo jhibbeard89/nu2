@@ -1,7 +1,7 @@
 <div class="container">
   <div class="profile_question">
     <div class="welcome-question question-card" id="question-0">
-      <h3>To allow us to understand your needs, please answer a few recomendations.</h3>
+      <h3 class="question-header">To allow us to understand your needs, please answer a few recomendations.</h3>
     </div>
     <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
 
@@ -86,7 +86,7 @@
     </div>
 
     <div class="question question-card" id="submit">
-      <h3>Thank you for completing the question, please submit to register and receive your answers</h3>
+      <h3 class="question-header">Thank you for completing the question, please submit to register and receive your answers</h3>
       <%= f.submit class: "btn btn-flat submit-btn", value: "Submit my questions" %>
     </div>
     <% end %>
