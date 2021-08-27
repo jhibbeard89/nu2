@@ -4,41 +4,46 @@
     <h1 class="registration-offices-header-text">Registration Offices in Berlin</h1>
     <p>Please choose your desired office for your registration in Berlin:</p>
       <ul>
-        <% @registration_offices.each do |registration_office| %>
-        <li>
-        <%= link_to registration_office.office_name, registration_office_path(registration_office), class: "registration-office-choice" %> <br>
-        </li>
+        <% @registration_offices.each do |registration_office, num| %>
+          <li>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-flat" data-toggle="modal" data-target="#exampleModal">
+              <%= registration_office.office_name %>
+            </button>
+          </li>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                   <div class="container column-right">
+                    <% registration_office.appointments.each do |appointment| %>
+                    <h2><%= registration_office.office_name %></h2>
+                      <% if appointment.not_booked? %>
+                        <%= simple_form_for appointment, data: {confirm: 'Are you sure you want to book this appointment?'} do |f| %>
+                          <%= f.button :submit, value: appointment.date.strftime('%A, %d %b, %l:%M %p'), class: 'btn btn-primary' %>
+                        <% end %>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </ul>
   </div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
   <div class="container column-right">
     <h1>CONTAINER FOR THE MAP</h1>
