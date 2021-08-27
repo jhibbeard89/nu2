@@ -89,6 +89,16 @@
   }
 }
 
+.btn-flat-even {
+  color: $off-white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $brand-purple;
+  transition: background 0.3s ease;
+  width: 300px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
 #call-to-action-btn{
   padding: 15px 20px;
   font-size: 1.3rem;
