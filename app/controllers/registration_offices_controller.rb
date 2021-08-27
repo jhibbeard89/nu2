@@ -5,7 +5,8 @@ class RegistrationOfficesController < ApplicationController
     @markers = @registration_offices.geocoded.map do |office|
       {
         lat: office.latitude,
-        lng: office.longitude
+        lng: office.longitude,
+        info_window: render_to_string(partial: "/registration_offices/info_window", locals: { office: office })
       }
     end
   end
