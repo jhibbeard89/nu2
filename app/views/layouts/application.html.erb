@@ -13,24 +13,22 @@
   </head>
 
   <body>
-
-<div class="d-flex flex-column min-vh-100">
-  <%= render 'shared/navbar' %>
-  <%= render 'shared/flashes' %>
-  <div class="flex-grow-1">
-    <%= yield %>
-  </div>
-      <div class="footer">
-      <div class="footer-links">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="d-flex flex-column min-vh-100">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+      <div class="flex-grow-1">
+        <%= yield %>
       </div>
-      <div>
-        I <i class="fas fa-heart"></i> Berlin.
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div>
+          I <i class="fas fa-heart"></i> Berlin.
+        </div>
       </div>
     </div>
-</div>
-
   </body>
 </html>
