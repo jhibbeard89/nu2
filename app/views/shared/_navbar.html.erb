@@ -18,7 +18,7 @@
         </li>
       <% else %>
         <li class="navbar-button">
-          <%= link_to "Log in", new_user_session_path, class: "btn-hollow" %>
+          <%= link_to "Log in", new_user_session_path, class: "btn-hollow" unless @reg_flow %>
         </li>
       <% end %>
     </ul>

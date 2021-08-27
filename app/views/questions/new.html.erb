@@ -1,17 +1,98 @@
-<div class="profile_question">
-  <h3>To allow us to understand your needs, please answer a few questions.</h3>
-  <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
-    <%= f.input :employment_status %>
-    <%= f.input :annual_gross_income_range %>
-    <%= f.input :net_month_income_range %>
-    <%= f.input :german_level %>
-    <%= f.input :email %>
-    <%= f.input :address,
-            input_html: { autocomplete: "address", id: "user_address" } %>
-    <%= f.input :phone_number %>
-    <%= f.input :arrival_date, input_html: { type: 'date' } %>
-    <%= f.input :duration %>
-    <%= f.input :date_of_birth, input_html: { type: 'date' } %>
-    <%= f.submit %>
-  <% end %>
+<div class="container">
+  <div class="profile_question">
+    <div class="welcome-question question-card" id="question-0">
+      <h3>To allow us to understand your needs, please answer a few recomendations.</h3>
+    </div>
+    <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
+
+    <div class="question question-card" id="question-1">
+      <%= f.input :employment_status,
+        input_html: {
+          placeholder: "Employed",
+          class: "input-field"
+          }%>
+    </div>
+
+    <div class="question question-card" id="question-2">
+      <%= f.input :annual_gross_income_range,
+        input_html: {
+          placeholder: "€45 000",
+          class: "input-field"
+          }%>
+    </div>
+
+    <div class="question question-card" id="question-3">
+      <%= f.input :net_month_income_range,
+        input_html:{
+          placeholder: "€3 500",
+          class: "input-field"
+          }%>
+    </div>
+
+    <div class="question question-card" id="question-4">
+      <%= f.input :german_level,
+        input_html: {
+          placeholder: "Beginner",
+          class: "input-field"
+          }%>
+    </div>
+
+    <div class="question question-card" id="question-5">
+      <%= f.input :email,
+        input_html: {
+          placeholder: "s.mayer@example.de",
+          class: "input-field" }
+          %>
+    </div>
+
+    <div class="question question-card" id="question-6">
+      <%= f.input :address,
+        input_html: {
+          autocomplete: "address",
+          id: "user_address",
+          placeholder: "Herbertstraße 13, Berlin, 10123",
+          class: "input-field" }
+          %>
+    </div>
+
+    <div class="question question-card" id="question-7">
+      <%= f.input :phone_number,
+        input_html:{
+          placeholder: "+49 123 45678912",
+          class: "input-field"
+        } %>
+    </div>
+
+    <div class="question question-card" id="question-8">
+      <%= f.input :arrival_date,
+        input_html: {
+          type: 'date',
+          class: 'input-field' } %>
+    </div>
+
+    <div class="question question-card" id="question-9">
+      <%= f.input :duration,
+        input_html: {
+          placeholder: "3 months",
+          class: "input-field"
+        } %>
+    </div>
+
+    <div class="question question-card" id="question-10">
+      <%= f.input :date_of_birth,
+        input_html: {
+          type: 'date',
+          class: 'input-field' } %>
+    </div>
+
+    <div class="question question-card" id="submit">
+      <h2>Thank you for completing the question, please submit to register and receive your answers</h2>
+      <%= f.submit class: "btn btn-flat submit-btn", value: "Submit my questions" %>
+    </div>
+    <% end %>
+    <div class="question-buttons" id="button-container">
+      <button class="btn-flat btn next-btn" id="next-btn">Next Question</button>
+      <button class="btn-flat btn last-btn btn-hollow question" id="back-btn">Previous Question</button>
+    </div>
+  </div>
 </div>
