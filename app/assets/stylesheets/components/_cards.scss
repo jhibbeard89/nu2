@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   padding-top: 20px;
   padding-bottom: 80px;
+  margin-top: 50px;
 }
 
 .card-square {
@@ -29,15 +30,10 @@
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 10px;
-
-  a {
-    color: $brand-purple;
+  color: $brand-purple;
+  text-decoration: none;
+  &:hover {
     text-decoration: none;
-
-    &:hover {
-    font-size: 21px;
-    color: $brand-purple-lighter;
-  }
   }
 }
 
@@ -73,9 +69,23 @@
   margin-right: 25px;
 }
 
+.card-product p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-top: 8px;
+  color: $brand-purple;
+  text-align: justify;
+  margin-right: 25px;
+}
 
 .card-product .card-product-infos {
   padding: 20px;
 }
 
 // FLIP CARDS => See file _television.scss
+// Added by James
+.insurance-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

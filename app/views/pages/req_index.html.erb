@@ -4,40 +4,40 @@
 
 <div class="card-square-container">
 
-  <div class="card-square">
-    <div class="card-square-infos">
-      <%= link_to "Apartment Registration", insurances_path %>
+  <%= link_to(registration_offices_path) do %>
+    <div class="card-square">
+      <h4 class="card-square-infos">Apartment Registration</h4>
+      <div style="text-align: center">
+        <%= image_tag 'apartment.png'  %>
+      </div>
     </div>
-    <div style="text-align: center">
-      <%= image_tag 'apartment.png'  %>
-    </div>
-  </div>
+  <% end %>
 
-  <div class="card-square">
-    <div class="card-square-infos">
-      <%= link_to "Health Insurance", insurances_path %>
+  <%= link_to(insurances_path) do %>
+    <div class="card-square">
+      <h4 class="card-square-infos">Health Insurance</h4>
+      <div style="text-align: center">
+        <%= image_tag 'insurance5.png' %>
+      </div>
     </div>
-    <div style="text-align: center">
-      <%= image_tag 'insurance5.png' %>
-    </div>
-  </div>
+  <% end %>
 
-  <div class="card-square">
-    <div class="card-square-infos">
-      <%= link_to "Banking", banks_path %>
+  <%= link_to(banks_path) do %>
+    <div class="card-square">
+      <h4 class="card-square-infos">Banking</h4>
+      <div style="text-align:center">
+        <%= image_tag 'payments.png' %>
+      </div>
     </div>
-    <div style="text-align:center">
-      <%= image_tag 'payments.png' %>
-    </div>
-  </div>
+  <% end %>
 
-  <div class="card-square">
-    <div class="card-square-infos">
-      <%= link_to "TV Licensing", tv_license_path %>
+  <%= link_to(tv_license_path) do %>
+    <div class="card-square">
+      <h4 class="card-square-infos">TV Licensing</h4>
+      <div style="text-align:center">
+        <%= image_tag 'radio.png' %>
+      </div>
     </div>
-    <div style="text-align:center">
-      <%= image_tag 'radio.png' %>
-    </div>
-  </div>
+  <% end %>
 
 </div>

@@ -7,17 +7,20 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+
 
 // Your CSS partials
 @import "components/grid";
 @import "components/index";
+@import "components/map";
 @import "pages/home";
 @import "pages/index";
 @import "pages/insurances";
 @import "pages/television";
+@import "pages/banks";
+@import "pages/registration_offices";
 
-// Registration Offices
-@import "registration_offices";
 
 html, body {
   min-height: 100vh;
@@ -54,7 +57,7 @@ html, body {
   padding: 20px;
   border-radius: 4px;
   box-shadow: 0 0 30px rgba(0,0,0,0.2);
-
+  margin-bottom: 30px;
 }
 
 .bot {

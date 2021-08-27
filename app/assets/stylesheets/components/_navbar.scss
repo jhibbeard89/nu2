@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 16px;
   background: $brand-yellow;
   // position: sticky;
   top: 0;
@@ -28,6 +29,6 @@
   }
 }
 
-// .navbar-nu2 .navbar-brand img {
-//   width: 40px;
-// }
+.nav-link{
+  font-size: 1.2rem;
+}

@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new]
 
   def new
+    @reg_flow = true
     @question = Question.new
   end
 

@@ -4,10 +4,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Bookings", "#", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My Tasks", "#", class: "nav-link" %>
+          <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -18,7 +18,7 @@
         </li>
       <% else %>
         <li class="navbar-button">
-          <%= link_to "Log in", new_user_session_path, class: "btn-hollow" %>
+          <%= link_to "Log in", new_user_session_path, class: "btn-hollow" unless @reg_flow %>
         </li>
       <% end %>
     </ul>
