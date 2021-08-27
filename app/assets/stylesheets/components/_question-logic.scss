@@ -1,0 +1,30 @@
+.profile_question{
+  position: relative;
+  background-color: white;
+  min-height: 250px;
+  padding: 40px 25px 45px 25px;
+  box-shadow: 0 3px 5px $brand-purple;
+  border-radius: 7px;
+}
+
+.question{
+  display: none;
+}
+
+.question-show{
+  display: inline-block;
+}
+
+.question-buttons{
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  bottom: 45px;
+  .btn {
+    margin-right: 25px;
+  }
+}
+
+.submit-btn{
+  margin-top: 45px;
+}
