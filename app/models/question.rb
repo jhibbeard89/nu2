@@ -10,7 +10,7 @@ class Question < ApplicationRecord
     question.date_of_birth = session[:date_of_birth]
     question.german_level = session[:german_level]
     question.duration = session[:duration]
-    question.user = @user
+    question.user = user
     question.save
   end
 
