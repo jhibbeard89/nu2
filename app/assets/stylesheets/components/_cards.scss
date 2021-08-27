@@ -75,3 +75,9 @@
 }
 
 // FLIP CARDS => See file _television.scss
+// Added by James
+.insurance-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

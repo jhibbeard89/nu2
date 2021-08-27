@@ -5,7 +5,7 @@
     <h2>Based on your WAY answers you should have <%= @type %></h2>
     <p>Please select from the following health care options below:</p>
 
-    <div>
+    <div class="insurance-container">
         <% @insurance.each do |option| %>
             <div class="card-product-2">
                 <%=option.name %>
@@ -16,4 +16,4 @@
         <% end %>
     </div>
 
-    <%= link_to "<< Back to all requirements", req_index_path %>
+    <%= link_to "Back to all requirements", req_index_path %>
