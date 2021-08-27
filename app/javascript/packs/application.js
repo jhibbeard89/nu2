@@ -9,12 +9,16 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
 
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
 import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
+  initAutocomplete();
 })
