@@ -30,15 +30,10 @@
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 10px;
-
-  a {
-    color: $brand-purple;
+  color: $brand-purple;
+  text-decoration: none;
+  &:hover {
     text-decoration: none;
-
-    &:hover {
-    font-size: 21px;
-    color: $brand-purple-lighter;
-  }
   }
 }
 
@@ -88,3 +83,9 @@
 }
 
 // FLIP CARDS => See file _television.scss
+// Added by James
+.insurance-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
