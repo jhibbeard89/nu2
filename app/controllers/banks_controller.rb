@@ -6,9 +6,11 @@ class BanksController < ApplicationController
     @duration = @user_answers.duration
 
     if @duration > 12
-      @bank = @german_level == 'Beginner' ? @banks.find_by(name: 'Deutsche Bank') : @bank.find_by(name: 'Deutsche Bank')
+      @bank = @german_level == 'Beginner' ? Bank.find_by(name: 'Deutsche Bank') : Bank.find_by(name: 'Commerzbank')
+      @alternative_banks = @banks.select{|bank| bank != @bank}
     else
-      @bank = @banks.find_by(name: 'N26')
+      @bank = Bank.find_by(name: 'N26')
+      @alternative_banks = @banks.select{|bank| bank != @bank}
     end
   end
 end
