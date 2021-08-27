@@ -7,17 +7,24 @@
 .section-container {
   display: flex;
   justify-content: space-evenly;
-  background-color: $brand-yellow;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $brand-yellow-faded;
+  padding-bottom: 80px;
+}
 .card-product {
   background-color: $off-white;
+
+  li {
+    color: $brand-purple;
+  };
 }
 
-.card-product-img {
-  background-color: $off-white;
-}
-
-.card-product h2 {
-  color: $brand-purple
+.card-product-infos {
+  color: $brand-purple;
 }

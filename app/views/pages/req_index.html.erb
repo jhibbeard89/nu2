@@ -1,13 +1,43 @@
-<h2>Here are the things you need to do and know...</h3>
+<div class="page-heading">
+  <h2>Based on the answers you provided, here are the items you need to complete:</h3>
+</div>
 
-<h3>Register your apartment</h3>
-<p>Find you more</p>
+<div class="card-square-container">
 
-<h3>Choose health insurance</h3>
-<%= link_to "Find out more", insurances_path %>
+  <div class="card-square">
+    <div class="card-square-infos">
+      <%= link_to "Apartment Registration", insurances_path %>
+    </div>
+    <div style="text-align: center">
+      <%= image_tag 'apartment.png'  %>
+    </div>
+  </div>
 
-<h3>Choose your bank</h3>
-<%= link_to "Find out more", banks_path %>
+  <div class="card-square">
+    <div class="card-square-infos">
+      <%= link_to "Health Insurance", insurances_path %>
+    </div>
+    <div style="text-align: center">
+      <%= image_tag 'insurance5.png' %>
+    </div>
+  </div>
 
-<h3>Inform yourself about TV licensing</h3>
-<%= link_to "Find out more", tv_license_path %>
+  <div class="card-square">
+    <div class="card-square-infos">
+      <%= link_to "Banking", banks_path %>
+    </div>
+    <div style="text-align:center">
+      <%= image_tag 'payments.png' %>
+    </div>
+  </div>
+
+  <div class="card-square">
+    <div class="card-square-infos">
+      <%= link_to "TV Licensing", tv_license_path %>
+    </div>
+    <div style="text-align:center">
+      <%= image_tag 'radio.png' %>
+    </div>
+  </div>
+
+</div>

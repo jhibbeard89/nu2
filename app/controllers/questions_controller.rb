@@ -1,25 +1,22 @@
 class QuestionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :create]
-  def index
-    Question.new
+  skip_before_action :authenticate_user!, only: [:new]
+
+  def new
+    @question = Question.new
+  end
+
+  def set_session_questions
+    question_params.each do |k, v|
+      session[k.to_sym] = v
+    end
+    redirect_to new_user_registration_path
   end
 
   def create
-    @user = User.new
-    @user.email = user_params['email']
-    @user.password = '123456'
-    @user.save
-    @question = Question.new(question_params)
-    @question.save
+    raise
   end
 
   private
-
-  def user_params
-    params.require(:questions).permit(
-      :email
-    )
-  end
 
   def question_params
     params.require(:questions).permit(
@@ -27,8 +24,10 @@ class QuestionsController < ApplicationController
       :german_level,
       :annual_gross_income_range,
       :net_month_income_range,
+      :email,
       :phone_number,
-      :arrivel_date,
+      :arrival_date,
+      :address,
       :duration,
       :date_of_birth
     )

@@ -11,8 +11,10 @@
 // Your CSS partials
 @import "components/grid";
 @import "components/index";
+@import "pages/home";
 @import "pages/index";
-@import "pages/_insurances";
+@import "pages/insurances";
+@import "pages/television";
 
 // Registration Offices
 @import "registration_offices";
@@ -22,3 +24,46 @@ html, body {
   background-color: $brand-yellow;
 }
 
+.container {
+  margin: 0 auto;
+}
+
+.page-heading {
+  text-align: center;
+  padding-bottom: 20px;
+
+  h2 {
+    color: $off-white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  h3 {
+    padding-top: 10px;
+    color: $off-white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 25px;
+    font-weight: bold;
+    }
+}
+
+.info-paragraph {
+  background-color: $brand-purple;
+  color: $off-white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+
+}
+
+.bot {
+  margin-top: -80px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+  img {
+    width: 200px;
+  }
+}
