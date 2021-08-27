@@ -1,7 +1,7 @@
 class Question < ApplicationRecord
   belongs_to :user
 
-  def self.save_question(session)
+  def self.save_question(session, user)
     question = Question.new
     question.employment_status = session[:employment_status]
     question.annual_gross_income_range = session[:annual_gross_income_range]
