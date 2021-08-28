@@ -10,16 +10,11 @@
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
 
 
-// Your CSS partials
-@import "components/grid";
+// CSS components
 @import "components/index";
-@import "components/map";
-@import "pages/home";
+
+// CSS Pages specific
 @import "pages/index";
-@import "pages/insurances";
-@import "pages/television";
-@import "pages/banks";
-@import "pages/registration_offices";
 
 
 html, body {
@@ -34,21 +29,6 @@ html, body {
 .page-heading {
   text-align: center;
   padding-bottom: 20px;
-
-  h2 {
-    color: $off-white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  h3 {
-    padding-top: 10px;
-    color: $off-white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 25px;
-    font-weight: bold;
-    }
 }
 
 .info-paragraph {
