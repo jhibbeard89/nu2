@@ -1,42 +1,31 @@
-<div class="page-heading">
-  <h2>Based on the answers you provided, here are the items you need to complete:</h3>
-</div>
-
-<div class="card-square-container">
+<div class="card-square-container flex-container">
+  <h2 class="page-header-text text-shadow">Based on the answers you provided, here are the items you need to complete:</h2>
 
   <%= link_to(registration_offices_path) do %>
-    <div class="card-square">
+    <div class="card-square nu2-card">
       <h4 class="card-square-infos">Apartment Registration</h4>
-      <div style="text-align: center">
-        <%= image_tag 'apartment.png'  %>
-      </div>
+      <%= image_tag 'apartment.png'  %>
     </div>
   <% end %>
 
   <%= link_to(insurances_path) do %>
-    <div class="card-square">
+    <div class="card-square nu2-card">
       <h4 class="card-square-infos">Health Insurance</h4>
-      <div style="text-align: center">
-        <%= image_tag 'insurance5.png' %>
-      </div>
+      <%= image_tag 'insurance5.png' %>
     </div>
   <% end %>
 
   <%= link_to(banks_path) do %>
-    <div class="card-square">
+    <div class="card-square nu2-card">
       <h4 class="card-square-infos">Banking</h4>
-      <div style="text-align:center">
-        <%= image_tag 'payments.png' %>
-      </div>
+      <%= image_tag 'payments.png' %>
     </div>
   <% end %>
 
   <%= link_to(tv_license_path) do %>
-    <div class="card-square">
+    <div class="card-square nu2-card">
       <h4 class="card-square-infos">TV Licensing</h4>
-      <div style="text-align:center">
-        <%= image_tag 'radio.png' %>
-      </div>
+      <%= image_tag 'radio.png' %>
     </div>
   <% end %>
 

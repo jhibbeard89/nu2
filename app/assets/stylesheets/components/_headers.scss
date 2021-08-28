@@ -1,33 +1,42 @@
 // This file should contain all global values related to headers, document headers and page headers. This will overwrite any steup within the config that relates to headers.
 
+
+.call-to-action{
+  color: $off-white;
+}
+
 #call-to-action-header{
   margin-top: 30px;
-  color: white;
   font-size: 50px;
   font-weight: bold;
 }
 
-h2 {
-  color: $off-white;
-  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+#call-to-action-text{
+  margin-top: 20px;
+  margin-bottom: 30px;
   font-size: 30px;
-  font-weight: bold;
 }
 
 h3 {
   padding-top: 10px;
-  color: $off-white;
-  // text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 25px;
   font-weight: bold;
 }
 
+.page-header-text{
+  font-size: 30px;
+  font-weight: bold;
+  color: $off-white;
+  margin-bottom: 60px;
 
-.header-shadow{
+}
+
+
+.text-shadow{
   text-shadow: $black-shadow
 }
 
-.page-heading {
-  text-align: center;
-  padding-bottom: 20px;
-}
+// .page-heading {
+//   text-align: center;
+//   padding-bottom: 20px;
+// }
