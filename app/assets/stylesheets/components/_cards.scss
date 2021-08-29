@@ -15,20 +15,27 @@
 
 .nu2-card{
   // .card is a bootstrap class
+  width: 325px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: $off-white;
+  height: 100%;
   img{
+    width: 60%;
     object-fit: cover;
   }
 }
+
+
+
 
 .card-square {
   width: 275px;
   height: 275px;
   align-items: center;
   padding: 10px;
+  margin-top: 20px;
   &:hover {
     text-decoration: none;
   }
@@ -77,14 +84,15 @@
   margin-right: 25px;
 }
 
-.card-product .card-product-infos {
-  padding: 20px;
-}
-
 // FLIP CARDS => See file _television.scss
 // Added by James
 .insurance-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.card-product-infos {
+  padding: 20px;
+  color: $brand-purple;
 }
