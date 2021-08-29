@@ -1,6 +1,9 @@
 .flex-container{
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 80px;
 }
 
 
