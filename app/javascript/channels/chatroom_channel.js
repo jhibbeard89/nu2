@@ -8,8 +8,22 @@ const initChatroomCable = () => {
 
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
-        console.log(data); // called when data is broadcast in the cable
-        messagesContainer.insertAdjacentHTML('beforeend', data);
+        console.log(data.id)
+        if(data.user.first_name == currentUser){
+        //console.log(data.user); // called when data is broadcast in the cable
+        messagesContainer.insertAdjacentHTML('beforeend', data.html);
+        } else {
+          console.log(currentUser)
+          console.log(data.user.first_name)
+          console.log(`#message-${data.id}`)
+          messagesContainer.insertAdjacentHTML('beforeend', data.html);
+          let message = document.querySelector(`#message-${data.id}`)
+          // console.log(`#message-${data.id}`)
+          // console.log(message)
+          message.classList.remove("my-message")
+          message.classList.add("your-message")
+          // console.log('test')
+        }
       },
     });
   }
