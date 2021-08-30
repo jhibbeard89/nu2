@@ -66,8 +66,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_141010) do
 
   create_table "questions", force: :cascade do |t|
     t.string "employment_status"
-    t.integer "annual_gross_income_range"
-    t.integer "net_month_income_range"
+    t.string "annual_gross_income_range"
     t.string "phone_number"
     t.datetime "arrivel_date"
     t.datetime "date_of_birth"
@@ -75,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_141010) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "german_level"
-    t.integer "duration"
+    t.string "duration"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 

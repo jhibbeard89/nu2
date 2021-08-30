@@ -7,37 +7,53 @@
 
     <div class="question question-card" id="question-1">
       <%= f.input :employment_status,
+        label: false,
         input_html: {
           placeholder: "Employed",
-          class: "input-field"
+          class: "input-field, hidden",
+          id: "employment-input"
           }%>
+      <h3 class="question-header">Please select which employment status applies to you?</h3>
+      <div class="buttons-container-questions flex-container">
+        <div class="btn question-button">Employed</div>
+        <div class="btn question-button">Self-employed</div>
+        <div class="btn question-button">Unemployed</div>
+        <div class="btn question-button">Student</div>
+      </div>
     </div>
 
     <div class="question question-card" id="question-2">
       <%= f.input :annual_gross_income_range,
+        label: false,
         input_html: {
-          placeholder: "€45 000",
-          class: "input-field"
+          placeholder: "yes/no",
+          class: "input-field, hidden",
+          id: "income-input"
           }%>
+      <h3 class="question-header">Will you have a gross salary of more than 62,550€ once living in Germany</h3>
+      <div class="buttons-container-questions flex-container">
+        <div class="btn question-button"> Yes </div>
+        <div class="btn question-button"> No </div>
+      </div>
     </div>
 
     <div class="question question-card" id="question-3">
-      <%= f.input :net_month_income_range,
-        input_html:{
-          placeholder: "€3 500",
-          class: "input-field"
+      <%= f.input :german_level,
+        label: false,
+        input_html: {
+          placeholder: "Beginner",
+          class: "input-field, hidden",
+          id: "german-level"
           }%>
+      <h3 class="question-header">What is your German language level?</h3>
+      <div class="buttons-container-questions flex-container">
+        <div class="btn question-button"> Beginner </div>
+        <div class="btn question-button"> Intermediate </div>
+        <div class="btn question-button"> Advanced </div>
+      </div>
     </div>
 
     <div class="question question-card" id="question-4">
-      <%= f.input :german_level,
-        input_html: {
-          placeholder: "Beginner",
-          class: "input-field"
-          }%>
-    </div>
-
-    <div class="question question-card" id="question-5">
       <%= f.input :email,
         input_html: {
           placeholder: "s.mayer@example.de",
@@ -45,7 +61,7 @@
           %>
     </div>
 
-    <div class="question question-card" id="question-6">
+    <div class="question question-card" id="question-5">
       <%= f.input :address,
         input_html: {
           autocomplete: "address",
@@ -55,7 +71,7 @@
           %>
     </div>
 
-    <div class="question question-card" id="question-7">
+    <div class="question question-card" id="question-6">
       <%= f.input :phone_number,
         input_html:{
           placeholder: "+49 123 45678912",
@@ -63,19 +79,26 @@
         } %>
     </div>
 
-    <div class="question question-card" id="question-8">
+    <div class="question question-card" id="question-7">
       <%= f.input :arrival_date,
         input_html: {
           type: 'date',
           class: 'input-field' } %>
     </div>
 
-    <div class="question question-card" id="question-9">
+    <div class="question question-card" id="question-8">
       <%= f.input :duration,
         input_html: {
+          label: false,
           placeholder: "3 Months / Years",
-          class: "input-field"
+          class: "input-field, hidden",
+          id: "duration-input"
         } %>
+      <h3 class="question-header">Is your planned stay longer than 1 year?</h3>
+      <div class="buttons-container-questions flex-container">
+        <div class="btn question-button"> Yes </div>
+        <div class="btn question-button"> No </div>
+      </div>
     </div>
 
     <div class="question question-card" id="question-10">
@@ -90,7 +113,7 @@
       <%= f.submit class: "btn btn-flat submit-btn", value: "Submit my questions" %>
     </div>
     <% end %>
-    <div class="question-buttons" id="button-container">
+    <div class="question-nav-buttons" id="button-container">
       <button class="btn-flat btn next-btn" id="next-btn">Next Question</button>
       <button class="btn-flat btn last-btn btn-hollow question" id="back-btn">Previous Question</button>
     </div>

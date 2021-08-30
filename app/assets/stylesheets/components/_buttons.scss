@@ -121,3 +121,26 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.buttons-container-questions{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.question-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 15px 25px;
+  border: 1px solid $brand-purple;
+  padding: 10px 45px;
+  text-align: center;
+  width: 150px;
+  &:hover{
+    color: white;
+    background-color: $brand-purple-faded;
+  }
+}
