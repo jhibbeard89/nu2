@@ -14,10 +14,10 @@ const WayLogic = () => {
       container[i].classList.add("question")
       i += 1
       container[i].classList.remove("question")
-      if(i !== 0){
+      if(i !== 1){
         buttonBack.classList.remove("question")
       }
-      if(i === 11){
+      if(i === 10){
         buttonContainer.style.display = "none"
       }
     });
@@ -35,22 +35,6 @@ const WayLogic = () => {
     })
   }
 }
-
-// const UserSelection = () => {
-//   const interaction = document.getElementsByClassName('employment-status')
-//   const target = document.getElementById('employment-input')
-//   const interactionButtons = Object.entries(interaction)
-
-//   interactionButtons.forEach(element =>{
-//     element[1].addEventListener('click', () => {
-//       target.value = element[1].innerText;
-//       $(".employment-status").removeClass('selected')
-//       element[1].classList.add('selected')
-//     });
-//   });
-// }
-
-
 
 const buttonSelection = (questionId, formSelection) => {
   const question = document.getElementById(questionId);
@@ -72,19 +56,5 @@ const UserSelection = () => {
   buttonSelection("question-3", "german-level");
   buttonSelection("question-8", "duration-input");
 }
-
-
-  // const buttonSelection = (question, formSelection) => {
-  // const question = document.getElementById('question-1');
-  // const target = document.getElementById('employment-input');
-  // const selectionButton = question.getElementsByClassName('question-button');
-  // const interactionButtons = Object.entries(selectionButton)
-  // interactionButtons.forEach(element => {
-  //   element[1].addEventListener('click', () => {
-  //     target.value = element[1].innerText;
-  //     $(".employment-status").removeClass('selected')
-  //     element[1].classList.add('selected')
-  //   });
-  // })
 
 export {WayLogic, UserSelection}

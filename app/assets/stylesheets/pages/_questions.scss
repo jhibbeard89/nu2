@@ -32,13 +32,15 @@
 
 
 .question-header {
+  color: $brand-purple !important;
   font-weight: 400;
   color: black;
   box-shadow: none;
+  text-shadow: $black-shadow;
 }
 
 .selected{
-  background-color: $brand-purple;
+  background-color: $brand-purple-lighter;
   color: white;
 }
 

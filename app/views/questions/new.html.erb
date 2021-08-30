@@ -13,23 +13,24 @@
           class: "input-field, hidden",
           id: "employment-input"
           }%>
-      <h3 id="header">Please select which employment status applies to you?</h3>
+      <h3 class="question-header">Please select which employment status applies to you?</h3>
       <div class="buttons-container-questions flex-container">
-        <div class="btn question-button employment-status">Employed</div>
-        <div class="btn question-button employment-status">Self-employed</div>
-        <div class="btn question-button employment-status">Unemployed</div>
-        <div class="btn question-button employment-status">Student</div>
+        <div class="btn question-button">Employed</div>
+        <div class="btn question-button">Self-employed</div>
+        <div class="btn question-button">Unemployed</div>
+        <div class="btn question-button">Student</div>
       </div>
     </div>
 
     <div class="question question-card" id="question-2">
       <%= f.input :annual_gross_income_range,
+        label: false,
         input_html: {
           placeholder: "yes/no",
           class: "input-field, hidden",
           id: "income-input"
           }%>
-      <h3>Will you have a gross salary of more than 62,550€ once living in Germany</h3>
+      <h3 class="question-header">Will you have a gross salary of more than 62,550€ once living in Germany</h3>
       <div class="buttons-container-questions flex-container">
         <div class="btn question-button"> Yes </div>
         <div class="btn question-button"> No </div>
@@ -38,14 +39,15 @@
 
     <div class="question question-card" id="question-3">
       <%= f.input :german_level,
+        label: false,
         input_html: {
           placeholder: "Beginner",
           class: "input-field, hidden",
           id: "german-level"
           }%>
-      <h3>What is your Germal language level?</h3>
+      <h3 class="question-header">What is your German language level?</h3>
       <div class="buttons-container-questions flex-container">
-        <div class="btn question-button"> Begginner </div>
+        <div class="btn question-button"> Beginner </div>
         <div class="btn question-button"> Intermediate </div>
         <div class="btn question-button"> Advanced </div>
       </div>
@@ -87,11 +89,12 @@
     <div class="question question-card" id="question-8">
       <%= f.input :duration,
         input_html: {
+          label: false,
           placeholder: "3 Months / Years",
           class: "input-field, hidden",
           id: "duration-input"
         } %>
-      <h3>Is your planned stay longer than 1 year?</h3>
+      <h3 class="question-header">Is your planned stay longer than 1 year?</h3>
       <div class="buttons-container-questions flex-container">
         <div class="btn question-button"> Yes </div>
         <div class="btn question-button"> No </div>
