@@ -4,8 +4,7 @@ class BanksController < ApplicationController
     @user_answers = current_user.questions.first
     @german_level = @user_answers.german_level
     @duration = @user_answers.duration
-
-    if @duration > 12
+    if @duration == "t"
       @bank = @german_level == 'Beginner' ? Bank.find_by(name: 'Deutsche Bank') : Bank.find_by(name: 'Commerzbank')
       @alternative_banks = @banks.select{|bank| bank != @bank}
     else
