@@ -13,28 +13,30 @@
     <h3>Based on your planned duration of stay and language skills, we recommend the below option(s) for you.</h3>
   </div>
 </div>
-
 <div class="flex-container">
-
-  <div class="bank-recommendation-card card-bank card-product-infos text-center">
-    <p class="card-bank-name-inverted"><%= "Our pick for you:" %></p>
-    <%= image_tag(@bank.image) %>
-    <h2 class="card-bank-name-inverted"><%= @bank.name%></h2>
-    <p class="card-bank-text-inverted"><%= @bank.summary %></p>
-    <button type="button" class="btn-gradient-yellow">Select Bank</button>
-  </div>
-
-  <% @alternative_banks.each do |bank| %>
   <div class="nu2-card card-bank card-product-infos text-center">
-    <h2 class="card-bank-name"><%= "Alternative option:"%></h2>
-    <%= image_tag(bank.image) %>
-    <h2 class="card-bank-name"><%= bank.name%></h2>
-    <p class="card-bank-text"><%= bank.summary %></p>
-    <button type="button" class="btn-gradient-purple">Select Bank</button>
+      <%= image_tag 'banking0.png' %>
+      <h2 class="card-bank-name"><%= @bank.name%></h2>
+      <p class="card-bank-text"><%= @bank.summary %></p>
+      <%= link_to 'Choose this bank', banks_create_path(@bank), class: "btn-gradient-yellow" if @new %>
+      <%= link_to 'Add this bank', banks_update_path(@bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+    </div>
   </div>
-  <% end %>
 
-</div>
+  <div class="grid-container">
+    <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
+    <div class="flex-container">
+      <% @alternative_banks.each do |bank| %>
+        <div class="nu2-card card-bank card-product-infos text-center">
+          <%= image_tag 'banking2.png' %>
+          <h2 class="card-bank-name"><%= bank.name%></h2>
+          <p class="card-bank-text"><%= bank.summary %></p>
+          <%= link_to 'Choose this bank', banks_create_path(bank), class: "btn-gradient-yellow" if @new %>
+          <%= link_to 'Add this bank', banks_update_path(bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
 <div class="back-btn-container">
   <%= link_to "<< Back to My Tasks", req_index_path, class: "btn-back" %>

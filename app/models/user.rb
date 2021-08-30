@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :questions
   has_many :appointments
+  has_many :user_choices
 end
