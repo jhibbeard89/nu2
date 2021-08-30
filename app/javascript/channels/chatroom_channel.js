@@ -4,6 +4,7 @@ const initChatroomCable = () => {
   const messagesContainer = document.getElementById('messages');
   if (messagesContainer) {
     const id = messagesContainer.dataset.chatroomId;
+    const currentUser = document.querySelector("#main").dataset.currentUser;
 
     consumer.subscriptions.create({ channel: "ChatroomChannel", id: id }, {
       received(data) {
