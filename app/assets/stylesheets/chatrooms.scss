@@ -46,14 +46,27 @@
     .my-message {
     background-color: chocolate;
     border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 200px;
     }
 
     .your-message {
     border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: darkred;
     align-self: flex-end;
-    }
+    margin-right: 25px;
+    width: 200px;
   
+    }
+
+    .your-message-author {
+      margin-right: 25px;
+      align-self: flex-end;
+    }
+
       #send-message {
         width: 95%;
         margin: auto;
