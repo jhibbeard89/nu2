@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :questions, only: [:new, :set_session_questions]
   post 'set_session', to: 'questions#set_session_questions', as: 'set_session_questions'
   post 'questions_create', to: 'questions#create', as: 'questions_create'
-  resources :appointments, only: [:edit, :update, :create]
+  resources :appointments, only: [:edit, :update, :create, :show]
   resources :questions
 
   get 'tv_license', to: 'pages#tv_license'

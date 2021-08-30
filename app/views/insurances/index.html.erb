@@ -1,19 +1,28 @@
-<h2>Insurance</h2>
+<h1 class="page-header-text text-shadow">Health Insurance <i>(Krankenversicherung</i>) </h1>
 
-<p>Once you sign up for a health insurance policy in Berlin, you receive an Insurance Card, which you have to present when seeking medical attention at a doctor’s office or hospital. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
+<div class="container">
+  <div class="info-paragraph">
+    <p>Once you sign up for a health insurance policy in Berlin (whether private or public), you will receive an insurance card in the mail, which you have to present whenever seeking medical treatment. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
+  </div>
+</div>
 
-    <h2>Based on your WAY answers you should have <%= @type %></h2>
-    <p>Please select from the following health care options below:</p>
+<div class="container">
+  <div class="results-paragraph">
+    <h3>Based on your income and age, we recommend that you go with <strong><%= @type %></strong> Here are our favorite options:</h3>
+  </div>
+</div>
 
-    <div class="insurance-container">
-        <% @insurance.each do |option| %>
-            <div class="card-product-2">
-                <h4><%=option.name %></h4>
-                <p><%= option.summary %></p>
+<div class="flex-container card-container">
+    <% @insurance.each do |option| %>
+            <div class="flex-container nu2-card insurance-card">
                 <%= image_tag(option.image) %>
-                <button type="button" class="btn-gradient-yellow">Choose this insurance</button>
+                <h2 class="text-shadow"><%=option.name %></h2>
+                <p><%= option.summary %></p>
+                <button type="button" class="btn-gradient-yellow">Select Insurance</button>
             </div>
         <% end %>
-    </div>
+</div>
 
-    <%= link_to "Back to all requirements", req_index_path %>
+<div class="back-btn-container">
+  <%= link_to "<< Back to My Tasks", req_index_path, class: "btn-back" %>
+</div>
