@@ -42,9 +42,17 @@ pankow = RegistrationOffice.create(
   opening_hours: '08:00',
   closing_hours: '16:00'
 )
+wedding = RegistrationOffice.create(
+  office_name: 'Bürgeramt Wedding',
+  address: 'Osloer Str. 36, 13359 Berlin',
+  opening_hours: '08:00',
+  closing_hours: '16:00'
+)
+
 
 puts 'Registration offices created.'
 puts 'Now seeding appointments ...'
+
 
 Appointment.create(
   date: DateTime.new(2021,9,15,8,30,0),
@@ -88,6 +96,7 @@ Appointment.create(
   documents_uploaded: false,
   registration_office_id: kreuzberg.id
 )
+
 
 Appointment.create(
   date: DateTime.new(2021,9,16,11,00,0),
@@ -153,6 +162,29 @@ Appointment.create(
   documents_uploaded: false,
   registration_office_id: pankow.id
 )
+
+
+Appointment.create(
+  date: DateTime.new(2021,9,14,10,00,0),
+  documents_uploaded: false,
+  registration_office_id: wedding.id
+)
+Appointment.create(
+  date: DateTime.new(2021,9,15,9,30,0),
+  documents_uploaded: false,
+  registration_office_id: wedding.id
+)
+Appointment.create(
+  date: DateTime.new(2021,9,16,11,30,0),
+  documents_uploaded: false,
+  registration_office_id: wedding.id
+)
+Appointment.create(
+  date: DateTime.new(2021,9,17,14,00,0),
+  documents_uploaded: false,
+  registration_office_id: wedding.id
+)
+
 
 puts 'Appointments succesfully created.'
 
