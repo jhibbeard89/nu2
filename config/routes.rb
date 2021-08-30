@@ -16,4 +16,10 @@ Rails.application.routes.draw do
 
   get 'tv_license', to: 'pages#tv_license'
   get 'req_index', to: 'pages#req_index'
+
+  resources :chatrooms, only: :show
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
