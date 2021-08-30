@@ -35,6 +35,12 @@ html, body {
   margin-bottom: 30px;
 }
 
+.results-paragraph {
+  background-color: none;
+  color: $off-white;
+  text-shadow: $black-shadow;
+}
+
 .bot {
   margin-top: -80px;
   display: flex;
