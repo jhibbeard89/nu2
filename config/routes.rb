@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users, controllers: {registrations: 'registrations'}
 
+  resources :journey, only: [:index]
   resources :banks, only: [:index, :show]
   resources :insurances, only: [:index, :show]
   resources :registration_offices, only: [:index, :show]
