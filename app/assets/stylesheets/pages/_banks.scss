@@ -3,15 +3,23 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .card-bank{
+  padding-top: 25px;
   padding-bottom: 25px;
+
   .card-bank-name {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    font-size: 30px;
+    font-size: 23px;
     font-weight: bold;
+    padding-top: 20px;
   }
 
   .card-bank-text {
     text-align: justify;
-    margin-top: 25px;
+    margin-top: 20px;
+  }
+
+  img {
+    border: 2px solid $brand-purple;
+    border-radius: 4px;
   }
 }

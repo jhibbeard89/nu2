@@ -16,22 +16,22 @@
 
   <div class="flex-container">
     <div class="nu2-card card-bank card-product-infos text-center">
-        <%= image_tag 'banking0.png' %>
+        <%= image_tag(@bank.image) %>
         <h2 class="card-bank-name"><%= @bank.name%></h2>
         <p class="card-bank-text"><%= @bank.summary %></p>
-        <button type="button" class="btn-gradient-yellow">Choose this bank</button>
+        <button type="button" class="btn-gradient-yellow">Select Bank</button>
       </div>
     </div>
 
     <div class="grid-container">
-      <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
+      <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives:</h3>
       <div class="flex-container">
         <% @alternative_banks.each do |bank| %>
               <div class="nu2-card card-bank card-product-infos text-center">
-                <%= image_tag 'banking2.png' %>
+                <%= image_tag(bank.image) %>
                 <h2 class="card-bank-name"><%= bank.name%></h2>
                 <p class="card-bank-text"><%= bank.summary %></p>
-                <button type="button" class="btn-gradient-yellow">Choose this bank</button>
+                <button type="button" class="btn-gradient-yellow">Select Bank</button>
               </div>
         <% end %>
       </div>
