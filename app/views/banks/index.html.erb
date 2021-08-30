@@ -7,34 +7,29 @@
   </div>
 
 
-
-  <div class="flex-container">
   <h3 class="section-headers text-shadow text-center">Based on that you plan to stay long-term in berlin and you have a good grasp of the language we recommend:</h3>
-      <div class="nu2-card card-product-infos text-center">
+  <div class="flex-container">
+    <div class="nu2-card card-bank card-product-infos text-center">
         <%= image_tag 'banking0.png' %>
         <h2 class="card-bank-name"><%= @bank.name%></h2>
         <p class="card-bank-text"><%= @bank.summary %></p>
-        <div class="align-center">
         <button type="button" class="btn-gradient-yellow">Choose this bank</button>
-        </div>
       </div>
-  </div>
+    </div>
 
-  <div>
-    <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
-    <div class="flex-container">
-      <% @alternative_banks.each do |bank| %>
-            <div class="nu2-card card-product-infos text-center">
-              <%= image_tag 'banking2.png' %>
-              <h2 class="card-bank-name"><%= bank.name%></h2>
-              <p class="card-bank-text"><%= @bank.summary %></p>
-              <div class="text-center">
+    <div class="grid-container">
+      <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
+      <div class="flex-container">
+        <% @alternative_banks.each do |bank| %>
+              <div class="nu2-card card-bank card-product-infos text-center">
+                <%= image_tag 'banking2.png' %>
+                <h2 class="card-bank-name"><%= bank.name%></h2>
+                <p class="card-bank-text"><%= @bank.summary %></p>
                 <button type="button" class="btn-gradient-yellow">Choose this bank</button>
               </div>
-            </div>
-      <% end %>
+        <% end %>
+      </div>
       <button type="button" class="btn-flat" id="bank-back-button"><%= link_to "Back to all requirements", req_index_path %></button>
     </div>
   </div>
-</div>
 </div>

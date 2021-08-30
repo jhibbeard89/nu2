@@ -1,18 +1,24 @@
 // Place all the styles related to the banks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.card-bank-name {
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+.card-bank{
+  padding-bottom: 25px;
+  .card-bank-name {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     font-size: 30px;
     font-weight: bold;
   }
 
-  .card-bank-text{
+  .card-bank-text {
     text-align: left;
     margin-top: 25px;
   }
+}
+
 
 
   #bank-back-button{
     margin-top: 50px;
+    justify-self: center;
   }
