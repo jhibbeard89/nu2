@@ -19,7 +19,7 @@ const initChatroomCable = () => {
           messagesContainer.insertAdjacentHTML('beforeend', data.html);
           let message = document.querySelector(`#message-${data.id}`)
           // console.log(`#message-${data.id}`)
-          // console.log(message)
+          // console.log(message)1
           message.classList.remove("my-message")
           message.classList.add("your-message")
           // console.log('test')
