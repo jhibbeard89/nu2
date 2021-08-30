@@ -10,7 +10,7 @@
   justify-content: space-evenly;
   padding-top: 20px;
   padding-bottom: 80px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .nu2-card{
@@ -61,4 +61,8 @@
 .card-product-infos {
   padding: 20px 20px 0 20px;
   color: $brand-purple;
+  text-align: justify;
+  ul{
+    padding-right: 5px;
+  }
 }
