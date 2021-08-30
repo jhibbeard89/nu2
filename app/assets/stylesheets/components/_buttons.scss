@@ -99,3 +99,16 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+.buttons-container-questions{
+  display: flex;
+}
+
+.question-button{
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 15px 25px;
+  border: 1px solid $brand-purple;
+  padding: 10px 45px;
+}
