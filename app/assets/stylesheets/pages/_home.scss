@@ -1,26 +1,10 @@
 // Specific CSS for your home-page
 .banner-container {
-  display: flex;
-  justify-content: space-evenly;
   padding-right: 15px;
 }
 
-.section-container {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 20px;
-  padding-bottom: 80px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: $brand-yellow-faded;
-  padding-bottom: 80px;
-}
 .card-product {
   background-color: $off-white;
-
   li {
     color: $brand-purple;
   };
@@ -35,4 +19,19 @@
   img{
     max-width: 840px;
   }
+}
+
+#call-to-action-btn {
+  flex-grow: 0;
+  padding: 15px 20px;
+  font-size: 1.3rem;
+}
+
+.home-button-container{
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.home-card{
+  padding-bottom: 5px;
 }

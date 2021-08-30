@@ -1,18 +1,16 @@
 <%# BANNER %>
 
-<div class="banner">
-  <div class="banner-container">
-    <div class="home-image">
-      <%= image_tag 'bureaucracy.jpg'  %>
-    </div>
-    <div class="container">
-      <div>
-        <h1>Nü2 Berlin?</h1>
-        <p>We can help. Hack German bureaucracy with our services.</p>
+<div class="banner flex-container">
+  <div class="home-image">
+    <%= image_tag 'bureaucracy.jpg'  %>
+  </div>
+
+  <div class="banner-text-container">
+    <div>
+      <h1 class="text-shadow call-to-action" id="call-to-action-header">Nü2 Berlin?</h1>
+      <p class="text-shadow call-to-action" id="call-to-action-text">We can help. Hack German bureaucracy with our services.</p>
+      <div class="home-button-container flex-container">
         <%= link_to "GET STARTED", new_question_path, class: "btn-flat", id: "call-to-action-btn" unless current_user %>
-      </div>
-      <div>
-        <br>
         <%= link_to "Already a member?", new_user_session_path unless current_user%>
       </div>
     </div>
@@ -20,68 +18,45 @@
 </div>
 
 <%# CARDS ON LANDING PAGE %>
-<div class="section-container">
-  <div class="card-product">
-    <div style="text-align: center">
+<div class="flex-container card-container">
+
+  <div class="flex-container card-product nu2-card home-card">
       <%= image_tag 'telescope.png'  %>
-    </div>
     <div class="card-product-infos">
-        <h2>Fulsome Support</h2>
+        <h2 class="text-shadow">Fullsome Support</h2>
         <ul>
-          <li>
-            <%= "City address registration, health insurance, bank account, and more!" %>
-          </li>
-          <li>
-            <%= "Gather and keep track of all your information in one place." %>
-          </li>
-          <li>
-            <%= "We've done the research so you don't have to." %>
-          </li>
+          <li>"Address registration, health insurance, bank account, and more!" </li>
+          <li>"Gather and keep track of all your information in one place."</li>
+          <li>"We've done the research so you don't have to."
         </ul>
     </div>
   </div>
 
-  <div class="card-product">
-    <div style="text-align: center">
-      <%= image_tag 'ridin.png' %>
-    </div>
+  <div class="flex-container card-product nu2-card home-card">
+    <%= image_tag 'ridin.png' %>
     <div class="card-product-infos">
-      <h2>Fast and Free</h2>
+      <h2 class="text-shadow">Fast and Free</h2>
       <ul>
-          <li>
-            <%= "Our services are absolutely free; just sign-up!" %>
-          </li>
-          <li>
-            <%= "Book appointments quickly and seamlessly through our portal." %>
-          </li>
-          <li>
-            <%= "We offer 24/7 online support. Chat with us!" %>
-          </li>
+          <li>"Our services are absolutely free; just sign-up!"</li>
+          <li>"Book appointments quickly and seamlessly through our portal."</li>
+          <li>"We offer 24/7 online support. Chat with us!"</li>
         </ul>
     </div>
   </div>
 
-  <div class="card-product">
-    <div style="text-align:center">
-      <%= image_tag 'peace.png' %>
-    </div>
+  <div class="flex-container card-product nu2-card home-card">
+    <%= image_tag 'peace.png' %>
     <div class="card-product-infos">
-      <h2>Friendly Service</h2>
+      <h2 class="text-shadow">Friendly Service</h2>
       <ul>
-          <li>
-            <%= "Our services are catered to your specific relocation and life needs." %>
-          </li>
-          <li>
-            <%= "We speak English, German, Mandarin, French, Spanish, Turkish and Arabic." %>
-          </li>
-          <li>
-            <%= "We can't wait to welcome you!" %>
-          </li>
+          <li>"Our services are catered to your specific relocation and life needs."</li>
+          <li>"We speak English, German, Mandarin, French, Spanish, Turkish and Arabic."</li>
+          <li>"We can't wait to welcome you!"</li>
         </ul>
     </div>
   </div>
 </div>
 
-<div class="button-container">
+<div class="flex-container">
   <%= link_to "Let us recommend the right solution for you!", new_user_registration_path, class: "btn-hollow" %>
 </div>

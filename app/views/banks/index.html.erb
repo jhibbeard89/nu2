@@ -1,69 +1,35 @@
 <div class="container">
-  <div class="page-heading" >
+  <div class="info-paragraph">
     <h2>Banking</h2>
+    <p>
+      When moving to Germany, it is very important to have (preferably free!) access to your funds. There are few things more frustrating than incurring expensive bank transaction fees, ATM charges, and delays in money transfers. On top of this, having a German bank account is often an important requirement for renting an apartment, signing up for a phone/internet package and getting paid by your employer. As such, setting up a German bank account as soon as possible is definitely a priority when moving to Germany! In Germany, there are a number of traditional banking options as well as an array of modern online banks. We have profiled a number of these below, highlighting their respective pros and cons to give you a clear idea of which is the best bank in Germany for your situation.
+    </p>
   </div>
-    <div class="info-paragraph">
-  <p>When moving to Germany, it is very important to have (preferably free!) access to your funds. There are few things more frustrating than incurring expensive bank transaction fees, ATM charges, and delays in money transfers.
 
-  On top of this, having a German bank account is often an important requirement for renting an apartment, signing up for a phone/internet package and getting paid by your employer. As such, setting up a German bank account as soon as possible is definitely a priority when moving to Germany!
 
-  In Germany, there are a number of traditional banking options as well as an array of modern online banks. We have profiled a number of these below, highlighting their respective pros and cons to give you a clear idea of which is the best bank in Germany for your situation. </p>
-    </div>
-  
-    <h3>Based on that you plan to stay long-term in berlin and you have a good grasp of the language we recommend:</h3>
-
-  <div class="section-container">
-    
-        <div class="card-product-2">
-          <div class="card-product-infos">
-            <div style="text-align: center">
-              <%= image_tag 'banking0.png' %>
-            </div>
-            <h2><%= @bank.name%></h2>
-            <ul>
-              <li>
-                 <%=@bank.summary%>
-              </li>
-            </ul>
-            <div style="text-align: center">
-            <button type="button" class="btn-gradient-yellow">Choose this bank</button>
-            </div>
-          </div>
-        </div>
+  <h3 class="section-headers text-shadow text-center">Based on that you plan to stay long-term in berlin and you have a good grasp of the language we recommend:</h3>
+  <div class="flex-container">
+    <div class="nu2-card card-bank card-product-infos text-center">
+        <%= image_tag 'banking0.png' %>
+        <h2 class="card-bank-name"><%= @bank.name%></h2>
+        <p class="card-bank-text"><%= @bank.summary %></p>
+        <button type="button" class="btn-gradient-yellow">Choose this bank</button>
+      </div>
     </div>
 
-
-    <h3>Here are the alternatives too...</h3>
-      <div class="section-container">
-    <% @alternative_banks.each do |bank| %>
-        <div class="card-product-2">
-          <div class="card-product-infos">
-            <div style="text-align: center">
-              <%= image_tag 'banking2.png' %>
-            </div>
-            <h2><%= bank.name%></h2>
-            <ul>
-              <li>
-                 <%=bank.summary%>
-              </li>
-            </ul>
-             <div style="text-align: center">
-            <button type="button" class="btn-gradient-yellow">Choose this bank</button>
-            </div>
-          </div>
-        </div>
-    <% end %>
+    <div class="grid-container">
+      <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
+      <div class="flex-container">
+        <% @alternative_banks.each do |bank| %>
+              <div class="nu2-card card-bank card-product-infos text-center">
+                <%= image_tag 'banking2.png' %>
+                <h2 class="card-bank-name"><%= bank.name%></h2>
+                <p class="card-bank-text"><%= @bank.summary %></p>
+                <button type="button" class="btn-gradient-yellow">Choose this bank</button>
+              </div>
+        <% end %>
+      </div>
+      <button type="button" class="btn-flat" id="bank-back-button"><%= link_to "Back to all requirements", req_index_path %></button>
+    </div>
   </div>
-
-
-
-
-
-          
-  
-  </div>
-
-            <div style="text-align: center">
-            <button type="button" class="btn-flat"><%= link_to "Back to all requirements", req_index_path %></button>
-            </div>
 </div>

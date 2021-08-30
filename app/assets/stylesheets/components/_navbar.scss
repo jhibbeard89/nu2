@@ -6,16 +6,16 @@
   background: $brand-yellow;
   // position: sticky;
   top: 0;
+  .navbar-collapse {
+    flex-grow: 0;
+  }
 }
 
-.navbar-nu2 .navbar-collapse {
-  flex-grow: 0;
-}
+// .nav-item {
+//   color: $brand-purple;
+// }
 
-.nav-item {
-  color: $brand-purple;
-}
-
+// .navbar-nu2-logo, has been moved to a new  will allow it to be used globally
 .navbar-nu2-logo {
   font-family: $logo-font;
   font-weight: 800;

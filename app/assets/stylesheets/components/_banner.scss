@@ -1,24 +1,15 @@
 .banner {
-  background-size: cover;
-  background-position: center;
   padding: 60px 0;
   background-color: $brand-yellow;
 }
 
-.banner h1 {
-  margin-top: 30px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 50px;
-  font-weight: bold;
+.home-image{
+  margin-right: -35px;
+  max-width: 50%;
 }
 
-.banner p {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-size: 30px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.banner-text-container{
+  max-width: 60%;
 }
 
 .banner img {

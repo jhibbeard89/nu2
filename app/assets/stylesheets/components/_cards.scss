@@ -1,27 +1,43 @@
+// Added by james
+.card-container{
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
 // SQUARE CARDS
 
 .card-square-container {
-  display: flex;
   justify-content: space-evenly;
   padding-top: 20px;
   padding-bottom: 80px;
   margin-top: 50px;
 }
 
-.card-square {
+.nu2-card{
+  // .card is a bootstrap class
+  width: 325px;
   overflow: hidden;
-  width: 275px;
-  height: 275px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  align-items: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: $off-white;
-  padding: 10px;
+  img{
+    width: 60%;
+    object-fit: cover;
+  }
 }
 
-.card-square img {
-  width: 100%;
-  object-fit: cover;
+.card-square {
+  width: 275px;
+  height: 275px;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+  img{
+    width: 100%;
+  }
 }
 
 .card-square-infos {
@@ -32,54 +48,6 @@
   margin-bottom: 10px;
   color: $brand-purple;
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-// CARDS ON LANDING PAGE
-.card-product {
-  overflow: hidden;
-  width: 325px;
-  height: 475px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.2);
-  align-items: center;
-  border-radius: 4px;
-}
-
-.card-product img {
-  width: 60%;
-  object-fit: cover;
-  padding-top: 50px;
-}
-
-.card-product h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.card-product li {
-  font-size: 13px;
-  line-height: 1.4;
-  margin-top: 8px;
-  color: $brand-purple;
-  text-align: justify;
-  margin-right: 25px;
-}
-
-.card-product p {
-  font-size: 13px;
-  line-height: 1.4;
-  margin-top: 8px;
-  color: $brand-purple;
-  text-align: justify;
-  margin-right: 25px;
-}
-
-.card-product .card-product-infos {
-  padding: 20px;
 }
 
 // FLIP CARDS => See file _television.scss
@@ -88,4 +56,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.card-product-infos {
+  padding: 20px 20px 0 20px;
+  color: $brand-purple;
 }
