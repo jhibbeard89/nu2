@@ -1,0 +1,21 @@
+.radio-button {
+  position: absolute;
+  transform: scale(0);
+}
+
+.radio-button + label {
+  cursor: pointer;
+}
+
+.radio-button:checked + label {
+  color: red;
+}
+
+.radio-button-label {
+  color: $off-white;
+  width: 300px;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: $brand-purple;
+  transition: background 0.3s ease;
+}
