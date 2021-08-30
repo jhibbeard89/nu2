@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_125214) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "german_level"
-    t.integer "duration"
+    t.string "duration"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
