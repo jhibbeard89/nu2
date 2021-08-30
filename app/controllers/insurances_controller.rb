@@ -10,12 +10,31 @@ class InsurancesController < ApplicationController
     if @annual_gross_income_range == 'f' || (@employment_status == "Student" && age < 30)
       @insurance = @public_insurances
       @type = "public health care."
-    elsif current_user.age <= 35 && income_range == 't'
+    elsif age <= 35 && @annual_gross_income_range == 't'
       @insurance = @private_insurances
       @type = "private health care as it is cheaper in the long term."
     else
       @insurance = @insurances
       @type = "either public or private health insurance."
     end
+    @new = current_user.user_choices.first.nil?
+  end
+
+  def create
+    user = current_user
+    insurance = Insurance.find(params[:id])
+    @user_choice = UserChoice.new
+    @user_choice.user = user
+    @user_choice.insurance = insurance
+    @user_choice.save!
+    redirect_to req_index_path
+  end
+
+  def update
+    insurance = Insurance.find(params[:id])
+    @user_choice = UserChoice.where(user: current_user).first
+    @user_choice.insurance = insurance
+    @user_choice.save!
+    redirect_to req_index_path
   end
 end
