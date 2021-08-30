@@ -47,6 +47,9 @@
   margin-bottom: 10px;
   color: $brand-purple;
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // FLIP CARDS => See file _television.scss
