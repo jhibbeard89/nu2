@@ -15,6 +15,7 @@
   <body>
     <div class="d-flex flex-column min-vh-100">
       <%= render 'shared/navbar' %>
+      <%= render 'shared/chat' if current_user %>
       <%= render 'shared/flashes' %>
       <div class="flex-grow-1">
         <%= yield %>

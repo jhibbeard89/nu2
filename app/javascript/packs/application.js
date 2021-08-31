@@ -6,6 +6,7 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
+import {ChatBotToggle} from '../plugins/init_chat_bot_chat';
 import {WayLogic, UserSelection} from '../plugins/init_way_logic';
 import {ProgressBarLogic} from '../plugins/init_progress_bar';
 
@@ -25,6 +26,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
+  ChatBotToggle();
   initMapbox();
   WayLogic();
   UserSelection();
