@@ -12,6 +12,9 @@ class Question < ApplicationRecord
     question.duration = session[:duration] == 'Yes'
     question.user = user
     question.save!
+
+    user.address = session[:address]
+    user.save!
   end
 
 end
