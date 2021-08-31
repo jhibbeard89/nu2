@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_081155) do
     t.integer "atm_fees"
     t.integer "banking_features"
     t.text "summary"
+    t.string "image"
   end
 
   create_table "chatrooms", force: :cascade do |t|
@@ -65,8 +66,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_081155) do
 
   create_table "questions", force: :cascade do |t|
     t.string "employment_status"
-    t.integer "annual_gross_income_range"
-    t.integer "net_month_income_range"
+    t.string "annual_gross_income_range"
     t.string "phone_number"
     t.datetime "arrivel_date"
     t.datetime "date_of_birth"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_081155) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "german_level"
-    t.integer "duration"
+    t.string "duration"
     t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
@@ -90,8 +90,8 @@ ActiveRecord::Schema.define(version: 2021_08_30_081155) do
   end
 
   create_table "user_choices", force: :cascade do |t|
-    t.bigint "bank_id", null: false
-    t.bigint "insurance_id", null: false
+    t.bigint "bank_id"
+    t.bigint "insurance_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false

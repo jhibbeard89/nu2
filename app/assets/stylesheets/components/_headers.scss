@@ -24,14 +24,28 @@
   font-weight: bold;
 }
 
+h1.page-header-text{
+  font-size: 3rem;
+  margin: 25px 0 60px 0;
+  text-align: center;
+}
+
+h2.page-header-text{
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 25px;
+}
+
+h3.page-header-text{
+  font-size: 1.4rem;
+}
 .page-header-text{
   font-size: 30px;
   padding: 0 16px;
   font-weight: bold;
   color: $off-white;
-  margin-bottom: 60px;
+  margin-bottom: 15px;
 }
-
 
 .text-shadow{
   text-shadow: $black-shadow

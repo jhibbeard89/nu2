@@ -1,35 +1,42 @@
+<h1 class="page-header-text text-shadow">Getting a Bank Account</h1>
+
 <div class="container">
   <div class="info-paragraph">
-    <h2>Banking</h2>
     <p>
       When moving to Germany, it is very important to have (preferably free!) access to your funds. There are few things more frustrating than incurring expensive bank transaction fees, ATM charges, and delays in money transfers. On top of this, having a German bank account is often an important requirement for renting an apartment, signing up for a phone/internet package and getting paid by your employer. As such, setting up a German bank account as soon as possible is definitely a priority when moving to Germany! In Germany, there are a number of traditional banking options as well as an array of modern online banks. We have profiled a number of these below, highlighting their respective pros and cons to give you a clear idea of which is the best bank in Germany for your situation.
     </p>
   </div>
+</div>
 
-
-  <h3 class="section-headers text-shadow text-center">Based on that you plan to stay long-term in berlin and you have a good grasp of the language we recommend:</h3>
-  <div class="flex-container">
-    <div class="nu2-card card-bank card-product-infos text-center">
-        <%= image_tag 'banking0.png' %>
-        <h2 class="card-bank-name"><%= @bank.name%></h2>
-        <p class="card-bank-text"><%= @bank.summary %></p>
-        <button type="button" class="btn-gradient-yellow">Choose this bank</button>
-      </div>
-    </div>
-
-    <div class="grid-container">
-      <h3 class="section-headers text-shadow text-center">You may also be interested in the following alternatives.</h3>
-      <div class="flex-container">
-        <% @alternative_banks.each do |bank| %>
-              <div class="nu2-card card-bank card-product-infos text-center">
-                <%= image_tag 'banking2.png' %>
-                <h2 class="card-bank-name"><%= bank.name%></h2>
-                <p class="card-bank-text"><%= @bank.summary %></p>
-                <button type="button" class="btn-gradient-yellow">Choose this bank</button>
-              </div>
-        <% end %>
-      </div>
-      <button type="button" class="btn-flat" id="bank-back-button"><%= link_to "Back to all requirements", req_index_path %></button>
-    </div>
+<div class="container">
+  <div class="results-paragraph">
+    <h3>Based on your planned duration of stay and language skills, we recommend the below option(s) for you.</h3>
   </div>
+</div>
+
+<div class="flex-container">
+  <div class="bank-recommendation-card card-bank card-product-infos text-center">
+    <p class="card-bank-name-inverted"><%= "Our pick for you:" %></p>
+    <%= image_tag(@bank.image) %>
+    <h2 class="card-bank-name-inverted"><%= @bank.name%></h2>
+    <p class="card-bank-text-inverted"><%= @bank.summary %></p>
+    <%= link_to 'Choose this bank', banks_create_path(@bank), class: "btn-gradient-yellow" if @new %>
+    <%= link_to 'Add this bank', banks_update_path(@bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+  </div>
+
+  <% @alternative_banks.each do |bank| %>
+    <div class="nu2-card card-bank card-product-infos text-center">
+      <h2 class="card-bank-name"><%= "Alternative option:"%></h2>
+      <%= image_tag(bank.image) %>
+      <h2 class="card-bank-name"><%= bank.name%></h2>
+      <p class="card-bank-text"><%= bank.summary %></p>
+      <%= link_to 'Choose this bank', banks_create_path(bank), class: "btn-gradient-yellow" if @new %>
+      <%= link_to 'Add this bank', banks_update_path(bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+    </div>
+  <% end %>
+</div>
+
+
+<div class="back-btn-container">
+  <%= link_to "<< Back to My Tasks", req_index_path, class: "btn-back" %>
 </div>

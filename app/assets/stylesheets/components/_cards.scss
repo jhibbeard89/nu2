@@ -1,7 +1,6 @@
 // Added by james
 .card-container{
   justify-content: space-around;
-  margin-bottom: 50px;
 }
 
 // SQUARE CARDS
@@ -10,12 +9,12 @@
   justify-content: space-evenly;
   padding-top: 20px;
   padding-bottom: 80px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .nu2-card{
   // .card is a bootstrap class
-  width: 325px;
+  width: 355px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -48,17 +47,26 @@
   margin-bottom: 10px;
   color: $brand-purple;
   text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 // FLIP CARDS => See file _television.scss
 // Added by James
-.insurance-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 .card-product-infos {
   padding: 20px 20px 0 20px;
   color: $brand-purple;
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  ul  {
+    padding-right: 5px;
+    text-align: left;
+  }
 }

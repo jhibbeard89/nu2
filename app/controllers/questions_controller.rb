@@ -24,7 +24,6 @@ class QuestionsController < ApplicationController
       :employment_status,
       :german_level,
       :annual_gross_income_range,
-      :net_month_income_range,
       :email,
       :phone_number,
       :arrival_date,
