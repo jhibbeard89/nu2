@@ -18,27 +18,26 @@
   font-size: 60px;
   color: $brand-purple;
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: none;
     color: $brand-purple;
   }
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.2rem;
   color: $brand-purple;
-  
-  &:hover {
-  font-weight: bold;
-  }
+  text-shadow: $black-shadow;
 
+  &:hover {
+  color: $off-white;
+  text-shadow: $black-shadow;
+  }
 }
 
 #bot {
-  // display: flex;
-  // justify-content: flex-end;
-  margin-right: 10px;
-  width: 70px;
-  margin-top: -15px;
+  margin-right: -12px;
+  width: 60px;
+  margin-top: -10px;
 }

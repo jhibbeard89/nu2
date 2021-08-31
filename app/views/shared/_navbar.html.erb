@@ -3,19 +3,20 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
+
         <li>
-          <%= link_to "Help", chatroom_path(id:2), class: "nav-link" %>
-        </li>
-        <li>
-          <%= link_to chatroom_path(id:2) do %>
+          <%= link_to chatroom_path(id:1) do %>
           <%= image_tag "bot4", class: "nav-link", id: "bot" %>
           <% end %>
         </li>
         <li>
-          <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
+          <%= link_to "| Help", chatroom_path(id:1), class: "nav-link", style: "color:black;" %>
         </li>
         <li>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= link_to "My Tasks", req_index_path, class: "nav-link", style: "font-weight:bold;" %>
+        </li>
+        <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", style: "font-weight:bold;" %>
         </li>
       <% else %>
         <li class="navbar-button">
