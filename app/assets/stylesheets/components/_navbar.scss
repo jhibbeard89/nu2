@@ -11,10 +11,6 @@
   }
 }
 
-// .nav-item {
-//   padding-top: 10px;
-// }
-
 // .navbar-nu2-logo, has been moved to a new  will allow it to be used globally
 .navbar-nu2-logo {
   font-family: $logo-font;
@@ -22,7 +18,7 @@
   font-size: 60px;
   color: $brand-purple;
   text-decoration: none;
-
+  
   &:hover {
     text-decoration: none;
     color: $brand-purple;
@@ -31,9 +27,15 @@
 
 .nav-link{
   font-size: 1.2rem;
+  color: $brand-purple;
+  
+  &:hover {
+  font-weight: bold;
+  }
+
 }
 
-.nav-item #bot {
+#bot {
   // display: flex;
   // justify-content: flex-end;
   margin-right: 10px;
