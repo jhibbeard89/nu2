@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   get 'tv_license', to: 'pages#tv_license'
   get 'req_index', to: 'pages#req_index'
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
   post 'insurance/:id/create', to: 'insurances#create', as: 'insurances_create'
   patch 'insurance/:id/update', to: 'insurances#update', as: 'insurances_update'
 
