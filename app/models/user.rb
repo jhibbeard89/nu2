@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :questions
   has_many :appointments
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end

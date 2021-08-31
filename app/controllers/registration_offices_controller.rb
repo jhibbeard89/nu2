@@ -9,6 +9,11 @@ class RegistrationOfficesController < ApplicationController
         info_window: render_to_string(partial: "/registration_offices/info_window", locals: { office: office })
       }
     end
+    @user_marker = {
+        lat: current_user.latitude,
+        lng: current_user.longitude,
+        image_url: helpers.asset_url('home_icon.png')
+    }
   end
 
   def show
