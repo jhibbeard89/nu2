@@ -2,16 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.bank-recommendation-card{
+  width: 355px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  background-color: $brand-purple;
+
+  img{
+    border: 2px solid $off-white;
+    width: 60%;
+    padding: 20px;
+    margin-top: 5px;
+  }
+
+  .card-bank-name-inverted {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+    color: $brand-yellow;
+  }
+
+  .card-bank-text-inverted {
+    text-align: justify;
+    margin-top: 20px;
+    color: $off-white;
+  }
+}
+
 .card-bank{
+  padding-top: 25px;
   padding-bottom: 25px;
+
   .card-bank-name {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+    padding-top: 20px;
   }
 
   .card-bank-text {
     text-align: justify;
-    margin-top: 25px;
+    margin-top: 20px;
+  }
+
+  img {
+    border: 2px solid $brand-purple;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 5px;
   }
 }

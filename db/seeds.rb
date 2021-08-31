@@ -188,16 +188,21 @@ Appointment.create(
 
 puts 'Appointments succesfully created.'
 
-banks = Bank.create([{name: "N26", english_customer_support: 8, signup_process: 9, bank_fees: 10, atm_fees: 6, banking_features: 8, summary: "Marketed as Europe's first mobile bank, N26 allows you to manage your entire financial life on your phone. Its free Debit Mastercard, free ATM withdrawals, intuitive app and English-speaking customer service are unparalleled in Berlin.", image: "insurance6.png" },
-     {name: "Commerzbank", english_customer_support: 5, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "For most expats, Commerzbank’s more comprehensive services only become relevant if staying in Germany longer-term. Therefore, we suggest starting with N26 and then joining Commerzbank as and when you can benefit from their traditional banking services.", image: "insurance6.png"},
-      {name: "Deutsche Bank", english_customer_support: 7, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "While similar to Commerzbank in its offering, Deutsche Bank is arguably slightly less geared towards expat customers. Having browsed their materials extensively, we found them to be the most ‘German’ of our four best banks in Germany.", image: "insurance6.png"}])
+banks = Bank.create([{name: "N26", english_customer_support: 8, signup_process: 9, bank_fees: 10, atm_fees: 6, banking_features: 8, summary: "As one of Europe's first mobile banks, N26 lets you manage your entire financial life from your phone. It offers a free Debit Mastercard, free ATM withdrawals, an intuitive app design and English-speaking customer service.", image: "n26.png" },
+     {name: "Commerzbank", english_customer_support: 5, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "For most expats, Commerzbank’s more comprehensive services become relevant if staying in Germany longer-term. We suggest starting with N26 and then considering Commerzbank as and when you can benefit from their traditional banking services.", image: "commerzbank.png"},
+      {name: "Deutsche Bank", english_customer_support: 7, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "While similar to Commerzbank in its offering, Deutsche Bank is arguably slightly less geared towards expat customers. Having browsed their materials extensively, we found them to be the most ‘German’ of our four best banks in Germany.", image: "deutschebank.png"}])
 
-public_insurances = Insurance.create([{name: "Techniker Krankenkasse", private: false, summary: "Great English-speaking sign-up process and support.", image: "techniker.png" },
-     {name: "AOK Baden Württemberg", private: false, summary: "Excellent range of services for elderly people.", image: "AOK.png"},
-     {name: "Barmer Ersatzkasse", private: false, summary: "Highly rated customer service and helpline.", image: "barmer.png"}])
+public_insurances = Insurance.create([{name: "Techniker Krankenkasse", private: false, summary: "Techniker Krankenkasse focuses on a comprehensive care concept for a range of therapies and treatments - from outpatient surgery up to the treatment of chronic diseases. ", image: "tk.png" },
+     {name: "AOK Baden Württemberg", private: false, summary: "AOK Baden-Württemberg is a statutory health insurance company in Baden-Württemberg. It is the biggest health insurer in southwest Germany.", image: "AOK.png"},
+     {name: "Barmer Ersatzkasse", private: false, summary: "As one of the largest statutory health insurances in Germany, we offer high-quality and innovative medical care and are committed to improving the health system.", image: "barmer.png"}])
 
-private_insurances = Insurance.create([{name: "DR-WALTER", private: true, summary: "Excellent cover for young professionals", image: "insurance4.png"},
-    {name: "AXA", private: true, summary: "Really good cover for retired professionals", image: "insurance5.png"},
-    {name: "Allianz", private: true, summary: "Amazing all round long term cover", image: "insurance6.png"}])
+private_insurances = Insurance.create([{name: "DR-WALTER GmbH", private: true, summary: "Great option for short-term stays in Germany, business travellers and globetrotters. Consultants specializing in expatriates are available to assist.", image: "walter.png"},
+    {name: "AXA Versicherungen", private: true, summary: "Large provider offering flexible packages for employees and independent workers, including five different international insurance policies.", image: "AXA.png"},
+    {name: "Allianz Group", private: true, summary: "One of the largest three medical insurance companies in the world, with English speaking support services and optional add-ons such as maternity and dental coverage.", image: "allianz.png"}])
+
+
+chatroom = Chatroom.create(name: "Chat with Hans")
+
+hans = User.create(first_name: "Hans", email: "hans@nu2.com", password: "123456")
 
 puts 'Seeding finished.'
