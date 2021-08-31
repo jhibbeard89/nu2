@@ -8,10 +8,27 @@
       This is your booking information
     </div>
     <div class="selected-information-box">
-      This is your Bank information
+      <% if @bank %>
+        <div class="user-card-selected-info">
+          <%= image_tag @bank.image %>
+        </div>
+      <% else %>
+        <p>You have not selected a bank</p>
+        <%= link_to "Choose a bank", banks_path  %>
+      <% end %>
     </div>
     <div class="selected-information-box">
-      This is your Insurance information
+      <% if @insurance %>
+        <div class="user-card-selected-info">
+          <%= image_tag @insurance.image %>
+          <div class="details">
+
+          </div>
+        </div>
+      <% else %>
+        <p>You have not selected an insurance provider</p>
+        <%= link_to "Choose insurance", insurances_path  %>
+      <% end %>
     </div>
   </div>
 </div>
