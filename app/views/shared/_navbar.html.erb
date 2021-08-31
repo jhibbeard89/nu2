@@ -1,27 +1,21 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-nu2">
+<div class="navbar navbar-expand-sm navbar-nu2">
   <%= link_to "Nü2", root_path, class: "navbar-nu2-logo" %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Bookings", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "My Profile", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
+        <li>
           <%= link_to "Help", chatroom_path(id:2), class: "nav-link" %>
         </li>
-        <li class="nav-item">
+        <li>
           <%= link_to chatroom_path(id:2) do %>
           <%= image_tag "bot4", class: "nav-link", id: "bot" %>
           <% end %>
+        </li>
+        <li>
+          <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
+        </li>
+        <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
         </li>
       <% else %>
         <li class="navbar-button">
