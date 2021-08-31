@@ -196,8 +196,8 @@ public_insurances = Insurance.create([{name: "Techniker Krankenkasse", private: 
      {name: "AOK Baden Württemberg", private: false, summary: "Excellent range of services for elderly people.", image: "AOK.png"},
      {name: "Barmer Ersatzkasse", private: false, summary: "Highly rated customer service and helpline.", image: "barmer.png"}])
 
-private_insurances = Insurance.create([{name: "DR-WALTER GmbH", private: true, summary: "Great option for shorter-term stays in Germany, long-term travellers and globetrotters.", image: "walter.png"},
-    {name: "AXA Versicherungen", private: true, summary: "Large provider offering flexible packages for independent workers as well as employees.", image: "AXA.png"},
-    {name: "Allianz", private: true, summary: "One of the largest three medical insurance companies in the world, with English speaking support services.", image: "allianz.png"}])
+private_insurances = Insurance.create([{name: "DR-WALTER GmbH", private: true, summary: "Great option for short-term stays in Germany, business travellers and globetrotters. Consultants specializing in expatriates are available to assist.", image: "walter.png"},
+    {name: "AXA Versicherungen", private: true, summary: "Large provider offering flexible packages for employees and independent workers, including five different international insurance policies.", image: "AXA.png"},
+    {name: "Allianz Krankenversicherung", private: true, summary: "One of the largest three medical insurance companies in the world, with English speaking support services and optional add-ons such as maternity and dental coverage.", image: "allianz.png"}])
 
 puts 'Seeding finished.'
