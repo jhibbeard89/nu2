@@ -1,0 +1,19 @@
+.portal-grid{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#progress-bar{
+  border: 1px solid blue;
+  width: 100%;
+  grid-row: 1;
+  grid-column-start: 1;
+  grid-column-end: span 3;
+
+  height: 150px;
+}
+
+.selected-information-box{
+  grid-row: 2;
+  border: 1px solid black;
+  height: 200px;
+}
