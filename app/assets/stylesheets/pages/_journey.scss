@@ -3,11 +3,14 @@
 }
 
 #progress-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid blue;
   width: 100%;
-  grid-row: 1;
   grid-column-start: 1;
-  grid-column-end: span 3;
+  grid-column-end: span 2;
+
 }
 
 .selected-information-box{
@@ -25,4 +28,23 @@
   height: 40px;
   width: 250px;
   margin-top: 15px;
+}
+
+.progress-bar-outer{
+  width: 80%;
+  padding: 0;
+  border: 1px solid $brand-purple;
+  padding: 2px;
+  margin: 25px;
+}
+.progress-bar-mainbar{
+  display: block;
+  width: 0%;
+  height: 25px;
+  background-color: $brand-purple;
+  border: none;
+  margin: 0;
+  color: $off-white;
+  padding: 0 5px;
+  text-align: right;
 }

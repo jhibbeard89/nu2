@@ -9,6 +9,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap';
 import {WayLogic, UserSelection} from '../plugins/init_way_logic';
+import {ProgressBarLogic} from '../plugins/init_progress_bar';
 
 
 Rails.start()
@@ -23,5 +24,6 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   WayLogic();
   UserSelection();
+  ProgressBarLogic();
   initAutocomplete();
 })

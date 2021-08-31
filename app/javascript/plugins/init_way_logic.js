@@ -38,16 +38,18 @@ const WayLogic = () => {
 
 const buttonSelection = (questionId, formSelection) => {
   const question = document.getElementById(questionId);
-  const target = document.getElementById(formSelection);
-  const selectionButton = question.getElementsByClassName('question-button');
-  const interactionButtons = Object.entries(selectionButton)
-  interactionButtons.forEach(element => {
-    element[1].addEventListener('click', () => {
-      target.value = element[1].innerText;
-      $(".question-button").removeClass('selected')
-      element[1].classList.add('selected')
-    });
-  })
+  if (question){
+    const target = document.getElementById(formSelection);
+    const selectionButton = question.getElementsByClassName('question-button');
+    const interactionButtons = Object.entries(selectionButton)
+    interactionButtons.forEach(element => {
+      element[1].addEventListener('click', () => {
+        target.value = element[1].innerText;
+        $(".question-button").removeClass('selected')
+        element[1].classList.add('selected')
+      });
+    })
+  }
 }
 
 const UserSelection = () => {

@@ -2,7 +2,9 @@
   <h1>My Portal</h1>
   <div class="grid-container portal-grid">
     <div id="progress-bar">
-      This is your progress bar
+      <div class="progress-bar-outer">
+        <span class="progress-bar-mainbar" id="main-bar">33%</span>
+      </div>
     </div>
     <div class="selected-information-box">
       This is your booking information
@@ -13,7 +15,7 @@
         <% if @bank %>
             <%= image_tag @bank.image %>
             <div class="details">
-              <p><%= @bank.name %></p>
+              <p class="task"><%= @bank.name%></p>
               <button>More information</button>
             </div>
         <% else %>
@@ -24,7 +26,7 @@
       <% if @insurance %>
         <%= image_tag @insurance.image %>
         <div class="details">
-          <p><%= @insurance.name %></p>
+          <p class="task"><%= @insurance.name %></p>
           <button>More information</button>
         </div>
       <% else %>
