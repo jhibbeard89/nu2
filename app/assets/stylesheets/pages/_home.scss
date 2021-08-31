@@ -35,3 +35,17 @@
 .home-card{
   padding-bottom: 5px;
 }
+
+#help {
+  font-style: italic;
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+.help-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+

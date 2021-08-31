@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #main {
     height: 100vh;
-    background-color: bisque;
+    background-color: $brand-yellow;
     overflow: auto;
   
     h2 {
@@ -14,8 +14,8 @@
   
     >div {
       height: 90vh;
-      background-color: $brand-yellow-translucent;
-      width: 80%;
+      background-color: $off-white;
+      width: 50%;
       margin: auto;
       border-radius: 5px;
       overflow: auto;
@@ -44,27 +44,32 @@
     }
     
     .my-message {
-    background-color: chocolate;
+    background-color: $brand-yellow-lighter;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    width: 200px;
+    width: 300px;
     }
 
     .your-message {
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: darkred;
+    background-color: $brand-purple-lighter;
     align-self: flex-end;
     margin-right: 25px;
-    width: 200px;
+    width: 300px;
   
     }
+
+    .my-message-author {
+        color: black;
+      }
 
     .your-message-author {
       margin-right: 25px;
       align-self: flex-end;
+      color: black;
     }
 
       #send-message {
@@ -76,6 +81,7 @@
           width: 90%;
           border-radius: 10px;
           border: 0;
+          background-color: $brand-purple-translucent;
         }
       }
     }
