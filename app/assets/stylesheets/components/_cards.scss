@@ -70,21 +70,3 @@
     text-align: left;
   }
 }
-
-.user-card-selected-info{
-  display: grid;
-  grid-template-columns: 35% 60%;
-  height: 80px;
-  border: 1px solid $brand-purple;
-  border-radius: 4px;
-  margin: 15px 5px;
-  padding: 5px;
-  background-color: $off-white;
-  img{
-    height: 100%;
-    aspect-ratio: 1/1;
-  }
-  .details > p{
-    font-weight: bold;
-  }
-}

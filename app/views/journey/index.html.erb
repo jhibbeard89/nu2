@@ -1,17 +1,29 @@
 <div class="container">
   <h1>My Portal</h1>
   <div class="grid-container portal-grid">
-    <div id="progress-bar">
+    <%# <div id="progress-bar" class="journey-boxes"> %>
       <div class="progress-bar-outer">
         <span class="progress-bar-mainbar" id="main-bar">33%</span>
       </div>
+    <%# </div> %>
+
+    <div class="selected-information-box journey-boxes">
+      <% if @appointment %>
+        <div class="registration-information-box">
+          <h4 class="task"><%= @appointment.registration_office.office_name %></h4>
+          <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+          <div id="map"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+        </div>
+      <% else %>
+        <p>I don't</p>
+      <% end %>
     </div>
+
     <div class="selected-information-box">
-      This is your booking information
-    </div>
-    <div class="selected-information-box">
-      <h4>Your Bank and Insurance selections</h4>
-      <div class="user-card-selected-info">
+      <div class="user-card-selected-info journey-boxes">
         <% if @bank %>
             <%= image_tag @bank.image %>
             <div class="details">
@@ -22,7 +34,7 @@
           <%= link_to "Choose a bank", banks_path  %>
         <% end %>
       </div>
-      <div class="user-card-selected-info">
+      <div class="user-card-selected-info journey-boxes">
       <% if @insurance %>
         <%= image_tag @insurance.image %>
         <div class="details">
