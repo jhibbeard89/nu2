@@ -15,9 +15,7 @@
 .btn-hollow:hover {
   color: $off-white;
   background-color: $brand-purple;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 // This button is used for the sign-up page on the landing page
@@ -33,9 +31,7 @@
 .btn-flat:hover {
   background: $brand-purple-faded;
   color: $off-white;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 // This is the "back" button used to navigate the user back to the My Tasks page
@@ -55,9 +51,7 @@
 
 .btn-back:hover {
   color: $brand-yellow;
-  &:hover {
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 //
@@ -111,6 +105,15 @@
   }
 }
 
+.registration-box{
+  min-height: 420px;
+}
+
+.registration-details{
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn-flat-even {
   color: $off-white;
   padding: 8px 24px;
@@ -144,4 +147,35 @@
     color: white;
     background-color: $brand-purple-faded;
   }
+}
+
+.buttons-group-user{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+
+.user-portal-button{
+  border: none;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 1px 1px 1px gray;
+  font-size: 1.1rem;
+  padding: 2px 4px;
+  margin: 0 5px;
+  &:hover{
+    box-shadow: none;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.portal-update{
+  background-color: $brand-purple;
+}
+
+.portal-delete{
+  border: 1px solid $brand-yellow;
+  color: $off-white;
+  background-color: $brand-yellow;
 }

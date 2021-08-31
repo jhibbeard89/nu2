@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import {WayLogic, UserSelection} from '../plugins/init_way_logic';
+import {ProgressBarLogic} from '../plugins/init_progress_bar';
 
 
 
@@ -27,6 +28,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   WayLogic();
   UserSelection();
+  ProgressBarLogic();
   initAutocomplete();
   initChatroomCable();
 })

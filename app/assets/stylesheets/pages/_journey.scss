@@ -1,19 +1,100 @@
 .portal-grid{
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
 }
 
 #progress-bar{
-  border: 1px solid blue;
-  width: 100%;
-  grid-row: 1;
-  grid-column-start: 1;
-  grid-column-end: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  height: 150px;
+.journey-boxes {
+  border-radius: 8px;
+  margin: 0 5px;
+  box-shadow: 2px 2px 3px $brand-purple;
+  background-color: white;
 }
 
 .selected-information-box{
   grid-row: 2;
-  border: 1px solid black;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  height: 40px;
+  width: 250px;
+  margin-top: 15px;
+}
+
+.user-card-selected-info {
+  display: grid;
+  grid-template-rows: 50px auto;
+  height: 49%;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: $off-white;
+  .logo-img {
+    height: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+  }
+  .details{
+    justify-self: right;
+    align-self: end;
+
+  }
+}
+
+.user-card-header{
+  display: flex;
+  p {
+    font-weight: bold;
+    margin: 0 0 0 15px;
+    align-self: center;
+  }
+}
+
+.progress-bar-outer{
+  padding: 0;
+  border: 1px solid $brand-purple;
+  padding: 2px;
+  margin: 25px 5px;
+  border-radius: 50px;
+  overflow: hidden;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row: 1;
+}
+.progress-bar-mainbar{
+  display: block;
+  width: 0%;
+  height: 30px;
+  background-color: $brand-purple;
+  border: none;
+  margin: 0;
+  color: $off-white;
+  padding: 0 5px;
+  text-align: right;
+  border-radius: inherit;
+}
+
+.registration-information-box{
+  padding: 10px;
+}
+
+.holding-img{
+  align-self: center;
+  justify-self: center;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-start: span 2;
+  width: 50%;
 }

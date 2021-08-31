@@ -20,8 +20,8 @@
     <%= image_tag(@bank.image) %>
     <h2 class="card-bank-name-inverted"><%= @bank.name%></h2>
     <p class="card-bank-text-inverted"><%= @bank.summary %></p>
-    <%= link_to 'Select Bank', banks_create_path(@bank), class: "btn-gradient-yellow" if @new %>
-    <%= link_to 'Add Bank', banks_update_path(@bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+    <%= link_to 'Choose this bank', banks_create_path(@bank), class: "btn-gradient-yellow", method: :post if @new %>
+    <%= link_to 'Add this bank', banks_update_path(@bank), class: "btn-gradient-yellow", method: :patch unless @new %>
   </div>
 
   <% @alternative_banks.each do |bank| %>
@@ -30,8 +30,8 @@
       <%= image_tag(bank.image) %>
       <h2 class="card-bank-name"><%= bank.name%></h2>
       <p class="card-bank-text"><%= bank.summary %></p>
-      <%= link_to 'Select Bank', banks_create_path(bank), class: "btn-gradient-yellow" if @new %>
-      <%= link_to 'Add Bank', banks_update_path(bank), class: "btn-gradient-yellow", method: :patch unless @new %>
+      <%= link_to 'Choose this bank', banks_create_path(bank), class: "btn-gradient-yellow", method: :post if @new %>
+      <%= link_to 'Add this bank', banks_update_path(bank), class: "btn-gradient-yellow", method: :patch unless @new %>
     </div>
   <% end %>
 </div>
