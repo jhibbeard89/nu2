@@ -10,15 +10,17 @@
   background-color: $brand-purple;
 
   img{
+    border: 2px solid $off-white;
     width: 60%;
-    object-fit: cover;
+    padding: 20px;
+    margin-top: 5px;
   }
 
   .card-bank-name-inverted {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
-    padding-top: 15px;
+    padding-top: 20px;
     color: $brand-yellow;
   }
 
@@ -35,7 +37,7 @@
 
   .card-bank-name {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    font-size: 23px;
+    font-size: 25px;
     font-weight: bold;
     padding-top: 20px;
   }
@@ -48,5 +50,7 @@
   img {
     border: 2px solid $brand-purple;
     border-radius: 4px;
+    padding: 20px;
+    margin-top: 5px;
   }
 }
