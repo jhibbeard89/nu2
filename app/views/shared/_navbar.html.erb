@@ -10,14 +10,18 @@
           <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
+          <%= link_to "My Profile", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "Help", chatroom_path(id:2), class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "bot4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My Profile", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+        <li class="nav-item">
+          <%= link_to chatroom_path(id:2) do %>
+          <%= image_tag "bot4", class: "nav-link", id: "bot" %>
+          <% end %>
         </li>
       <% else %>
         <li class="navbar-button">

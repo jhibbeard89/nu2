@@ -12,7 +12,7 @@
 }
 
 // .nav-item {
-//   color: $brand-purple;
+//   padding-top: 10px;
 // }
 
 // .navbar-nu2-logo, has been moved to a new  will allow it to be used globally
@@ -31,4 +31,12 @@
 
 .nav-link{
   font-size: 1.2rem;
+}
+
+.nav-item #bot {
+  // display: flex;
+  // justify-content: flex-end;
+  margin-right: 10px;
+  width: 70px;
+  margin-top: -15px;
 }
