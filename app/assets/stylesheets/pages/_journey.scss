@@ -10,13 +10,16 @@
 
 .journey-boxes {
   border-radius: 8px;
-  margin: 5px 5px;
+  margin: 0 5px;
   box-shadow: 2px 2px 3px $brand-purple;
   background-color: white;
 }
 
 .selected-information-box{
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .button-span{
@@ -34,7 +37,7 @@
 .user-card-selected-info {
   display: grid;
   grid-template-rows: 50px auto;
-  height: 48%;
+  height: 49%;
   border-radius: 8px;
   padding: 5px;
   background-color: $off-white;

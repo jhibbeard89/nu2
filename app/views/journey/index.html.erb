@@ -7,11 +7,14 @@
       </div>
     <%# </div> %>
 
-    <div class="selected-information-box journey-boxes">
+    <div class="selected-information-box journey-boxes registration-box">
       <% if @appointment %>
         <div class="registration-information-box">
           <h4 class="task"><%= @appointment.registration_office.office_name %></h4>
-          <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+          <div class="registration-details">
+            <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+            <p><%= "#{@date}#{} at #{@time}" %></p>
+          </div>
           <div id="map"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -22,7 +25,8 @@
           </div>
         </div>
       <% else %>
-        <p>I don't</p>
+        <%= link_to "Book Appointment", registration_offices_path, class: "btn-gradient-purple button-span"%>
+        <%= image_tag('apartment.png', class: "holding-img") %>
       <% end %>
     </div>
 
@@ -34,7 +38,7 @@
               <p class="task"><%= @bank.name%></p>
             </div>
             <div class="details">
-              <button class="user-portal-button portal-update">Update</button>
+              <%= link_to "Update", banks_path, class: "user-portal-button portal-update"%>
               <%= link_to 'Delete', banks_delete_path(@bank.id), class: "user-portal-button portal-delete", method: :patch %>
             </div>
         <% else %>
@@ -49,7 +53,7 @@
               <p class="task"><%= @insurance.name%></p>
             </div>
         <div class="details">
-          <button class="user-portal-button portal-update">Update</button>
+          <%= link_to "Update", insurances_path, class: "user-portal-button portal-update"%>
           <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
         </div>
       <% else %>

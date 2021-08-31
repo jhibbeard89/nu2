@@ -105,6 +105,15 @@
   }
 }
 
+.registration-box{
+  min-height: 420px;
+}
+
+.registration-details{
+  display: flex;
+  justify-content: space-between;
+}
+
 .btn-flat-even {
   color: $off-white;
   padding: 8px 24px;
@@ -155,6 +164,8 @@
   margin: 0 5px;
   &:hover{
     box-shadow: none;
+    color: white;
+    text-decoration: none;
   }
 }
 
