@@ -8,27 +8,29 @@
       This is your booking information
     </div>
     <div class="selected-information-box">
-      <% if @bank %>
-        <div class="user-card-selected-info">
-          <%= image_tag @bank.image %>
-        </div>
-      <% else %>
-        <p>You have not selected a bank</p>
-        <%= link_to "Choose a bank", banks_path  %>
-      <% end %>
-    </div>
-    <div class="selected-information-box">
+      <h4>Your Bank and Insurance selections</h4>
+      <div class="user-card-selected-info">
+        <% if @bank %>
+            <%= image_tag @bank.image %>
+            <div class="details">
+              <p><%= @bank.name %></p>
+              <button>More information</button>
+            </div>
+        <% else %>
+          <%= link_to "Choose a bank", banks_path  %>
+        <% end %>
+      </div>
+      <div class="user-card-selected-info">
       <% if @insurance %>
-        <div class="user-card-selected-info">
-          <%= image_tag @insurance.image %>
-          <div class="details">
-
-          </div>
+        <%= image_tag @insurance.image %>
+        <div class="details">
+          <p><%= @insurance.name %></p>
+          <button>More information</button>
         </div>
       <% else %>
-        <p>You have not selected an insurance provider</p>
-        <%= link_to "Choose insurance", insurances_path  %>
+        <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
       <% end %>
+      </div>
     </div>
   </div>
 </div>

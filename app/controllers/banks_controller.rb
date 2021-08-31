@@ -31,6 +31,5 @@ class BanksController < ApplicationController
     @user_choice.bank = bank
     @user_choice.save!
     redirect_to req_index_path
-
   end
 end
