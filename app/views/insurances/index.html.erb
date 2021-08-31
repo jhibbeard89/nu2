@@ -13,14 +13,15 @@
 </div>
 
 <div class="flex-container card-container">
-    <% @insurance.each do |option| %>
-            <div class="flex-container nu2-card insurance-card">
-                <%= image_tag(option.image) %>
-                <h2 class="text-shadow"><%=option.name %></h2>
-                <p><%= option.summary %></p>
-                <button type="button" class="btn-gradient-yellow">Select Insurance</button>
-            </div>
-        <% end %>
+    <% @insurance.each do |insurance| %>
+      <div class="flex-container nu2-card insurance-card">
+        <%= image_tag(insurance.image) %>
+        <h2 class="text-shadow"><%=insurance.name %></h2>
+        <p><%= insurance.summary %></p>
+        <%= link_to 'Choose this insurance', insurances_create_path(insurance), class: "btn-gradient-yellow" if @new %>
+        <%= link_to 'Add this insurance', insurances_update_path(insurance), class: "btn-gradient-yellow", method: :patch unless @new %>
+      </div>
+    <% end %>
 </div>
 
 <div class="back-btn-container">
