@@ -1,73 +1,93 @@
-<div class="grid-body">
+<h1 class="page-header-text text-shadow">Registration Offices in Berlin</h1>
 
-  <div class="container column-left">
-    <h1 class="registration-offices-header-text">Registration Offices in Berlin</h1>
-    <% if current_user.appointments.any? %>
-      <p>You've already booked an appointment.</p>
+<div class="container info-registration-offices">
+  <div class="info-paragraph">
+    <h3>What do I need to do with a <i>"Registration Office"</i> ?</h3>
+    <div>
+        <p>Once you’ve found an apartment in Berlin you have to register at a local registration office within a 14 days period. <br>
+        This is called <i>Anmeldung einer Wohnung</i> and mandatory in the following cases:</p>
+        <ul>
+          <li>You have moved to a new apartment within the city or</li>
+          <li>You have moved to Berlin from another municipality in Germany or</li>
+          <li>You have moved to Berlin from abroad</li>
+        </ul>
+        <p>An exception to this registration period (14 days) only applies if you are registered with an apartment
+            in Germany and your stay in Berlin does not exceed six months. If you otherwise live abroad, a period
+            of three months applies. If you have not moved out after six or three months, you must register with the
+            registration office within 14 days. For a succesfull registration you must bring the following documents
+            fully filled out and signed to the appointment:</p>
+         <ul>
+          <li>Proof of identify (Passport, ID card)</li>
+          <li>Application form</li>
+          <li>Civil status certificate ("Personenstandsurkunde", e.g. certification of birth)</li>
+          <li>A confirmation of the move-in from your landlord or your housing management</li>
+        </ul>
+        <p>After your registration you will receive a confirmation of registration.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container registration-offices-cards important-margin-class">
+  <% if current_user.appointments.any? %>
+    <div class="booked-appointment">
+      <p>You've already booked an appointment.</p> <br>
       <%= link_to 'See your appointment', appointment_path(current_user.appointments.first), class: 'btn btn-flat-even' %>
-    <% else %>
-    <p>Please choose your desired office for your registration in Berlin:</p>
-      <ul>
-        <% @registration_offices.each_with_index do |registration_office, index| %>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-flat-even" data-toggle="modal" data-target="#exampleModal<%= index %>">
-            <%= registration_office.office_name %>
-          </button>
+    </div>
+  <% else %>
+    <% @registration_offices.each_with_index do |registration_office, index| %>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" role="dialog" aria-labelledby="<%= index %>" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="example"> Please choose a free appointment with <%= registration_office.office_name %> and confirm with "Book"</h5>
+      <button type="button" class="card-registration-office" data-toggle="modal" data-target="#exampleModal<%= index %>">
+        <%= registration_office.office_name %>
+      </button>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-
-              </div>
-
-              <div class="modal-body text-center">
-                <% counter = 0 %>
-                <% registration_office.appointments.each do |appointment| %>
-                  <% if appointment.not_booked? %>
-                    <%= simple_form_for appointment do |f| %>
-                      <input class="radio-button" type="radio" id="appointment-<%= counter.to_s %>">
-                      <label for="appointment-<%= counter.to_s %>" class="radio-button-label"><%= appointment.date.strftime('%A, %d %b, %l:%M %p') %></label>
-                      <% counter += 1 %>
-                      <%= f.submit 'Book', class: 'btn-gradient-yellow' %>
-                    <% end %>
+      <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" role="dialog" aria-labelledby="<%= index %>" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="example"> Please choose a free appointment with <%= registration_office.office_name %> and confirm with "Book"</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <% counter = 0 %>
+              <% registration_office.appointments.each do |appointment| %>
+                <% if appointment.not_booked? %>
+                  <%= simple_form_for appointment do |f| %>
+                    <input class="radio-button" type="radio" id="appointment-<%= counter.to_s %>">
+                    <label for="appointment-<%= counter.to_s %>" class="radio-button-label"><%= appointment.date.strftime('%A, %d %b, %l:%M %p') %></label>
+                    <% counter += 1 %>
+                    <%= f.submit 'Book', class: 'btn-gradient-yellow' %>
                   <% end %>
                 <% end %>
-              </div>
-
-              <%# <div class="modal-footer">
-                <button type="button" class="btn btn-flat" data-dismiss="modal">Close</button>
-                <%= link_to(req_index_path) do %>
-                  <%# <button type="button" class="btn btn-gradient-yellow">Book</button> %>
-                <%# <% end %>
-              <%# </div> %>
-
+              <% end %>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
 
-  <div class="container column-right">
+<div class="container">
+  <div class="map-container">
     <div id="map"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-     </div>
+    </div>
   </div>
-
 </div>
 
-<%#= simple_form_for appointment, data: {confirm: 'Are you sure you want to book this appointment?'} do |f| %>
+<div class="back-btn-container">
+  <%= link_to "<< Back to My Tasks", req_index_path, class: "btn-back" %>
+</div>
 
-<script>
 
-// JAVASCRIPT
 
-</script>
+
+<%# <div class="modal-footer">
+  <button type="button" class="btn btn-flat" data-dismiss="modal">Close</button>
+  <%= link_to(req_index_path) do %>
+    <%# <button type="button" class="btn btn-gradient-yellow">Book</button> %>
+  <%# <% end %>
+<%# </div> %>

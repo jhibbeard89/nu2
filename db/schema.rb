@@ -67,12 +67,6 @@ ActiveRecord::Schema.define(version: 2021_08_31_084750) do
     t.string "image"
   end
 
-  create_table "chatrooms", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "insurances", force: :cascade do |t|
     t.string "name"
     t.boolean "private"
@@ -80,16 +74,6 @@ ActiveRecord::Schema.define(version: 2021_08_31_084750) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "summary"
     t.string "image"
-  end
-
-  create_table "messages", force: :cascade do |t|
-    t.string "content"
-    t.bigint "chatroom_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -146,8 +130,6 @@ ActiveRecord::Schema.define(version: 2021_08_31_084750) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "appointments", "registration_offices"
   add_foreign_key "appointments", "users"
-  add_foreign_key "messages", "chatrooms"
-  add_foreign_key "messages", "users"
   add_foreign_key "questions", "users"
   add_foreign_key "user_choices", "banks"
   add_foreign_key "user_choices", "insurances"
