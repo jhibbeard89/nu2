@@ -2,27 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.grid-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  .column-left {
-    grid-column: span 2;
-  }
-
-  .column-right {
-    grid-column: span 2;
-    grid-row: 2;
-    width: 100%;
-  }
-}
-#map {
-  width: 100%;
-  height: 55vh;
-}
-
 .container {
-  // background-color: $brand-yellow;
   height: 100%;
   width: auto;
   margin: 25px 25px;
@@ -32,35 +12,24 @@
 .registration-offices-header-text {
   text-align: left;
   padding: auto 20px;
-  // color: $brand-purple;
-  // font-family: $headers-font;
 }
 
-.registration-office-choice {
-  // color: $brand-purple;
-  list-style-type: none;
-  .hover {
-    color: white;
-    text-decoration: none !important;
-  }
+.registration-offices-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.registration-office-header {
-  text-align: center;
-  // color: $brand-purple;
-  // font-family: $headers-font;
-  padding: 20px;
-  h1 {
-    font-size: 20px;
-  }
+.map-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.registration-office-details {
-  // color: $brand-purple;
-  margin: 20px 20px;
-  padding: 20px;
-  h3 {
-    font-size: 20px;
-    // font-family: $body-font;
-  }
+#map {
+  width: 100%;
+  height: 55vh;
+}
+
+.important-margin-class {
+  margin-bottom: 15px !important;
 }
