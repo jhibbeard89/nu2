@@ -16,6 +16,10 @@
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
           </div>
+          <div class="buttons-group-user">
+            <button class="user-portal-button portal-update">Update</button>
+            <button class="user-portal-button portal-delete">Delete</button>
+          </div>
         </div>
       <% else %>
         <p>I don't</p>
@@ -25,10 +29,13 @@
     <div class="selected-information-box">
       <div class="user-card-selected-info journey-boxes">
         <% if @bank %>
-            <%= image_tag @bank.image %>
-            <div class="details">
+            <div class="user-card-header">
+              <%= image_tag @bank.image %>
               <p class="task"><%= @bank.name%></p>
-              <button>More information</button>
+            </div>
+            <div class="details">
+              <button class="user-portal-button portal-update">Update</button>
+              <button class="user-portal-button portal-delete">Delete</button>
             </div>
         <% else %>
           <%= link_to "Choose a bank", banks_path  %>
@@ -36,10 +43,13 @@
       </div>
       <div class="user-card-selected-info journey-boxes">
       <% if @insurance %>
-        <%= image_tag @insurance.image %>
+        <div class="user-card-header">
+              <%= image_tag @insurance.image %>
+              <p class="task"><%= @insurance.name%></p>
+            </div>
         <div class="details">
-          <p class="task"><%= @insurance.name %></p>
-          <button>More information</button>
+          <button class="user-portal-button portal-update">Update</button>
+          <button class="user-portal-button portal-delete">Delete</button>
         </div>
       <% else %>
         <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>

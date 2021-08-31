@@ -33,20 +33,29 @@
 
 .user-card-selected-info {
   display: grid;
-  grid-template-columns: 35% 60%;
-  border: 1px solid $brand-purple;
+  grid-template-rows: 50px auto;
+  height: 48%;
   border-radius: 8px;
-  margin: 15px 5px;
   padding: 5px;
   background-color: $off-white;
-
   img {
-    height: 150px;
+    height: 50px;
     aspect-ratio: 1/1;
+    border-radius: 6px;
   }
+  .details{
+    justify-self: right;
+    align-self: end;
 
-  .details>p {
+  }
+}
+
+.user-card-header{
+  display: flex;
+  p {
     font-weight: bold;
+    margin: 0 0 0 15px;
+    align-self: center;
   }
 }
 
