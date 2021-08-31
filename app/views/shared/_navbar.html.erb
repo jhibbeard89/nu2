@@ -1,23 +1,22 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-nu2">
+<div class="navbar navbar-expand-sm navbar-nu2">
   <%= link_to "Nü2", root_path, class: "navbar-nu2-logo" %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Bookings", "#", class: "nav-link" %>
+
+        <li>
+          <%= link_to chatroom_path(id:1) do %>
+          <%= image_tag "bot4", class: "nav-link", id: "bot" %>
+          <% end %>
         </li>
-        <li class="nav-item">
-          <%= link_to "My Journey", journey_index_path, class: "nav-link" %>
+        <li>
+          <%= link_to "| Help", chatroom_path(id:1), class: "nav-link", style: "color:black;" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "My Tasks", req_index_path, class: "nav-link" %>
+        <li>
+          <%= link_to "My Tasks", req_index_path, class: "nav-link", style: "font-weight:bold;" %>
         </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My Profile", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
+        <li>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link", style: "font-weight:bold;" %>
         </li>
       <% else %>
         <li class="navbar-button">

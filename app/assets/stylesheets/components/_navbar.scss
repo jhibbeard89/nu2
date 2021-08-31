@@ -11,10 +11,6 @@
   }
 }
 
-// .nav-item {
-//   color: $brand-purple;
-// }
-
 // .navbar-nu2-logo, has been moved to a new  will allow it to be used globally
 .navbar-nu2-logo {
   font-family: $logo-font;
@@ -29,6 +25,19 @@
   }
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.2rem;
+  color: $brand-purple;
+  text-shadow: $black-shadow;
+
+  &:hover {
+  color: $off-white;
+  text-shadow: $black-shadow;
+  }
+}
+
+#bot {
+  margin-right: -12px;
+  width: 60px;
+  margin-top: -10px;
 }

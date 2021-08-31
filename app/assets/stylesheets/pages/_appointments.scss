@@ -1,3 +1,18 @@
 // Place all the styles related to the appointments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.booking-details {
+  text-align: center;
+  color: black;
+  background-color: $brand-purple;
+  width: 355px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: $off-white;
+  img{
+    width: 60%;
+    object-fit: cover;
+  }
+}

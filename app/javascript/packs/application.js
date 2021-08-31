@@ -6,15 +6,19 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import 'bootstrap';
 import {WayLogic, UserSelection} from '../plugins/init_way_logic';
 import {ProgressBarLogic} from '../plugins/init_progress_bar';
+
 
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import "channels"
+import 'bootstrap';
+
+import { initChatroomCable } from '../channels/chatroom_channel';
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 
@@ -26,4 +30,5 @@ document.addEventListener('turbolinks:load', () => {
   UserSelection();
   ProgressBarLogic();
   initAutocomplete();
+  initChatroomCable();
 })
