@@ -200,4 +200,9 @@ private_insurances = Insurance.create([{name: "DR-WALTER", private: true, summar
     {name: "AXA", private: true, summary: "Really good cover for retired professionals", image: "insurance5.png"},
     {name: "Allianz", private: true, summary: "Amazing all round long term cover", image: "insurance6.png"}])
 
+
+chatroom = Chatroom.create(name: "Chat with Hans")
+
+hans = User.create(first_name: "Hans", email: "hans@nu2.com", password: "123456")
+
 puts 'Seeding finished.'

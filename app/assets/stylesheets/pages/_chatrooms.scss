@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 #main {
     height: 100vh;
-    background-color: $brand-yellow;
+    background-color: $brand-yellow-lighter;
     overflow: auto;
   
     h2 {
@@ -85,4 +85,8 @@
         }
       }
     }
+  }
+
+  .chat-page {
+    background-color: $brand-yellow-lighter;
   }

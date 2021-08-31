@@ -1,5 +1,5 @@
-<div id="main" data-current-user="<%= current_user.first_name %>">
-        <h2><%= @chatroom.name %></h2>
+<div id="main" class="chat-page" data-current-user="<%= current_user.first_name %>">
+        <h2 class="page-header-text"><%= @chatroom.name %></h2>
     <div>    
         <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
         <% @chatroom.messages.each do |message| %>
