@@ -32,4 +32,11 @@ class BanksController < ApplicationController
     @user_choice.save!
     redirect_to req_index_path
   end
+
+  def destroy
+    @user_choice = UserChoice.where(user: current_user).first
+    @user_choice.bank = nil
+    @user_choice.save!
+    redirect_to journey_index_path
+  end
 end

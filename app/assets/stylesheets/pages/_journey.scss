@@ -38,7 +38,7 @@
   border-radius: 8px;
   padding: 5px;
   background-color: $off-white;
-  img {
+  .logo-img {
     height: 50px;
     aspect-ratio: 1/1;
     border-radius: 6px;
@@ -85,4 +85,13 @@
 
 .registration-information-box{
   padding: 10px;
+}
+
+.holding-img{
+  align-self: center;
+  justify-self: center;
+  grid-row: 2;
+  grid-column-start: 1;
+  grid-column-start: span 2;
+  width: 50%;
 }

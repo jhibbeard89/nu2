@@ -30,29 +30,32 @@
       <div class="user-card-selected-info journey-boxes">
         <% if @bank %>
             <div class="user-card-header">
-              <%= image_tag @bank.image %>
+              <%= image_tag @bank.image, class: "logo-img" %>
               <p class="task"><%= @bank.name%></p>
             </div>
             <div class="details">
               <button class="user-portal-button portal-update">Update</button>
-              <button class="user-portal-button portal-delete">Delete</button>
+              <%= link_to 'Delete', banks_delete_path(@bank.id), class: "user-portal-button portal-delete", method: :patch %>
             </div>
         <% else %>
-          <%= link_to "Choose a bank", banks_path  %>
+          <%= link_to "Choose bank", banks_path, class: "btn-gradient-purple button-span"%>
+          <%= image_tag('banking.png', class: "holding-img") %>
         <% end %>
       </div>
       <div class="user-card-selected-info journey-boxes">
       <% if @insurance %>
         <div class="user-card-header">
-              <%= image_tag @insurance.image %>
+              <%= image_tag @insurance.image, class: "logo-img" %>
               <p class="task"><%= @insurance.name%></p>
             </div>
         <div class="details">
           <button class="user-portal-button portal-update">Update</button>
-          <button class="user-portal-button portal-delete">Delete</button>
+          <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
         </div>
       <% else %>
         <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
+        <%= image_tag('insurance3.png', class: "holding-img") %>
+
       <% end %>
       </div>
     </div>
