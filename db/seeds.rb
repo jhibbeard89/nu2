@@ -192,12 +192,12 @@ banks = Bank.create([{name: "N26", english_customer_support: 8, signup_process: 
      {name: "Commerzbank", english_customer_support: 5, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "For most expats, Commerzbank’s more comprehensive services become relevant if staying in Germany longer-term. We suggest starting with N26 and then considering Commerzbank as and when you can benefit from their traditional banking services.", image: "commerzbank.png"},
       {name: "Deutsche Bank", english_customer_support: 7, signup_process: 6, bank_fees: 7, atm_fees: 5, banking_features: 8, summary: "While similar to Commerzbank in its offering, Deutsche Bank is arguably slightly less geared towards expat customers. Having browsed their materials extensively, we found them to be the most ‘German’ of our four best banks in Germany.", image: "deutschebank.png"}])
 
-public_insurances = Insurance.create([{name: "Techniker Krankenkasse", private: false, summary: "Great English-speaking sign-up process and support.", image: "techniker.png" },
+public_insurances = Insurance.create([{name: "Techniker Krankenkasse", private: false, summary: "Great English-speaking sign-up process and support.", image: "tk.png" },
      {name: "AOK Baden Württemberg", private: false, summary: "Excellent range of services for elderly people.", image: "AOK.png"},
      {name: "Barmer Ersatzkasse", private: false, summary: "Highly rated customer service and helpline.", image: "barmer.png"}])
 
-private_insurances = Insurance.create([{name: "DR-WALTER", private: true, summary: "Excellent cover for young professionals", image: "insurance4.png"},
-    {name: "AXA", private: true, summary: "Really good cover for retired professionals", image: "insurance5.png"},
-    {name: "Allianz", private: true, summary: "Amazing all round long term cover", image: "insurance6.png"}])
+private_insurances = Insurance.create([{name: "DR-WALTER GmbH", private: true, summary: "Great option for shorter-term stays in Germany, long-term travellers and globetrotters.", image: "walter.png"},
+    {name: "AXA Versicherungen", private: true, summary: "Large provider offering flexible packages for independent workers as well as employees.", image: "AXA.png"},
+    {name: "Allianz", private: true, summary: "One of the largest three medical insurance companies in the world, with English speaking support services.", image: "allianz.png"}])
 
 puts 'Seeding finished.'
