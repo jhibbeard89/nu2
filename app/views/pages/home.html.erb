@@ -10,7 +10,7 @@
       <h1 class="text-shadow call-to-action" id="call-to-action-header">Nü2 Berlin?</h1>
       <p class="text-shadow call-to-action" id="call-to-action-text">We can help. Hack German bureaucracy with our services.</p>
       <div class="home-button-container flex-container">
-        <%= link_to "GET STARTED", new_question_path, class: "btn-flat", id: "call-to-action-btn" unless current_user %>
+        <%= link_to "GET STARTED", new_question_path, class: "btn-flat", id: "call-to-action-btn" unless current_user %> <br>
         <%= link_to "Already a member?", new_user_session_path unless current_user%>
       </div>
     </div>
@@ -60,4 +60,3 @@
 <div class="flex-container">
   <%= link_to "Take our quiz!", new_question_path, class: "btn-back" %>
 </div>
-

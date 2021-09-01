@@ -27,7 +27,7 @@ class InsurancesController < ApplicationController
     @user_choice.user = user
     @user_choice.insurance = insurance
     @user_choice.save!
-    redirect_to req_index_path
+    redirect_to journey_index_path
   end
 
   def update
@@ -35,7 +35,7 @@ class InsurancesController < ApplicationController
     @user_choice = UserChoice.where(user: current_user).first
     @user_choice.insurance = insurance
     @user_choice.save!
-    redirect_to req_index_path
+    redirect_to journey_index_path
   end
 
   def destroy
