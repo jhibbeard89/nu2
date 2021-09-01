@@ -9,7 +9,7 @@
 }
 
 .journey-boxes {
-  border-radius: 8px;
+  border-radius: 4px;
   margin: 0 5px;
   box-shadow: 2px 2px 3px $brand-purple;
   background-color: white;
@@ -37,19 +37,18 @@
 .user-card-selected-info {
   display: grid;
   grid-template-rows: 50px auto;
-  height: 49%;
-  border-radius: 8px;
+  height: 32%;
+  border-radius: 4px;
   padding: 5px;
   background-color: $off-white;
   .logo-img {
-    height: 50px;
+    height: 100px;
     aspect-ratio: 1/1;
-    border-radius: 6px;
+    border-radius: 4px;
   }
   .details{
     justify-self: right;
     align-self: end;
-
   }
 }
 
@@ -96,5 +95,14 @@
   grid-row: 2;
   grid-column-start: 1;
   grid-column-start: span 2;
-  width: 50%;
+  width: 25%;
+}
+
+.task {
+  color: $brand-purple;
+  font-weight: bold;
+}
+
+.form-group {
+  // background-color: pink;
 }

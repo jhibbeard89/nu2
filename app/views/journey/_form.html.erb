@@ -1,0 +1,6 @@
+<%= simple_form_for :appointment do |f| %>
+  <%= f.input :photos, as: :file %>
+  <div class="d-flex justify-content-center">
+    <%= f.submit class: "user-portal-button portal-update", value: "Upload Documents"%>
+  </div>
+<% end %>

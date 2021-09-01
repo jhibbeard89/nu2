@@ -1,3 +1,7 @@
+<%# content_for :meta_title, "#{@appointment.date.to_s} is on #{DEFAULT_META["meta_product_name"]}" %>
+<%# content_for :meta_description, @appointment.description %>
+<%# content_for :meta_image, cl_image_path(@appointment.photo.path) %>
+
 <h1 class="page-header-text text-shadow">Thanks, your appointment was booked succesfully!</h1>
 <div class="container">
   <div class="container booking-details">

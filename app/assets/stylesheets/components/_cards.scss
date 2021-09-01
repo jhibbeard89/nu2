@@ -73,6 +73,15 @@
   }
 }
 
+.flex-card-item-3 {
+  flex-basis: 33%;
+  margin-bottom: 25px;
+
+  .flip-card {
+    margin: 0 auto;
+  }
+}
+
 // REGISTRATION OFFICES CARDS => See file /views/registration_offices/index.html.erb
 // Added by Martin
 

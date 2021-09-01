@@ -22,7 +22,7 @@ class BanksController < ApplicationController
     @user_choice.user = user
     @user_choice.bank = bank
     @user_choice.save!
-    redirect_to req_index_path
+    redirect_to journey_index_path
   end
 
   def update
@@ -30,7 +30,7 @@ class BanksController < ApplicationController
     @user_choice = UserChoice.where(user: current_user).first
     @user_choice.bank = bank
     @user_choice.save!
-    redirect_to req_index_path
+    redirect_to journey_index_path
   end
 
   def destroy

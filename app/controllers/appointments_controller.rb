@@ -11,6 +11,6 @@ class AppointmentsController < ApplicationController
   def update
     @appointment = Appointment.find(params[:id])
     @appointment.update!(user: current_user)
-    redirect_to appointment_path(@appointment)
+    redirect_to journey_index_path
   end
 end
