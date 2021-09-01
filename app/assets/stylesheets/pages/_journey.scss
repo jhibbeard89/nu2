@@ -41,6 +41,7 @@
   border-radius: 4px;
   padding: 5px;
   background-color: $off-white;
+
   .logo-img {
     height: 100px;
     aspect-ratio: 1/1;
@@ -49,11 +50,13 @@
   .details{
     justify-self: right;
     align-self: end;
+    padding: 10px;
   }
 }
 
 .user-card-header{
   display: flex;
+
   p {
     font-weight: bold;
     margin: 0 0 0 15px;
@@ -103,6 +106,16 @@
   font-weight: bold;
 }
 
+// For the documents upload card
+
 .form-group {
-  // background-color: pink;
+  color: $brand-purple;
+  font-size: 12px;
+  background-color: lightgray;
+}
+
+.upload-header {
+  padding-top: 10px;
+  color: $brand-purple;
+  font-style: italic;
 }
