@@ -66,7 +66,10 @@
       </div>
 
       <div class="user-card-selected-info journey-boxes">
-        <%= render "form", appointment: @appointment %>
+        <div class="container">
+            <p class="upload-header">No documents currently required.</p>
+            <%= render "form", appointment: @appointment %>
+        </div>
       </div>
 
     </div>
