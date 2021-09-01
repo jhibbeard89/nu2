@@ -58,5 +58,5 @@
 </div>
 
 <div class="flex-container">
-  <%= link_to "TAKE OUR QUIZ", new_question_path, class: "btn-back" %>
+  <%= link_to "TAKE OUR QUIZ", new_question_path, class: "btn-back" unless current_user %>
 </div>

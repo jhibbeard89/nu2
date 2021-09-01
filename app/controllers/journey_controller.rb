@@ -1,8 +1,10 @@
 class JourneyController < ApplicationController
   def index
     @user = current_user
-    @bank = @user.user_choices.first.bank
-    @insurance = @user.user_choices.first.insurance
+    unless @user.user_choices.first.nil?
+      @bank = @user.user_choices.first.bank
+      @insurance = @user.user_choices.first.insurance
+    end
     @appointment = @user.appointments.first
     unless @appointment.nil? || @appointment.registration_office.nil?
       @booking_date_time = @appointment.date
