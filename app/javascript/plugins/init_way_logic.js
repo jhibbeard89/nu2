@@ -4,8 +4,11 @@ const WayLogic = () => {
   const buttonNext = document.getElementById('next-btn')
   const buttonBack = document.getElementById('back-btn')
   const buttonContainer = document.getElementById('button-container')
+  const numberOfQuestions = container.length - 1
 
   if (buttonNext){
+    const counter = document.getElementById('counter');
+
     if (i === 0){
       buttonNext.innerText = "START QUESTIONS"
     }
@@ -20,6 +23,7 @@ const WayLogic = () => {
       if(i === 10){
         buttonContainer.style.display = "none"
       }
+      counter.innerText = `${i}/${numberOfQuestions}`
     });
   }
 
@@ -32,6 +36,7 @@ const WayLogic = () => {
         buttonNext.innerText = "START QUESTIONS"
         buttonBack.classList.add("question")
       }
+      counter.innerText = `${i}/${numberOfQuestions}`
     })
   }
 }
