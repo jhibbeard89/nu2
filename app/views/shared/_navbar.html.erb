@@ -3,14 +3,8 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-
         <li>
-          <%= link_to chatroom_path(id:1) do %>
-          <%= image_tag "bot4", class: "nav-link", id: "bot" %>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to "| Help", chatroom_path(id:1), class: "nav-link", style: "color:black;" %>
+          <div id="bot-link"> <%= image_tag "bot4", class: "nav-link", id: "bot" %> | Help</div>
         </li>
         <li>
           <%= link_to "My Tasks", req_index_path, class: "nav-link", style: "font-weight:bold;" %>
