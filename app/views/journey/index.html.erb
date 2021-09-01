@@ -12,7 +12,7 @@
         <div class="registration-information-box">
           <h4 class="task"><%= @appointment.registration_office.office_name %></h4>
           <div class="registration-details">
-            <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+            <a href="https://www.google.com/maps/dir/<%= current_user.address %>/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
             <p><%= "#{@date}#{} at #{@time}" %></p>
           </div>
           <div id="map"
