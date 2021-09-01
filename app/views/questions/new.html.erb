@@ -54,15 +54,17 @@
     </div>
 
     <div class="question question-card" id="question-4">
-      <%= f.input :email, :label_html => { :class => 'question-header' },
+    <h3 class="question-header">What is your email address?</h3>
+      <%= f.input :email, label: false,
         input_html: {
           placeholder: "s.mayer@example.de",
-          class: "input-field" }
+          class: "input-field banana" }
           %>
     </div>
 
     <div class="question question-card" id="question-5">
-      <%= f.input :address, :label_html => { :class => 'question-header' },
+    <h3 class="question-header">What is your address?</h3>
+      <%= f.input :address, label: false,
         input_html: {
           autocomplete: "address",
           id: "user_address",
@@ -72,7 +74,8 @@
     </div>
 
     <div class="question question-card" id="question-6">
-      <%= f.input :phone_number, :label_html => { :class => 'question-header' },
+<h3 class="question-header">What is your phone number?</h3>
+      <%= f.input :phone_number, label: false,
         input_html:{
           placeholder: "+49 123 45678912",
           class: "input-field"
@@ -80,14 +83,15 @@
     </div>
 
     <div class="question question-card" id="question-7">
-      <%= f.input :arrival_date, :label_html => { :class => 'question-header' },
+    <h3 class="question-header">What is your arrival date?</h3>
+      <%= f.input :arrival_date, label: false,
         input_html: {
           type: 'date',
           class: 'input-field' } %>
     </div>
 
     <div class="question question-card" id="question-8">
-      <%= f.input :duration, :label_html => { :class => 'question-header' },
+      <%= f.input :duration, label: false,
         input_html: {
           label: false,
           placeholder: "3 Months / Years",
@@ -102,7 +106,8 @@
     </div>
 
     <div class="question question-card" id="question-10">
-      <%= f.input :date_of_birth, :label_html => { :class => 'question-header' },
+    <h3 class="question-header">When were you born?</h3>
+      <%= f.input :date_of_birth, label: false,
         input_html: {
           type: 'date',
           class: 'input-field' } %>
