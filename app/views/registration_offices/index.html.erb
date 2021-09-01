@@ -30,8 +30,8 @@
 <div class="container registration-offices-cards important-margin-class">
   <% if current_user.appointments.any? %>
     <div class="booked-appointment">
-      <p>You've already booked an appointment.</p> <br>
-      <%= link_to 'See your appointment', appointment_path(current_user.appointments.first), class: 'btn btn-flat-even' %>
+      <h2>You've already booked an appointment!</h2> <br>
+      <%= link_to 'BOOKING CONFIRMATION', appointment_path(current_user.appointments.first), class: 'btn btn-flat-even' %>
     </div>
   <% else %>
     <% @registration_offices.each_with_index do |registration_office, index| %>
@@ -80,7 +80,7 @@
 </div>
 
 <div class="back-btn-container">
-  <%= link_to "<< Back to My Tasks", req_index_path, class: "btn-back" %>
+  <%= link_to "<< Back to Required Tasks", req_index_path, class: "btn-back" %>
 </div>
 
 
