@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>My Portal</h1>
+  <h1 class="page-header-text text-shadow">My Portal</h1>
   <div class="grid-container portal-grid">
     <%# <div id="progress-bar" class="journey-boxes"> %>
       <div class="progress-bar-outer">
@@ -32,6 +32,7 @@
     </div>
 
     <div class="selected-information-box">
+
       <div class="user-card-selected-info journey-boxes">
         <% if @bank %>
             <div class="user-card-header">
@@ -47,22 +48,27 @@
           <%= image_tag('banking.png', class: "holding-img") %>
         <% end %>
       </div>
-      <div class="user-card-selected-info journey-boxes">
-      <% if @insurance %>
-        <div class="user-card-header">
-              <%= image_tag @insurance.image, class: "logo-img" %>
-              <p class="task"><%= @insurance.name%></p>
-            </div>
-        <div class="details">
-          <%= link_to "Update", insurances_path, class: "user-portal-button portal-update"%>
-          <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
-        </div>
-      <% else %>
-        <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
-        <%= image_tag('insurance3.png', class: "holding-img") %>
 
-      <% end %>
+      <div class="user-card-selected-info journey-boxes">
+        <% if @insurance %>
+          <div class="user-card-header">
+                <%= image_tag @insurance.image, class: "logo-img" %>
+                <p class="task"><%= @insurance.name%></p>
+              </div>
+          <div class="details">
+            <%= link_to "Update", insurances_path, class: "user-portal-button portal-update"%>
+            <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
+          </div>
+        <% else %>
+          <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
+          <%= image_tag('insurance3.png', class: "holding-img") %>
+        <% end %>
       </div>
+
+      <div class="user-card-selected-info journey-boxes">
+        <%= render "form", appointment: @appointment %>
+      </div>
+
     </div>
   </div>
 </div>
