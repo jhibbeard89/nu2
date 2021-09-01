@@ -21,8 +21,8 @@
         <%= image_tag(insurance.image) %>
         <h2 class="text-shadow"><%=insurance.name %></h2>
         <p><%= insurance.summary %></p>
-        <%= link_to 'Choose this insurance', insurances_create_path(insurance), class: "btn-gradient-yellow", method: :post if @new %>
-        <%= link_to 'Add this insurance', insurances_update_path(insurance), class: "btn-gradient-yellow", method: :patch unless @new %>
+        <%= link_to 'Select Insurance', insurances_create_path(insurance), class: "btn-gradient-yellow", method: :post if @new %>
+        <%= link_to 'Select Insurance', insurances_update_path(insurance), class: "btn-gradient-yellow", method: :patch unless @new %>
       </div>
     <% end %>
 </div>
