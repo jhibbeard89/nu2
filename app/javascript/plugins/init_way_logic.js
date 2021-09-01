@@ -7,10 +7,10 @@ const WayLogic = () => {
 
   if (buttonNext){
     if (i === 0){
-      buttonNext.innerText = "Start questions"
+      buttonNext.innerText = "START QUESTIONS"
     }
     buttonNext.addEventListener('click', () => {
-      buttonNext.innerText = "Next questions"
+      buttonNext.innerText = "NEXT QUESTION"
       container[i].classList.add("question")
       i += 1
       container[i].classList.remove("question")
@@ -29,7 +29,7 @@ const WayLogic = () => {
       i -= 1
       container[i].classList.remove("question")
       if(i === 0){
-        buttonNext.innerText = "Start questions"
+        buttonNext.innerText = "START QUESTIONS"
         buttonBack.classList.add("question")
       }
     })

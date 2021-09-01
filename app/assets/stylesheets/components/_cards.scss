@@ -1,6 +1,7 @@
 // Added by james
 .card-container{
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 // SQUARE CARDS
@@ -23,6 +24,7 @@
     width: 60%;
     object-fit: cover;
   }
+  flex: 0 0 25.5%;
 }
 
 .card-square {

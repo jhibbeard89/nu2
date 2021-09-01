@@ -1,7 +1,7 @@
 <div class="container">
   <div class="profile_question">
     <div class="welcome-question question-card" id="question-0">
-      <h3 class="question-header">To allow us to understand your needs, please answer a few recomendations.</h3>
+      <h3 class="question-header">To allow us to understand you better, please answer a few questions...</h3>
     </div>
     <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
 
@@ -13,7 +13,7 @@
           class: "input-field, hidden",
           id: "employment-input"
           }%>
-      <h3 class="question-header">Please select which employment status applies to you?</h3>
+      <h3 class="question-header">What is your emplyment status?</h3>
       <div class="buttons-container-questions flex-container">
         <div class="btn question-button">Employed</div>
         <div class="btn question-button">Self-employed</div>
@@ -30,7 +30,7 @@
           class: "input-field, hidden",
           id: "income-input"
           }%>
-      <h3 class="question-header">Will you have a gross salary of more than 62,550€ once living in Germany</h3>
+      <h3 class="question-header">Will your gross salary be more than €62,550?</h3>
       <div class="buttons-container-questions flex-container">
         <div class="btn question-button"> Yes </div>
         <div class="btn question-button"> No </div>
@@ -54,7 +54,7 @@
     </div>
 
     <div class="question question-card" id="question-4">
-      <%= f.input :email,
+      <%= f.input :email, :label_html => { :class => 'question-header' },
         input_html: {
           placeholder: "s.mayer@example.de",
           class: "input-field" }
@@ -62,7 +62,7 @@
     </div>
 
     <div class="question question-card" id="question-5">
-      <%= f.input :address,
+      <%= f.input :address, :label_html => { :class => 'question-header' },
         input_html: {
           autocomplete: "address",
           id: "user_address",
@@ -72,7 +72,7 @@
     </div>
 
     <div class="question question-card" id="question-6">
-      <%= f.input :phone_number,
+      <%= f.input :phone_number, :label_html => { :class => 'question-header' },
         input_html:{
           placeholder: "+49 123 45678912",
           class: "input-field"
@@ -80,14 +80,14 @@
     </div>
 
     <div class="question question-card" id="question-7">
-      <%= f.input :arrival_date,
+      <%= f.input :arrival_date, :label_html => { :class => 'question-header' },
         input_html: {
           type: 'date',
           class: 'input-field' } %>
     </div>
 
     <div class="question question-card" id="question-8">
-      <%= f.input :duration,
+      <%= f.input :duration, :label_html => { :class => 'question-header' },
         input_html: {
           label: false,
           placeholder: "3 Months / Years",
@@ -102,20 +102,20 @@
     </div>
 
     <div class="question question-card" id="question-10">
-      <%= f.input :date_of_birth,
+      <%= f.input :date_of_birth, :label_html => { :class => 'question-header' },
         input_html: {
           type: 'date',
           class: 'input-field' } %>
     </div>
 
     <div class="question question-card" id="submit">
-      <h3 class="question-header">Thank you for completing the question, please submit to register and receive your answers</h3>
-      <%= f.submit class: "btn btn-flat submit-btn", value: "Submit my questions" %>
+      <h3 class="question-header">Thank you for your answers! Please submit to continue.</h3>
+      <%= f.submit class: "btn btn-flat submit-btn", value: "SUBMIT" %>
     </div>
     <% end %>
     <div class="question-nav-buttons" id="button-container">
-      <button class="btn-flat btn next-btn" id="next-btn">Next Question</button>
-      <button class="btn-flat btn last-btn btn-hollow question" id="back-btn">Previous Question</button>
+      <button class="btn-flat btn next-btn" id="next-btn">NEXT QUESTION</button>
+      <button class="btn-flat btn last-btn btn-hollow question" id="back-btn">PREVIOUS QUESTION</button>
     </div>
   </div>
 </div>
