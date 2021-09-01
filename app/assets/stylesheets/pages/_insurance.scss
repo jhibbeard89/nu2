@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .insurance-card {
-  padding-top: 20px;
   width: 325px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -11,10 +10,11 @@
   display: flex;
 
   h2 {
-    padding-top: 20px;
     font-size: 23px;
     color: $brand-purple;
     font-weight: bold;
+    text-align: center;
+    padding-top: 40px;
   }
 
   img {

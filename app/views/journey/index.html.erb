@@ -1,17 +1,67 @@
 <div class="container">
   <h1>My Portal</h1>
   <div class="grid-container portal-grid">
-    <div id="progress-bar">
-      This is your progress bar
+    <%# <div id="progress-bar" class="journey-boxes"> %>
+      <div class="progress-bar-outer">
+        <span class="progress-bar-mainbar" id="main-bar">33%</span>
+      </div>
+    <%# </div> %>
+
+    <div class="selected-information-box journey-boxes registration-box">
+      <% if @appointment %>
+        <div class="registration-information-box">
+          <h4 class="task"><%= @appointment.registration_office.office_name %></h4>
+          <div class="registration-details">
+            <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+            <p><%= "#{@date}#{} at #{@time}" %></p>
+          </div>
+          <div id="map"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
+          <div class="buttons-group-user">
+            <button class="user-portal-button portal-update">Update</button>
+            <button class="user-portal-button portal-delete">Delete</button>
+          </div>
+        </div>
+      <% else %>
+        <%= link_to "Book Appointment", registration_offices_path, class: "btn-gradient-purple button-span"%>
+        <%= image_tag('apartment.png', class: "holding-img") %>
+      <% end %>
     </div>
+
     <div class="selected-information-box">
-      This is your booking information
-    </div>
-    <div class="selected-information-box">
-      This is your Bank information
-    </div>
-    <div class="selected-information-box">
-      This is your Insurance information
+      <div class="user-card-selected-info journey-boxes">
+        <% if @bank %>
+            <div class="user-card-header">
+              <%= image_tag @bank.image, class: "logo-img" %>
+              <p class="task"><%= @bank.name%></p>
+            </div>
+            <div class="details">
+              <%= link_to "Update", banks_path, class: "user-portal-button portal-update"%>
+              <%= link_to 'Delete', banks_delete_path(@bank.id), class: "user-portal-button portal-delete", method: :patch %>
+            </div>
+        <% else %>
+          <%= link_to "Choose bank", banks_path, class: "btn-gradient-purple button-span"%>
+          <%= image_tag('banking.png', class: "holding-img") %>
+        <% end %>
+      </div>
+      <div class="user-card-selected-info journey-boxes">
+      <% if @insurance %>
+        <div class="user-card-header">
+              <%= image_tag @insurance.image, class: "logo-img" %>
+              <p class="task"><%= @insurance.name%></p>
+            </div>
+        <div class="details">
+          <%= link_to "Update", insurances_path, class: "user-portal-button portal-update"%>
+          <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
+        </div>
+      <% else %>
+        <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
+        <%= image_tag('insurance3.png', class: "holding-img") %>
+
+      <% end %>
+      </div>
     </div>
   </div>
 </div>

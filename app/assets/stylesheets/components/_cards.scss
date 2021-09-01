@@ -8,8 +8,8 @@
 .card-square-container {
   justify-content: space-evenly;
   padding-top: 20px;
-  padding-bottom: 80px;
-  margin-top: 5px;
+  // padding-bottom: 40px;
+  margin-top: 50px;
 }
 
 .nu2-card{
@@ -69,4 +69,19 @@
     padding-right: 5px;
     text-align: left;
   }
+}
+
+// REGISTRATION OFFICES CARDS => See file /views/registration_offices/index.html.erb
+// Added by Martin
+
+.card-registration-office {
+  background-color: $brand-purple;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 100px;
+  padding: 5px 20px;
+  margin: 5px 5px;
 }

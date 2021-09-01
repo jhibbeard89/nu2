@@ -2,6 +2,9 @@
 
 <div class="container">
   <div class="info-paragraph">
+    <p>If you are already researching health insurance companies, you likely know the importance of a solid insurance plan. Admittedly, purchasing a policy can be confusing, and it is going to take a lot of browsing, detailed reading, and comparing insurance policies before you decide on the right one.</p>
+
+
     <p>Once you sign up for a health insurance policy in Berlin (whether private or public), you will receive an insurance card in the mail, which you have to present whenever seeking medical treatment. Health insurance covers the majority of your basic medical needs, and it is usually all you need. </p>
   </div>
 </div>
@@ -18,7 +21,7 @@
         <%= image_tag(insurance.image) %>
         <h2 class="text-shadow"><%=insurance.name %></h2>
         <p><%= insurance.summary %></p>
-        <%= link_to 'Choose this insurance', insurances_create_path(insurance), class: "btn-gradient-yellow" if @new %>
+        <%= link_to 'Choose this insurance', insurances_create_path(insurance), class: "btn-gradient-yellow", method: :post if @new %>
         <%= link_to 'Add this insurance', insurances_update_path(insurance), class: "btn-gradient-yellow", method: :patch unless @new %>
       </div>
     <% end %>
