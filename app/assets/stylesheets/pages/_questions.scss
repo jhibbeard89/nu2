@@ -1,7 +1,7 @@
 .profile_question {
   position: relative;
   background-color: white;
-  min-height: 250px;
+  min-height: 400px;
   padding: 40px 25px 45px 25px;
   box-shadow: 0 3px 5px $brand-purple;
   border-radius: 7px;
@@ -69,4 +69,12 @@
   color: black;
   box-shadow: none;
   text-shadow: $black-shadow;
+}
+
+.submit-sentence {
+  margin-top: 80px;
+}
+
+.questions-counter {
+  color: $brand-purple;
 }
