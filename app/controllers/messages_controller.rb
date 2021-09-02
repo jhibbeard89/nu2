@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
             @chatroom,
             {html: render_to_string(partial: "message", locals: { message: @message, user: current_user }), user: current_user, id: @message.id}
           )
-          redirect_to chatroom_path(@chatroom, anchor: "message-#{@message.id}")
+          redirect_to chatroom_path(@chatroom)
     else
         raise
         render "chatrooms/show"

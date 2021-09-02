@@ -1,10 +1,11 @@
 import consumer from "./consumer";
+import {ScrollMessagesIntoView} from "../plugins/init_scrollchat"
 
 const initChatroomCable = () => {
   const messagesContainer = document.getElementById('messages')
   if (messagesContainer) {
+    ScrollMessagesIntoView()
     const id = messagesContainer.dataset.chatroomId;
-
     consumer.subscriptions.create(
       { channel: 'ChatroomChannel', id: id },
       {
@@ -24,6 +25,7 @@ const initChatroomCable = () => {
               icon.classList.add('your-message-author')
               icon.classList.remove('my-message-author')
             }
+            ScrollMessagesIntoView()
             // message.classList.add('your-message')
             // message.classList.remove('my-message')
             // console.log('test')
