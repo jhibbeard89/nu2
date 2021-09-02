@@ -16,7 +16,7 @@ const ProgressBarLogic = () => {
     }
 
     const move = () => {
-      id = setInterval(frame, 60)
+      id = setInterval(frame, 30)
     }
 
     let i = 0
