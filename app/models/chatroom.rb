@@ -7,5 +7,6 @@ class Chatroom < ApplicationRecord
     chatroom = Chatroom.new(name: "Chat with Hans - #{chatroom_number}")
     chatroom.user = user
     chatroom.save!
+    chatroom
   end
 end
