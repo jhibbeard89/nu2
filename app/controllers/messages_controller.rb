@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def create
     if current_user.id == 1
-      @chatroom = Chatroom.find(params[:chatroom_id])
+      @chatroom = Chatroom.find(params[:id])
     else
       @chatroom = current_user.chatrooms.first
     end
