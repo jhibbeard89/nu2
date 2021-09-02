@@ -1,7 +1,14 @@
 class ChatroomsController < ApplicationController
+  def index
+    @chatrooms = Chatroom.all
+  end
+
+
   def show
-    @chatroom = Chatroom.find(1)
+    @chatroom = Chatroom.find(params[:id])
     @message = Message.new
-    redirect_back(fallback_location: root_path)
+    unless current_user.id == 1
+      redirect_back(fallback_location: root_path)
+    end
   end
 end

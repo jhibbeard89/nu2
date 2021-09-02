@@ -1,0 +1,12 @@
+<h1>This is Hans's house</h1>
+
+<div class="available_chatrooms">
+  <h3>Chatroom Name</h3>
+  <p>user</p>
+  <% @chatrooms.each do |chatroom| %>
+    <%= link_to(chatroom_path(chatroom.id)) do %>
+      <h4><%= chatroom.name %></h4>
+    <% end %>
+    <p><%= chatroom.user.first_name %></p>
+  <% end %>
+</div>

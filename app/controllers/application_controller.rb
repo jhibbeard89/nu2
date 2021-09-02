@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
 
   # Messaging service
   def load_chat
-    @chatroom = Chatroom.find(1)
-    @message = Message.new
+    if current_user
+      @chatroom = Chatroom.where(user: current_user).first
+      @message = Message.new
+    end
   end
 
   def configure_permitted_parameters

@@ -1,36 +1,136 @@
-#bot-link{
-  cursor: pointer;
-  margin-right: 10px;
-  & > * {
-    display: inline-block;
+.user-chat{
+  #bot-link{
+    cursor: pointer;
+    margin-right: 10px;
+    & > * {
+      display: inline-block;
+    }
   }
+
+  #main {
+      background-color: $brand-yellow-lighter;
+      overflow: auto;
+      height: 400px;
+      position: absolute;
+      top: 70px;
+      right: 130px;
+      z-index: 150;
+      box-shadow: 1px 1px 3px $brand-purple;
+      & > div {
+        height: inherit;
+        background-color: rgba(250, 250, 250, 0.9);
+        width: 300px;
+        margin: auto;
+        border-radius: 5px;
+        overflow: auto;
+        position: relative;
+        div#messages {
+          height: 80%;
+          width: 95%;
+          color: white;
+          margin: 14px auto;
+          overflow: auto;
+          display: flex;
+          flex-direction: column;
+          p {
+            display: inline-block;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            // width: max-content;
+          }
+
+      }
+
+      .my-message {
+      background-color: $brand-yellow-lighter;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      align-self: flex-end;
+      max-width: 65%;
+      min-width: 100px;
+      }
+
+      .your-message {
+      border-bottom-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      background-color: $brand-purple-lighter;
+      margin-right: 25px;
+      max-width: 65%;
+      min-width: 100px;
+      }
+
+      .my-message-author {
+          color: black;
+          align-self: flex-end;
+        }
+
+      .your-message-author {
+        margin-right: 25px;
+        color: black;
+      }
+
+        #send-message {
+          width: 95%;
+          margin: auto;
+
+          input {
+            height: 30px;
+            width: 90%;
+            border-radius: 10px;
+            border: 0;
+            background-color: $brand-purple-translucent;
+          }
+        }
+      }
+    }
+
+    .message-container{
+
+
+    }
+
+    .chat-page {
+      background-color: $brand-yellow-lighter;
+    }
 }
 
-#main {
+
+  // Bellow is repeated code though this applies only with Hans chat room and not the user chatroom
+.hans-chat{
+  #main {
+    height: 100vh;
     background-color: $brand-yellow-lighter;
     overflow: auto;
-    height: 400px;
-    position: absolute;
-    top: 70px;
-    right: 130px;
-    z-index: 150;
-    box-shadow: 1px 1px 3px $brand-purple;
-    & > div {
-      height: inherit;
-      background-color: rgba(250, 250, 250, 0.9);
-      width: 300px;
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    >div {
+      height: 90vh;
+      background-color: $off-white;
+      width: 50%;
       margin: auto;
       border-radius: 5px;
       overflow: auto;
       position: relative;
+
       div#messages {
-        height: 80%;
+        height: 90%;
         width: 95%;
         color: white;
         margin: 14px auto;
         overflow: auto;
         display: flex;
         flex-direction: column;
+
         p {
           display: inline-block;
           padding: 10px;
@@ -38,40 +138,40 @@
           border-top-right-radius: 10px;
           margin-bottom: 5px;
           margin-top: 5px;
-          // width: max-content;
+          max-width: 70%;
+          width: max-content;
         }
 
-    }
-
-    .my-message {
-    background-color: $brand-yellow-lighter;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    align-self: flex-end;
-    max-width: 65%;
-    min-width: 100px;
-    }
-
-    .your-message {
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    background-color: $brand-purple-lighter;
-    margin-right: 25px;
-    max-width: 65%;
-    min-width: 100px;
-    }
-
-    .my-message-author {
-        color: black;
-        align-self: flex-end;
       }
 
-    .your-message-author {
-      margin-right: 25px;
-      color: black;
-    }
+      .my-message {
+        background-color: $brand-yellow-lighter;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        width: 300px;
+      }
+
+      .your-message {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color: $brand-purple-lighter;
+        align-self: flex-end;
+        margin-right: 25px;
+        width: 300px;
+
+      }
+
+      .my-message-author {
+        color: black;
+      }
+
+      .your-message-author {
+        margin-right: 25px;
+        align-self: flex-end;
+        color: black;
+      }
 
       #send-message {
         width: 95%;
@@ -88,11 +188,7 @@
     }
   }
 
-  .message-container{
-
-
-  }
-
   .chat-page {
     background-color: $brand-yellow-lighter;
   }
+}
