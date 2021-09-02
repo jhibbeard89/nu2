@@ -86,8 +86,8 @@
 // Added by Martin
 
 .card-registration-office {
-  background-color: $brand-purple;
-  color: white;
+  background-color: $off-white;
+  color: $brand-purple;
   font-size: 14px;
   border: none;
   border-radius: 5px;
@@ -95,4 +95,19 @@
   height: 100px;
   padding: 5px 20px;
   margin: 5px 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-registration-office:hover {
+  background-color: $off-white;
+  color: $brand-purple;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 100px;
+  padding: 5px 20px;
+  margin: 5px 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
