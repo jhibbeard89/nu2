@@ -2,7 +2,7 @@
   <div class="profile_question">
   <p class="questions-counter" id="counter"></p>
     <div class="welcome-question question-card" id="question-0">
-      <h3 class="question-header">To allow us to understand you better, please answer a few questions...</h3>
+      <h3 class="question-header">To allow us to understand you better, please answer a few questions.</h3>
     </div>
     <%= simple_form_for :questions, url: set_session_questions_path do |f|  %>
     <div class="question question-card" id="question-1">
@@ -114,7 +114,7 @@
     </div>
 
     <div class="question question-card" id="submit">
-      <h3 class="question-header">Thank you for your answers! Please submit to continue.</h3>
+      <h3 class="question-header">Thank you for your answers! Please click submit to continue.</h3>
       <%= f.submit class: "btn btn-flat submit-btn", value: "SUBMIT" %>
     </div>
     <% end %>
