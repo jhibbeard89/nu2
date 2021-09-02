@@ -1,6 +1,10 @@
 class MessagesController < ApplicationController
   def create
-    @chatroom = Chatroom.find(params[:chatroom_id])
+    if current_user.id == 1
+      @chatroom = Chatroom.find(params[:chatroom_id])
+    else
+      @chatroom = current_user.chatrooms.first
+    end
     @message = Message.new(message_params)
     @message.chatroom = @chatroom
     @message.user = current_user
