@@ -131,7 +131,7 @@
   justify-content: center;
   text-align: center;
   margin-bottom: -40px;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .question-button{
@@ -180,4 +180,22 @@
   border: 1px solid $brand-yellow;
   color: $off-white;
   background-color: $brand-yellow;
+}
+
+// Bugfix button for insurances page
+
+.btn-gradient-yellow-insurance {
+  color: $brand-purple;
+  padding: 8px 24px;
+  height: 42px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($brand-yellow, $brand-yellow-lighter);
+  transition: background 0.3s ease;
+  border: 1px solid $brand-yellow;
+}
+
+.btn-gradient-yellow-insurance:hover {
+  background: linear-gradient($brand-yellow-lighter, $brand-yellow-faded);
+  color: $brand-purple;
 }
