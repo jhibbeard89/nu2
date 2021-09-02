@@ -150,6 +150,7 @@
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         width: 300px;
+        align-self: flex-end;
       }
 
       .your-message {
@@ -157,7 +158,6 @@
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
         background-color: $brand-purple-lighter;
-        align-self: flex-end;
         margin-right: 25px;
         width: 300px;
 
@@ -165,11 +165,11 @@
 
       .my-message-author {
         color: black;
+        align-self: flex-end;
       }
 
       .your-message-author {
         margin-right: 25px;
-        align-self: flex-end;
         color: black;
       }
 
