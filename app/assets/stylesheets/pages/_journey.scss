@@ -26,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   justify-self: center;
   grid-column-start: 1;
   grid-column-end: span 2;
@@ -41,6 +42,7 @@
   border-radius: 4px;
   padding: 5px;
   background-color: $off-white;
+
   .logo-img {
     height: 100px;
     aspect-ratio: 1/1;
@@ -49,11 +51,13 @@
   .details{
     justify-self: right;
     align-self: end;
+    padding: 10px;
   }
 }
 
 .user-card-header{
   display: flex;
+
   p {
     font-weight: bold;
     margin: 0 0 0 15px;
@@ -75,14 +79,16 @@
 .progress-bar-mainbar{
   display: block;
   width: 0%;
+  min-width: 33px;
   height: 30px;
   background-color: $brand-purple;
   border: none;
   margin: 0;
   color: $off-white;
-  padding: 0 5px;
+  padding: 5px 6px 0 5px;
   text-align: right;
   border-radius: inherit;
+  font-size: 0.9rem;
 }
 
 .registration-information-box{
@@ -103,6 +109,19 @@
   font-weight: bold;
 }
 
+// For the documents upload card
+
 .form-group {
-  // background-color: pink;
+  color: $brand-purple;
+  font-size: 12px;
+}
+
+.upload-header {
+  padding-top: 10px;
+  color: $brand-purple;
+  font-style: italic;
+}
+
+#apartment{
+  width: 65%;
 }

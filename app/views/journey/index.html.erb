@@ -3,7 +3,7 @@
   <div class="grid-container portal-grid">
     <%# <div id="progress-bar" class="journey-boxes"> %>
       <div class="progress-bar-outer">
-        <span class="progress-bar-mainbar" id="main-bar">33%</span>
+        <span class="progress-bar-mainbar" id="main-bar">0%</span>
       </div>
     <%# </div> %>
 
@@ -12,7 +12,7 @@
         <div class="registration-information-box">
           <h4 class="task"><%= @appointment.registration_office.office_name %></h4>
           <div class="registration-details">
-            <a href="https://www.google.com/maps/place/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
+            <a href="https://www.google.com/maps/dir/<%= current_user.address %>/<%= @appointment.registration_office.address %>" target="_blank"><%= @appointment.registration_office.address %></a>
             <p><%= "#{@date}#{} at #{@time}" %></p>
           </div>
           <div id="map"
@@ -27,7 +27,7 @@
         </div>
       <% else %>
         <%= link_to "Book Appointment", registration_offices_path, class: "btn-gradient-purple button-span"%>
-        <%= image_tag('apartment.png', class: "holding-img") %>
+        <%= image_tag('apartment.png', class: "holding-img", id: "apartment") %>
       <% end %>
     </div>
 
@@ -66,7 +66,10 @@
       </div>
 
       <div class="user-card-selected-info journey-boxes">
-        <%= render "form", appointment: @appointment %>
+        <div class="container">
+            <p class="upload-header">No documents currently required.</p>
+            <%= render "form", appointment: @appointment %>
+        </div>
       </div>
 
     </div>

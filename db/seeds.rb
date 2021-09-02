@@ -201,7 +201,7 @@ private_insurances = Insurance.create([{name: "DR-WALTER GmbH", private: true, s
     {name: "Allianz Versicherungen", private: true, summary: "One of the largest three medical insurance companies in the world, with English speaking support services and optional add-ons such as maternity and dental coverage.", image: "allianz.png"}])
 
 
-chatroom = Chatroom.create(name: "Chat with Hans")
+# chatroom = Chatroom.create(name: "Chat with Hans")
 
 hans = User.create(first_name: "Hans", email: "hans@nu2.com", password: "123456")
 
