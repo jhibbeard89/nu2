@@ -116,6 +116,26 @@
   font-size: 12px;
 }
 
+.form-control-file {
+  background-color: lightgray;
+}
+
+input[type=file]::file-selector-button {
+  color: $off-white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($brand-purple, $brand-purple-lighter);
+  transition: background 0.3s ease;
+  border: 1px solid $brand-purple;
+
+  &:hover {
+    background: linear-gradient($brand-purple-lighter, $brand-purple-faded);
+    color: $off-white;
+  }
+}
+
+
 .upload-header {
   padding-top: 10px;
   color: $brand-purple;
