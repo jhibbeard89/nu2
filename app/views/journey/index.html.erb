@@ -44,7 +44,7 @@
               <%= link_to 'Delete', banks_delete_path(@bank.id), class: "user-portal-button portal-delete", method: :patch %>
             </div>
         <% else %>
-          <%= link_to "Choose bank", banks_path, class: "btn-gradient-purple button-span"%>
+          <%= link_to "Select Bank", banks_path, class: "btn-gradient-purple button-span"%>
           <%= image_tag('banking.png', class: "holding-img") %>
         <% end %>
       </div>
@@ -60,7 +60,7 @@
             <%= link_to 'Delete', insurances_delete_path(@insurance.id), class: "user-portal-button portal-delete", method: :patch %>
           </div>
         <% else %>
-          <%= link_to "Choose insurance", insurances_path, class: "btn-gradient-purple button-span"%>
+          <%= link_to "Select Insurance", insurances_path, class: "btn-gradient-purple button-span"%>
           <%= image_tag('insurance3.png', class: "holding-img") %>
         <% end %>
       </div>
