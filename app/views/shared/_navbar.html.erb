@@ -4,7 +4,11 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li>
-          <div id="bot-link"> <%= image_tag "https://res.cloudinary.com/dz9aqljih/image/upload/v1630483947/nu2_images/bot4_ljor1s.png", class: "nav-link", id: "bot" %> | Help</div>
+          <% if current_user.id == 1 %>
+            <%= link_to "Available Chats", chatrooms_path, class: "nav-link", style: "font-weight:bold;" %>
+          <% else %>
+            <div id="bot-link"> <%= image_tag "https://res.cloudinary.com/dz9aqljih/image/upload/v1630483947/nu2_images/bot4_ljor1s.png", class: "nav-link", id: "bot" %> | Help</div>
+          <% end %>
         </li>
         <li>
           <%= link_to "My Portal", journey_index_path, class: "nav-link", style: "font-weight:bold;" %>
