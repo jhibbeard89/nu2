@@ -199,3 +199,19 @@
   background: linear-gradient($brand-yellow-lighter, $brand-yellow-faded);
   color: $brand-purple;
 }
+
+.btn-mapbox-appointment {
+  color: $brand-purple;
+  font-family: $body-font;
+  padding: 2px 10px;
+  font-size: 10px;
+  border-radius: 4px;
+  background: linear-gradient($brand-yellow, $brand-yellow-lighter);
+  transition: background 0.3s ease;
+  border: 1px solid $brand-yellow;
+}
+
+.btn-mapbox-appointment:hover {
+  background: linear-gradient($brand-yellow-lighter, $brand-yellow-faded);
+  color: $brand-purple;
+}

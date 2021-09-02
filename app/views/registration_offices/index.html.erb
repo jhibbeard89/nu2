@@ -34,13 +34,13 @@
       <%= link_to 'BOOKING CONFIRMATION', appointment_path(current_user.appointments.first), class: 'btn btn-flat-even' %>
     </div>
   <% else %>
-    <% @registration_offices.each_with_index do |registration_office, index| %>
+    <% @registration_offices.each do |registration_office| %>
 
-      <button type="button" class="card-registration-office" data-toggle="modal" data-target="#exampleModal<%= index %>">
+      <button type="button" class="card-registration-office" data-toggle="modal" data-target="#exampleModal<%= registration_office.id %>">
         <%= registration_office.office_name %>
       </button>
 
-      <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" role="dialog" aria-labelledby="<%= index %>" aria-hidden="true">
+      <div class="modal fade" id="exampleModal<%= registration_office.id %>" tabindex="-1" role="dialog" aria-labelledby="<%= registration_office.id %>" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
