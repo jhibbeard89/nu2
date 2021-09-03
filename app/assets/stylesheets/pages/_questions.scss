@@ -15,6 +15,10 @@
   display: inline-block;
 }
 
+.question-card{
+  min-height: 200px;
+}
+
 .question-nav-buttons {
   display: flex;
   flex-direction: row-reverse;
