@@ -1,24 +1,50 @@
-# README
+# Nü2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Nü2 is an application that allows users to navigate through the Berlin bureaucracy. It allows a user to create appointments with the Bürgeramt (Citizens office), find a bank and health insurance provider based on a selection of WAY (Who are you) questions during the registration process.
 
-Things you may want to cover:
+Nü2 was a project produced during Le Wagon bootcamp programme. It has no integration with the Bürgeramt and booking can not be made.
 
-* Ruby version
+## Versions
+The following should be within the GEM file
+```ruby
+  # Ruby Version
+  ruby '2.7.3'
+  # Rails version
+  'rails', '~> 6.1.4'
+```
 
-* System dependencies
+## System dependencies
+```bash
+  # Bundler
+  brew install bundler
+  # Node / npm
+  brew install node
+  # Yarn
+  brew install yarn
+```
+## Installation
+The following process is requried for installation.
 
-* Configuration
+```bash
+  # Bundle
+  bundle install
 
-* Database creation
+  # Yarn
+  yarn install
 
-* Database initialization
+  # Database and Migrations
+  rails db:create
 
-* How to run the test suite
+  rails db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+  rails db:seed
+```
 
-* Deployment instructions
+## Run server
+```bash
+  rails s
+```
 
-* ...
+## Features
+The following features and APIs were used within Aunties, an API key is required.
+* [Mapbox](https://www.mapbox.com/)
