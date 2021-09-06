@@ -1,5 +1,5 @@
 # Nü2
-<h3 text-align="center">
+<h3 align="center">
   <img src="app/assets/images/landingpage.png" width="800px">
 </h3>
   
