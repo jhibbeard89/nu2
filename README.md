@@ -49,5 +49,5 @@ The following process is requried for installation.
 ```
 
 ## Features
-The following features and APIs were used within Aunties, an API key is required.
+The following features and APIs were used within Nü2, an API key is required.
 * [Mapbox](https://www.mapbox.com/)
