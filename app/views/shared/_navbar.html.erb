@@ -4,7 +4,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <%# Hans is a chat room created as demonstration, to reactivate them please uncomment the line below. %>
-        <%# render 'shared/hans' %>
+        <%= render 'shared/hans' %>
         <li>
           <%= link_to "My Portal", journey_index_path, class: "nav-link", style: "font-weight:bold;" %>
         </li>
